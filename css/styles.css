@@ -1,0 +1,317 @@
+/* =========================================================
+   Personal Portfolio — styles inspired by Start Bootstrap "Resume"
+   ========================================================= */
+
+:root {
+    --accent: #4f46e5;          /* indigo — pick your own */
+    --accent-hover: #6366f1;
+    --accent-soft: rgba(79, 70, 229, 0.15);
+    --text-body: #212529;
+    --text-muted: #6c757d;
+    --bg: #ffffff;
+    --bg-section-alt: #f8f9fa;
+    --border: #dee2e6;
+}
+
+html, body {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Mulish', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: var(--text-body);
+    padding-top: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Saira Extra Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+h1 { font-size: clamp(3rem, 6vw, 5rem); line-height: 1; }
+h2 { font-size: 2.5rem; }
+h3 { font-size: 1.5rem; }
+
+.text-primary { color: var(--accent) !important; }
+.bg-primary   { background-color: var(--accent) !important; }
+.btn-primary {
+    background-color: var(--accent);
+    border-color: var(--accent);
+}
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: var(--accent-hover);
+    border-color: var(--accent-hover);
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: var(--accent-hover); text-decoration: underline; }
+
+.subheading {
+    font-family: 'Saira Extra Condensed', sans-serif;
+    font-weight: 500;
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+/* ---------- Sidebar navigation ---------- */
+#sideNav .navbar-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+}
+
+.img-profile {
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+    border: 0.5rem solid rgba(255, 255, 255, 0.2);
+}
+
+@media (min-width: 992px) {
+    #sideNav {
+        width: 17rem;
+        height: 100vh;
+        flex-direction: column;
+        align-items: stretch;
+    }
+    #sideNav .navbar-brand {
+        flex-direction: column;
+        padding: 2rem 1rem;
+    }
+    #sideNav .navbar-collapse {
+        flex-grow: 0;
+        width: 100%;
+    }
+    #sideNav .navbar-nav {
+        flex-direction: column;
+        width: 100%;
+    }
+    #sideNav .nav-item {
+        text-align: center;
+    }
+    #sideNav .nav-link {
+        font-family: 'Saira Extra Condensed', sans-serif;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        padding: 0.75rem 1rem;
+    }
+    #sideNav .nav-link:hover { color: #fff; background: rgba(255, 255, 255, 0.08); }
+}
+
+/* ---------- Resume sections ---------- */
+.resume-section {
+    padding: 5rem 1.5rem;
+    border-bottom: 1px solid var(--border);
+    max-width: 75rem;
+    width: 100%;
+}
+
+.resume-section .resume-section-content {
+    width: 100%;
+}
+
+@media (min-width: 992px) {
+    .resume-section {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        padding: 5rem 4rem;
+        margin-left: 17rem;  /* offset for sidebar */
+    }
+}
+
+/* ---------- Social icons ---------- */
+.social-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.25rem;
+    height: 3.25rem;
+    border-radius: 50%;
+    background-color: var(--accent);
+    color: #fff !important;
+    font-size: 1.25rem;
+    transition: background-color 0.15s ease;
+}
+.social-icon:hover {
+    background-color: var(--accent-hover);
+    text-decoration: none;
+}
+
+/* ---------- Dev / skill icons ---------- */
+.dev-icons {
+    font-size: 2.75rem;
+}
+.dev-icons li {
+    margin-right: 1rem;
+    color: var(--text-muted);
+}
+.dev-icons li:hover {
+    color: var(--accent);
+}
+
+/* ---------- Project cards ---------- */
+.project {
+    padding: 1.5rem;
+    border: 1px solid var(--border);
+    border-radius: 0.75rem;
+    background: var(--bg);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.project:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.08);
+}
+.project .badge {
+    font-family: 'Mulish', sans-serif;
+    font-weight: 600;
+    text-transform: none;
+    letter-spacing: 0;
+    padding: 0.5rem 0.75rem;
+}
+.project-image {
+    width: 100%;
+    max-height: 22rem;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    background: linear-gradient(135deg, #eef2ff, #e0e7ff);  /* fallback while image missing */
+    border: 1px solid var(--border);
+}
+.project-image-link { display: block; }
+
+hr.divider {
+    border: 0;
+    border-top: 1px dashed var(--border);
+    margin: 2.5rem 0;
+}
+
+/* ---------- "Open" / in-progress project styling ---------- */
+.project--open {
+    border-style: dashed;
+    border-color: var(--accent);
+    background: linear-gradient(180deg, var(--accent-soft), var(--bg) 35%);
+}
+.status-pill {
+    display: inline-flex;
+    align-items: center;
+    font-family: 'JetBrains Mono', 'Mulish', monospace;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    padding: 0.25rem 0.6rem;
+    margin-left: 0.5rem;
+    border-radius: 999px;
+    vertical-align: middle;
+    text-transform: uppercase;
+}
+.status-pill--open {
+    color: #fff;
+    background: var(--accent);
+    box-shadow: 0 0 0 0.2rem var(--accent-soft);
+}
+
+/* ---------- Misc ---------- */
+.lead {
+    font-size: 1.15rem;
+    line-height: 1.7;
+}
+.fa-ul li { margin-bottom: 0.5rem; }
+
+/* ---------- Project pipeline bullet list ---------- */
+.proj-pipeline {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+.proj-pipeline li {
+    position: relative;
+    padding-left: 1.25rem;
+    margin-bottom: 0.4rem;
+    line-height: 1.5;
+}
+.proj-pipeline li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.55em;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background: var(--accent);
+}
+
+/* ---------- AIGC image gallery ---------- */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
+    gap: 0.75rem;
+}
+.gallery__item {
+    margin: 0;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    background: linear-gradient(135deg, #eef2ff, #e0e7ff);
+}
+.gallery__item img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    transition: transform 0.2s ease;
+}
+.gallery__item:hover img { transform: scale(1.04); }
+.gallery__item figcaption {
+    font-family: 'Mulish', sans-serif;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    padding: 0.45rem 0.6rem;
+    background: var(--bg);
+}
+.gallery__cat {
+    font-weight: 700;
+    color: var(--text-body);
+}
+
+/* ---------- Course reports / academic writing ---------- */
+.writing-block {
+    padding: 1.5rem;
+    border: 1px solid var(--border);
+    border-radius: 0.75rem;
+    background: var(--bg-section-alt);
+}
+.writing-list__item {
+    padding: 1rem 0;
+    border-bottom: 1px dashed var(--border);
+}
+.writing-list__item:last-child { border-bottom: 0; }
+.writing-list__title {
+    font-family: 'Saira Extra Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+.writing-list__title a { color: var(--text-body); }
+.writing-list__title a:hover { color: var(--accent); }
+.writing-list__meta {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin: 0.25rem 0 0.5rem;
+}
+.writing-list__abstract {
+    margin: 0;
+    color: var(--text-body);
+}
