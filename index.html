@@ -100,9 +100,22 @@
                             <span class="badge bg-secondary">Role: Solo — Design + Implementation · 2026.01–present</span>
                         </div>
                     </div>
-                    <a href="[GMR_LIVE_URL]" class="project-image-link" target="_blank" rel="noopener">
-                        <img class="img-fluid project-image mb-3" src="assets/img/gmr-cover.jpg" alt="GMR project preview" />
-                    </a>
+                    <!-- Showcase: same bare face → 3 looks, each decompiled & replayed stroke-by-stroke (autoplay loop) -->
+                    <div class="gmr-show">
+                        <figure>
+                            <video src="assets/GMR/gmr-m1.mp4" poster="assets/GMR/gmr-m1-poster.jpg" autoplay loop muted playsinline preload="metadata"></video>
+                            <figcaption><b>Look 1 · clean / 日杂</b> — left: per-region decomposition + palette; right: the look replayed stroke by stroke.</figcaption>
+                        </figure>
+                        <figure>
+                            <video src="assets/GMR/gmr-m2.mp4" poster="assets/GMR/gmr-m2-poster.jpg" autoplay loop muted playsinline preload="metadata"></video>
+                            <figcaption><b>Look 2 · HK retro / 港风</b> — same face, different target, same four-stage pipeline.</figcaption>
+                        </figure>
+                        <figure>
+                            <video src="assets/GMR/gmr-m3.mp4" poster="assets/GMR/gmr-m3-poster.jpg" autoplay loop muted playsinline preload="metadata"></video>
+                            <figcaption><b>Look 3 · K-soft / 韩系挂雾</b> — final stroke reconstructs the target exactly.</figcaption>
+                        </figure>
+                    </div>
+
                     <p class="mb-2">
                         A <strong>makeup decompiler</strong>: give it a finished makeup photo and it returns a sequence
                         of brushstrokes you can replay on your own face. The makeup is recovered as four decoupled stages —
@@ -149,9 +162,13 @@
                             <span class="badge bg-secondary">Role: Agent Feature Lead · 2025.12–present</span>
                         </div>
                     </div>
-                    <a href="[HZKJ_LIVE_URL]" class="project-image-link" target="_blank" rel="noopener">
-                        <img class="img-fluid project-image mb-3" src="assets/img/hzkj-canvas-cover.jpg" alt="HZKJ Claude Code agent feature preview" />
+                    <a href="assets/hzkj.png" class="project-image-link" target="_blank" rel="noopener" title="Open full screenshot">
+                        <img class="img-fluid hzkj-shot mb-3" src="assets/hzkj.png" alt="HZKJ canvas with Claude Code Agent creating nodes across the canvas, dev console on the right" loading="lazy" />
                     </a>
+                    <p class="text-muted small mb-3">
+                        ▲ The agent driving the canvas: a single prompt ("create 5 nodes, each in a different language")
+                        is decomposed into tool calls that build the nodes directly on the canvas.
+                    </p>
                     <p class="mb-2">
                         At <strong>HZKJ</strong> — Suzhou's first OPC in the motion-comic (漫剧) industry — I own the
                         entire Claude Code Agent feature built on top of the company's production canvas, turning the
@@ -195,32 +212,23 @@
                         audience, format, and brand tone.
                     </p>
 
-                    <!-- GALLERY: replace each src + caption. Add / remove <figure> tiles freely. -->
-                    <div class="gallery mb-2">
-                        <figure class="gallery__item">
-                            <img src="assets/img/aigc/aigc-01.jpg" alt="[what this is]" loading="lazy" />
-                            <figcaption><span class="gallery__cat">[品类 / category]</span> · [平台 / platform]</figcaption>
-                        </figure>
-                        <figure class="gallery__item">
-                            <img src="assets/img/aigc/aigc-02.jpg" alt="[what this is]" loading="lazy" />
-                            <figcaption><span class="gallery__cat">[品类 / category]</span> · [平台 / platform]</figcaption>
-                        </figure>
-                        <figure class="gallery__item">
-                            <img src="assets/img/aigc/aigc-03.jpg" alt="[what this is]" loading="lazy" />
-                            <figcaption><span class="gallery__cat">[品类 / category]</span> · [平台 / platform]</figcaption>
-                        </figure>
-                        <figure class="gallery__item">
-                            <img src="assets/img/aigc/aigc-04.jpg" alt="[what this is]" loading="lazy" />
-                            <figcaption><span class="gallery__cat">[品类 / category]</span> · [平台 / platform]</figcaption>
-                        </figure>
-                        <figure class="gallery__item">
-                            <img src="assets/img/aigc/aigc-05.jpg" alt="[what this is]" loading="lazy" />
-                            <figcaption><span class="gallery__cat">[品类 / category]</span> · [平台 / platform]</figcaption>
-                        </figure>
-                        <figure class="gallery__item">
-                            <img src="assets/img/aigc/aigc-06.jpg" alt="[what this is]" loading="lazy" />
-                            <figcaption><span class="gallery__cat">[品类 / category]</span> · [平台 / platform]</figcaption>
-                        </figure>
+                    <!-- 15 small thumbnails → 3 rows × 5. Click any to open full image. -->
+                    <div class="aigc-thumbs mb-2">
+                        <figure><a href="assets/AIGC/gallery/g1-1.png" target="_blank" rel="noopener"><img src="assets/AIGC/gallery/g1-1.png" alt="Gold horse necklace on model" loading="lazy" /></a></figure>
+                        <figure><a href="assets/AIGC/gallery/g1-2.jpeg" target="_blank" rel="noopener"><img src="assets/AIGC/gallery/g1-2.jpeg" alt="Gold horse necklace on model" loading="lazy" /></a></figure>
+                        <figure><a href="assets/AIGC/gallery/g1-3.jpeg" target="_blank" rel="noopener"><img src="assets/AIGC/gallery/g1-3.jpeg" alt="Gold horse necklace on model" loading="lazy" /></a></figure>
+                        <figure><a href="assets/AIGC/gallery/g2-1.png" target="_blank" rel="noopener"><img src="assets/AIGC/gallery/g2-1.png" alt="Gold horse pendant, festive red" loading="lazy" /></a></figure>
+                        <figure><a href="assets/AIGC/gallery/g2-2.png" target="_blank" rel="noopener"><img src="assets/AIGC/gallery/g2-2.png" alt="Gold horse pendant, festive red" loading="lazy" /></a></figure>
+                        <figure><a href="assets/AIGC/gallery/g2-3.jpeg" target="_blank" rel="noopener"><img src="assets/AIGC/gallery/g2-3.jpeg" alt="Gold horse pendant, festive red" loading="lazy" /></a></figure>
+                        <figure><a href="assets/AIGC/gallery/g3-1.jpeg" target="_blank" rel="noopener"><img src="assets/AIGC/gallery/g3-1.jpeg" alt="Fitting-room lifestyle shot" loading="lazy" /></a></figure>
+                        <figure><a href="assets/AIGC/gallery/g3-2.jpeg" target="_blank" rel="noopener"><img src="assets/AIGC/gallery/g3-2.jpeg" alt="Fitting-room lifestyle shot" loading="lazy" /></a></figure>
+                        <figure><a href="assets/AIGC/gallery/g3-3.jpeg" target="_blank" rel="noopener"><img src="assets/AIGC/gallery/g3-3.jpeg" alt="Fitting-room lifestyle shot" loading="lazy" /></a></figure>
+                        <figure><a href="assets/AIGC/gallery/g4-1.jpeg" target="_blank" rel="noopener"><img src="assets/AIGC/gallery/g4-1.jpeg" alt="Counter display of gold pieces" loading="lazy" /></a></figure>
+                        <figure><a href="assets/AIGC/gallery/g4-2.jpeg" target="_blank" rel="noopener"><img src="assets/AIGC/gallery/g4-2.jpeg" alt="Counter display of gold pieces" loading="lazy" /></a></figure>
+                        <figure><a href="assets/AIGC/gallery/g4-3.jpeg" target="_blank" rel="noopener"><img src="assets/AIGC/gallery/g4-3.jpeg" alt="Counter display of gold pieces" loading="lazy" /></a></figure>
+                        <figure><a href="assets/AIGC/gallery/g5-1.jpeg" target="_blank" rel="noopener"><img src="assets/AIGC/gallery/g5-1.jpeg" alt="Conceptual gold product art" loading="lazy" /></a></figure>
+                        <figure><a href="assets/AIGC/gallery/g5-2.png" target="_blank" rel="noopener"><img src="assets/AIGC/gallery/g5-2.png" alt="Conceptual gold product art" loading="lazy" /></a></figure>
+                        <figure><a href="assets/AIGC/gallery/g5-3.jpeg" target="_blank" rel="noopener"><img src="assets/AIGC/gallery/g5-3.jpeg" alt="Conceptual gold product art" loading="lazy" /></a></figure>
                     </div>
                 </div>
 
@@ -237,16 +245,73 @@
                             <span class="badge bg-secondary">Role: Lead Designer · Ideation</span>
                         </div>
                     </div>
-                    <a href="https://rainm1st.github.io/CPT208-TrainerSync/" class="project-image-link" target="_blank" rel="noopener">
-                        <img class="img-fluid project-image mb-3" src="assets/img/trainersync-cover.jpg" alt="TrainerSync project preview" />
-                    </a>
-                    <p>
-                        <!-- PLACEHOLDER: tighten or replace this description. -->
-                        TrainerSync is a concept app that synchronizes personal trainers and clients around shared
-                        workout schedules, progress tracking, and check-ins. I led the ideation and visual design —
-                        defining the core user flows, information architecture, and component system — and partnered
-                        with the development sub-team on hand-off and prototype review.
+                    <p class="mb-3">
+                        TrainerSync is a concept gym-training app built around three functional pillars —
+                        <strong>Plan</strong>, <strong>Monitor</strong>, and <strong>Connect</strong>. Plan lets users
+                        filter and queue exercises with live visual guidance and per-set logging; Monitor tracks
+                        heart-rate in real time with breathing-light pacing cues and an intelligent post-session
+                        summary; Connect surfaces live equipment occupancy and lightweight peer messaging for set-checks
+                        and next-turn booking. I led the ideation and visual design — core user flows, information
+                        architecture, and the component system.
                     </p>
+
+                    <!-- Screenshot row 1: FR1 Plan + FR2 Monitor (dark UI) -->
+                    <div class="ts-shots">
+                        <div class="ts-shots__label">FR1 · Plan · &nbsp;FR2 · Monitor</div>
+                        <div class="ts-shots__grid">
+                            <figure class="ts-shots__item">
+                                <img src="assets/TrainerSync/f1-1.png" alt="TrainerSync exercise library" loading="lazy" />
+                                <figcaption><b>Exercise Library</b> — filter chips by muscle group, numbered queue building</figcaption>
+                            </figure>
+                            <figure class="ts-shots__item">
+                                <img src="assets/TrainerSync/f1-2.png" alt="TrainerSync live session" loading="lazy" />
+                                <figcaption><b>Live Session</b> — exercise demo panel with set counter and reorder controls</figcaption>
+                            </figure>
+                            <figure class="ts-shots__item">
+                                <img src="assets/TrainerSync/f2-1.png" alt="TrainerSync in-session monitor" loading="lazy" />
+                                <figcaption><b>In-Session Monitor</b> — live HR ring with current bpm readout</figcaption>
+                            </figure>
+                            <figure class="ts-shots__item">
+                                <img src="assets/TrainerSync/f2-2.png" alt="TrainerSync pace guidance" loading="lazy" />
+                                <figcaption><b>Pace Guidance</b> — breathing-light overlay responds to HR zone</figcaption>
+                            </figure>
+                            <figure class="ts-shots__item">
+                                <img src="assets/TrainerSync/f2-3.png" alt="TrainerSync HR zones" loading="lazy" />
+                                <figcaption><b>HR Zones</b> — blue (rest) · green (target 120–150) · red (high intensity)</figcaption>
+                            </figure>
+                            <figure class="ts-shots__item">
+                                <img src="assets/TrainerSync/f4.png" alt="TrainerSync session summary" loading="lazy" />
+                                <figcaption><b>Session Summary</b> — HR timeline, sets completed, AI analysis text</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+
+                    <!-- Screenshot row 2: FR3 Connect (light UI) -->
+                    <div class="ts-shots mb-3">
+                        <div class="ts-shots__label">FR3 · Connect</div>
+                        <div class="ts-shots__grid">
+                            <figure class="ts-shots__item">
+                                <img src="assets/TrainerSync/f3-1.png" alt="TrainerSync gym floor map" loading="lazy" />
+                                <figcaption><b>Gym Floor Map</b> — live zone occupancy counts and peer positions</figcaption>
+                            </figure>
+                            <figure class="ts-shots__item">
+                                <img src="assets/TrainerSync/f3-2.png" alt="TrainerSync buddy chat" loading="lazy" />
+                                <figcaption><b>Buddy Chat</b> — conversation panel with gym peer</figcaption>
+                            </figure>
+                            <figure class="ts-shots__item">
+                                <img src="assets/TrainerSync/f3-3.png" alt="TrainerSync set-check message" loading="lazy" />
+                                <figcaption><b>Set-Check</b> — pre-canned message asking how many sets remain</figcaption>
+                            </figure>
+                            <figure class="ts-shots__item">
+                                <img src="assets/TrainerSync/f3-4.png" alt="TrainerSync next-turn pre-booking" loading="lazy" />
+                                <figcaption><b>Pre-Book</b> — request next turn at the current equipment</figcaption>
+                            </figure>
+                            <figure class="ts-shots__item">
+                                <img src="assets/TrainerSync/f3-5.png" alt="TrainerSync booking confirmation" loading="lazy" />
+                                <figcaption><b>Confirmed</b> — booking status reply and message thread</figcaption>
+                            </figure>
+                        </div>
+                    </div>
                     <a class="btn btn-primary" href="https://rainm1st.github.io/CPT208-TrainerSync/" target="_blank" rel="noopener">
                         <i class="fas fa-external-link-alt me-1"></i> Live Site
                     </a>
@@ -265,17 +330,52 @@
                             <span class="badge bg-secondary">Role: Group Leader · Main Developer · Deliverables Orchestrator</span>
                         </div>
                     </div>
-                    <a href="https://github.com/545411679/Consilium-Expert-Consultation-Booking" class="project-image-link" target="_blank" rel="noopener">
-                        <img class="img-fluid project-image mb-3" src="assets/img/consilium-cover.jpg" alt="Consilium project preview" />
-                    </a>
-                    <p>
-                        <!-- PLACEHOLDER: tighten or replace this description. -->
+                    <p class="mb-3">
                         A booking platform that matches end-users with verified domain experts for paid one-on-one
-                        consultations — covering search, scheduling, payment, and post-session review. As group leader
-                        I owned the architecture, drove the main implementation, and orchestrated all course
-                        deliverables (requirements, design docs, sprint reports, final presentation) for a team of [N]
-                        contributors.
+                        consultations — covering search, scheduling, payment, and post-session review, across three
+                        role surfaces: <strong>Customer</strong>, <strong>Specialist</strong>, and <strong>Admin</strong>.
+                        As group leader I owned the architecture, drove the main implementation, and orchestrated all
+                        course deliverables (requirements, design docs, sprint reports, final presentation) for a team
+                        of [N] contributors.
                     </p>
+
+                    <!-- main hero (left) + 3 role rows (right), matched heights -->
+                    <div class="con-shots">
+                        <a class="con-shots__main" href="assets/Consilium/main.png" target="_blank" rel="noopener" title="Open homepage screenshot">
+                            <img src="assets/Consilium/main.png" alt="Consilium homepage" loading="lazy" />
+                        </a>
+                        <div class="con-shots__rows">
+                            <div class="con-shots__row">
+                                <div class="con-shots__label">Customer pages</div>
+                                <div class="con-shots__line">
+                                    <figure><img src="assets/Consilium/cus1.png" alt="Consilium customer page 1" loading="lazy" /></figure>
+                                    <figure><img src="assets/Consilium/cus2.png" alt="Consilium customer page 2" loading="lazy" /></figure>
+                                    <figure><img src="assets/Consilium/cus3.png" alt="Consilium customer page 3" loading="lazy" /></figure>
+                                    <figure><img src="assets/Consilium/cus4.png" alt="Consilium customer page 4" loading="lazy" /></figure>
+                                </div>
+                            </div>
+                            <div class="con-shots__row">
+                                <div class="con-shots__label">Specialist pages</div>
+                                <div class="con-shots__line">
+                                    <figure><img src="assets/Consilium/sp1.png" alt="Consilium specialist page 1" loading="lazy" /></figure>
+                                    <figure><img src="assets/Consilium/sp2.png" alt="Consilium specialist page 2" loading="lazy" /></figure>
+                                    <figure><img src="assets/Consilium/sp3.png" alt="Consilium specialist page 3" loading="lazy" /></figure>
+                                    <figure><img src="assets/Consilium/sp4.png" alt="Consilium specialist page 4" loading="lazy" /></figure>
+                                    <figure><img src="assets/Consilium/sp5.png" alt="Consilium specialist page 5" loading="lazy" /></figure>
+                                </div>
+                            </div>
+                            <div class="con-shots__row">
+                                <div class="con-shots__label">Admin pages</div>
+                                <div class="con-shots__line">
+                                    <figure><img src="assets/Consilium/admin1.png" alt="Consilium admin page 1" loading="lazy" /></figure>
+                                    <figure><img src="assets/Consilium/admin2.png" alt="Consilium admin page 2" loading="lazy" /></figure>
+                                    <figure><img src="assets/Consilium/admin3.png" alt="Consilium admin page 3" loading="lazy" /></figure>
+                                    <figure><img src="assets/Consilium/admin4.png" alt="Consilium admin page 4" loading="lazy" /></figure>
+                                    <figure><img src="assets/Consilium/admin5.png" alt="Consilium admin page 5" loading="lazy" /></figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <a class="btn btn-primary" href="https://github.com/545411679/Consilium-Expert-Consultation-Booking" target="_blank" rel="noopener">
                         <i class="fab fa-github me-1"></i> View Repository
                     </a>
@@ -291,13 +391,10 @@
                             <div class="subheading mb-3">Synthetic Biology · MIT Grand Jamboree (Paris) · Manufacture track · Protein modeling + commercialization</div>
                         </div>
                         <div class="text-md-end">
-                            <span class="badge bg-secondary">Role: Protein Modeling + Commercialization · 2023.09–2024.09</span>
+                            <span class="badge bg-secondary">Role: Protein Modeling + Commercialization · 2023.12–2025.1</span>
                         </div>
                     </div>
-                    <a href="https://2024.igem.wiki/xjtlu-china/" class="project-image-link" target="_blank" rel="noopener">
-                        <img class="img-fluid project-image mb-3" src="assets/img/igem-cover.jpg" alt="iGEM XJTLU-China 2024 project preview" />
-                    </a>
-                    <p>
+                    <p class="mb-3">
                         XJTLU-China's 2024 iGEM team (MIT-hosted international synthetic-biology competition, Manufacture
                         track, presented at the Grand Jamboree in Paris). Our project optimized a <strong>fish-oil
                         biosynthesis pathway</strong> through protein engineering. On the modeling team I ran
@@ -307,6 +404,42 @@
                         I also contributed to the commercialization track and helped host the national 100+-team
                         exchange meet (XJTLU as host school).
                     </p>
+
+                    <!-- Selected modeling figures: left column stacked, right column 2-up + RMSD -->
+                    <div class="igem-figs">
+                        <div class="igem-figs__col">
+                            <figure>
+                                <img src="assets/iGEM/microscopic-mechanism-figure.jpg" alt="LACS micro-scale reaction mechanism" loading="lazy" />
+                                <figcaption>Residue-scale catalytic mechanism of LACS — how key pocket residues coordinate ATP, DHA and CoA across the step-wise reaction.</figcaption>
+                            </figure>
+                            <div class="igem-figs__row">
+                                <figure>
+                                    <img src="assets/iGEM/figure7.png" alt="Template ttLACS with four motifs annotated" loading="lazy" />
+                                    <figcaption><b>Figure 23</b> — template ttLACS with four motifs annotated. A-motif in lightmagenta, G-motif and aromatic ring in purple, L-motif in cyan and P-motif in orange.</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="assets/iGEM/figure9.png" alt="Target LACS1 with four motifs annotated" loading="lazy" />
+                                    <figcaption><b>Figure 25</b> — target LACS1 with four motifs annotated in consistent color palette.</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="igem-figs__col">
+                            <div class="igem-figs__row">
+                                <figure>
+                                    <img src="assets/iGEM/figure11.png" alt="Chosen substrate tunnel with G-motif and A-motif highlighted" loading="lazy" />
+                                    <figcaption><b>Figure 27</b> — the chosen tunnel, with G-motif and A-motif highlighted.</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="assets/iGEM/lacs1.gif" alt="Animated LACS1 enzyme structure" loading="lazy" />
+                                    <figcaption>LACS1 enzyme — homology-modeled 3D structure (animated).</figcaption>
+                                </figure>
+                            </div>
+                            <figure>
+                                <img src="assets/iGEM/rmsd.png" alt="RMSD plots from molecular-dynamics simulation" loading="lazy" />
+                                <figcaption>RMSD over a 100&nbsp;ns MD simulation — wild-type vs mutant. Protein (black), DHA (red), ATP (green); convergence confirms a stable, analysable trajectory.</figcaption>
+                            </figure>
+                        </div>
+                    </div>
                     <a class="btn btn-primary" href="https://2024.igem.wiki/xjtlu-china/results.html" target="_blank" rel="noopener">
                         <i class="fas fa-external-link-alt me-1"></i> Team Results
                     </a>
