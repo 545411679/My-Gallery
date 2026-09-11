@@ -4,9 +4,9 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="Personal portfolio of [YOUR NAME] — computer-vision & deep-learning practitioner focused on controllable, decomposable generative visual systems." />
-    <meta name="author" content="[YOUR NAME]" />
-    <title>[YOUR NAME] | AI / ML Engineer Portfolio</title>
+    <meta name="description" content="Personal portfolio of JT Z. — computer-vision & deep-learning practitioner focused on controllable, decomposable generative visual systems." />
+    <meta name="author" content="JT Z." />
+    <title>JT Z. | AI / ML Engineer Portfolio</title>
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
@@ -29,7 +29,7 @@
     <!-- Sidebar Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">
-            <span class="d-block d-lg-none">[YOUR NAME]</span>
+            <span class="d-block d-lg-none">JT Z.</span>
             <span class="d-none d-lg-block">
                 <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.jpg" alt="Profile photo" />
             </span>
@@ -53,26 +53,26 @@
         <section class="resume-section" id="about">
             <div class="resume-section-content">
                 <h1 class="mb-0">
-                    [YOUR FIRST NAME]
-                    <span class="text-primary">[YOUR LAST NAME]</span>
+                    JT
+                    <span class="text-primary">Z.</span>
                 </h1>
                 <div class="subheading mb-5">
-                    [CITY, COUNTRY] · [PHONE OPTIONAL] ·
-                    <a href="mailto:[YOUR EMAIL]">[YOUR EMAIL]</a>
+                    SZ, CHN ·
+                    <a href="mailto:jintong.zhang23@student.xjtlu.edu.cn">jintong.zhang23@student.xjtlu.edu.cn</a>
                 </div>
                 <p class="lead mb-5">
                     Computer-vision and deep-learning practitioner focused on making generative visual systems
                     <strong>controllable, decomposable, and interpretable</strong>. Genuinely curious across
-                    disciplines. In computer vision: designed, built, and still iterating on GMR, a
+                    disciplines. In computer vision: designed, built, and still iterating on the Makeup Replayer, a
                     makeup-decomposition pipeline. In industry: led an AI-agent feature for an employer's
                     creative-canvas platform and delivered AIGC visuals across e-commerce categories. Earlier in
                     AI4S: contributed protein-representation modeling and VAEs. Information &amp; Computing Science
                     undergraduate at XJTLU, class of 2027, bilingual EN/ZH.
                 </p>
                 <div class="social-icons">
-                    <a class="social-icon" href="https://github.com/[YOUR-GITHUB-USERNAME]" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                    <a class="social-icon" href="https://www.linkedin.com/in/[YOUR-LINKEDIN]" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="social-icon" href="mailto:[YOUR EMAIL]" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    <a class="social-icon" href="https://github.com/545411679" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a class="social-icon" href="https://www.linkedin.com/in/%E9%94%A6%E6%A1%90-%E5%BC%A0-3138502a0/?locale=en" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="social-icon" href="mailto:jintong.zhang23@student.xjtlu.edu.cn" aria-label="Email"><i class="fas fa-envelope"></i></a>
                     <!-- Optional: <a class="social-icon" href="#"><i class="fab fa-x-twitter"></i></a> -->
                 </div>
             </div>
@@ -84,17 +84,17 @@
             <div class="resume-section-content">
                 <h2 class="mb-5">Projects</h2>
 
-                <!-- Project 1: GMR -->
+                <!-- Project 1: Makeup Replayer -->
                 <div class="project project--open mb-5">
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-3">
                         <div class="flex-grow-1">
                             <h3 class="mb-1">
-                                GMR — Gaussian Makeup Replayer
+                                Makeup Replayer
                                 <span class="status-pill status-pill--open" title="Active / in-progress">
                                     <i class="fas fa-circle-notch fa-spin me-1"></i>OPEN · IN PROGRESS
                                 </span>
                             </h3>
-                            <div class="subheading mb-3">妆教编译器 / makeup decompiler · Computer Vision · Pigment Decomposition · MediaPipe · GMM · Porter-Duff Compositing</div>
+                            <div class="subheading mb-3">妆教编译器 / makeup decompiler · Computer Vision · Pigment Decomposition · MediaPipe · Porter-Duff Compositing</div>
                         </div>
                         <div class="text-md-end">
                             <span class="badge bg-secondary">Role: Solo — Design + Implementation · 2026.01–present</span>
@@ -116,13 +116,21 @@
                         </figure>
                     </div>
 
+                    <!-- 3D twin + makeup try-on prototype (single small video) -->
+                    <div class="tryon-show">
+                        <figure>
+                            <video src="assets/GMR/3d-twin-tryon.mp4" autoplay loop muted playsinline preload="metadata"></video>
+                            <figcaption><b>3D twin + makeup try-on</b> — later prototype: a 3D face twin with makeup try-on.</figcaption>
+                        </figure>
+                    </div>
+
                     <p class="mb-2">
                         A <strong>makeup decompiler</strong>: give it a finished makeup photo and it returns a sequence
                         of brushstrokes you can replay on your own face. The makeup is recovered as four decoupled stages —
                     </p>
                     <ul class="proj-pipeline mb-3">
                         <li><strong>Peel</strong> — closed-form inversion of α-blended skin + pigment, with a Signed-D term that preserves dark negative values (eyeliner, contour) and bilateral-filter denoising.</li>
-                        <li><strong>Decompose</strong> — MediaPipe-468 region segmentation + a temperature-scaled Gaussian-mixture decomposition of each region's pigment layer (evaluated a convex-hull unmix, ultimately dropped it in favour of GMM).</li>
+                        <li><strong>Decompose</strong> — MediaPipe-468 region segmentation + a temperature-scaled Gaussian-mixture decomposition of each region's pigment layer (evaluated a convex-hull unmix, ultimately dropped it in favour of the Gaussian-mixture model).</li>
                         <li><strong>Palette Aggregation</strong> — merging visually similar / mutually-substitutable colors down to the few that matter.</li>
                         <li><strong>Replay</strong> — Porter-Duff cumulative-coverage compositing; a non-trivial λ derivation guarantees the final stroke reconstructs the target exactly.</li>
                     </ul>
@@ -131,6 +139,10 @@
                         on CPU for a 6MP image, per-region RMSE ≈ 2–4 / 255. The four modules (Peel / Segmentation /
                         Unmix / Step Generator) each stand alone for adjacent use-cases: dermatology before/after
                         quantification, brand-color matching, layered-tutorial generation.
+                    </p>
+                    <p class="mb-2">
+                        <strong>3D twin &amp; try-on</strong> · later designed and implemented a prototype for a 3D
+                        face twin and makeup try-ons (demo below).
                     </p>
                     <p class="mb-3">
                         <strong>Next</strong> · grafting this decomposable, controllable makeup representation onto a
@@ -569,11 +581,11 @@
                     agent systems, or potential collaborations.
                 </p>
                 <div class="social-icons">
-                    <a class="social-icon" href="mailto:[YOUR EMAIL]" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                    <a class="social-icon" href="https://github.com/[YOUR-GITHUB-USERNAME]" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                    <a class="social-icon" href="https://www.linkedin.com/in/[YOUR-LINKEDIN]" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="social-icon" href="mailto:jintong.zhang23@student.xjtlu.edu.cn" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    <a class="social-icon" href="https://github.com/545411679" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a class="social-icon" href="https://www.linkedin.com/in/%E9%94%A6%E6%A1%90-%E5%BC%A0-3138502a0/?locale=en" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                 </div>
-                <p class="mt-5 small text-muted">&copy; <span id="year"></span> [YOUR NAME]. Built with Bootstrap.</p>
+                <p class="mt-5 small text-muted">&copy; <span id="year"></span> JT Z.. Built with Bootstrap.</p>
             </div>
         </section>
     </div>

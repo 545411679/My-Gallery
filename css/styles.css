@@ -400,6 +400,32 @@ hr.divider {
     .gmr-show { grid-template-columns: 1fr; }
 }
 
+/* ---------- 3D twin / try-on video (single, kept small) ---------- */
+.tryon-show {
+    margin-bottom: 0.9rem;
+}
+.tryon-show figure {
+    margin: 0;
+    max-width: 360px;
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background: #000;
+}
+.tryon-show video {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.tryon-show figcaption {
+    font-size: 0.66rem;
+    line-height: 1.35;
+    color: var(--text-muted);
+    padding: 0.4rem 0.55rem;
+    background: var(--bg);
+}
+.tryon-show figcaption b { color: var(--text-body); }
+
 /* ---------- iGEM modeling figures (2 columns) ---------- */
 .igem-figs {
     display: flex;
