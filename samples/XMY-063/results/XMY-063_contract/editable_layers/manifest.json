@@ -1,0 +1,1115 @@
+{
+  "schema": "editable-makeup-layer-pack-v0",
+  "role": "Derived browser editing pack; canonical .npz Object remains the source of truth.",
+  "alpha_encoding": "uint8 PNG, used only when an individual component is edited.",
+  "uv_size": 768,
+  "regions": [
+    {
+      "id": "lips",
+      "bare_proportion": 0.699999988079071,
+      "full_replay": "lips_full.png",
+      "components": [
+        {
+          "id": "lips_01",
+          "index": 0,
+          "alpha": "lips_01_alpha.png",
+          "palette_rgb": [
+            0.8127685189247131,
+            0.38754746317863464,
+            0.46517181396484375
+          ]
+        },
+        {
+          "id": "lips_02",
+          "index": 1,
+          "alpha": "lips_02_alpha.png",
+          "palette_rgb": [
+            -0.09317667037248611,
+            -0.5922021269798279,
+            -0.3386313319206238
+          ]
+        },
+        {
+          "id": "lips_03",
+          "index": 2,
+          "alpha": "lips_03_alpha.png",
+          "palette_rgb": [
+            0.3645722568035126,
+            -0.6103770732879639,
+            -0.30173832178115845
+          ]
+        },
+        {
+          "id": "lips_04",
+          "index": 3,
+          "alpha": "lips_04_alpha.png",
+          "palette_rgb": [
+            0.5199964046478271,
+            -0.34260687232017517,
+            -0.09091706573963165
+          ]
+        },
+        {
+          "id": "lips_05",
+          "index": 4,
+          "alpha": "lips_05_alpha.png",
+          "palette_rgb": [
+            0.9958815574645996,
+            0.9778454899787903,
+            0.9903194308280945
+          ]
+        },
+        {
+          "id": "lips_06",
+          "index": 5,
+          "alpha": "lips_06_alpha.png",
+          "palette_rgb": [
+            0.0434734970331192,
+            -0.5232202410697937,
+            -0.28199049830436707
+          ]
+        },
+        {
+          "id": "lips_07",
+          "index": 6,
+          "alpha": "lips_07_alpha.png",
+          "palette_rgb": [
+            0.2710663080215454,
+            -0.9423590898513794,
+            -0.594661295413971
+          ]
+        },
+        {
+          "id": "lips_08",
+          "index": 7,
+          "alpha": "lips_08_alpha.png",
+          "palette_rgb": [
+            0.19762669503688812,
+            -0.7120811939239502,
+            -0.4060012102127075
+          ]
+        },
+        {
+          "id": "lips_09",
+          "index": 8,
+          "alpha": "lips_09_alpha.png",
+          "palette_rgb": [
+            0.7639294862747192,
+            -0.10533375293016434,
+            0.09607309103012085
+          ]
+        },
+        {
+          "id": "lips_10",
+          "index": 9,
+          "alpha": "lips_10_alpha.png",
+          "palette_rgb": [
+            -0.06033977493643761,
+            -0.3672054708003998,
+            -0.1683538407087326
+          ]
+        },
+        {
+          "id": "lips_11",
+          "index": 10,
+          "alpha": "lips_11_alpha.png",
+          "palette_rgb": [
+            0.3356461524963379,
+            -0.8076460957527161,
+            -0.47062981128692627
+          ]
+        },
+        {
+          "id": "lips_12",
+          "index": 11,
+          "alpha": "lips_12_alpha.png",
+          "palette_rgb": [
+            0.18121197819709778,
+            -0.5070602297782898,
+            -0.26325708627700806
+          ]
+        },
+        {
+          "id": "lips_13",
+          "index": 12,
+          "alpha": "lips_13_alpha.png",
+          "palette_rgb": [
+            0.4639338552951813,
+            -0.41284438967704773,
+            -0.15324664115905762
+          ]
+        },
+        {
+          "id": "lips_14",
+          "index": 13,
+          "alpha": "lips_14_alpha.png",
+          "palette_rgb": [
+            0.9908304810523987,
+            0.582480788230896,
+            0.7417360544204712
+          ]
+        },
+        {
+          "id": "lips_15",
+          "index": 14,
+          "alpha": "lips_15_alpha.png",
+          "palette_rgb": [
+            0.31353187561035156,
+            -0.43246352672576904,
+            -0.1816996932029724
+          ]
+        },
+        {
+          "id": "lips_16",
+          "index": 15,
+          "alpha": "lips_16_alpha.png",
+          "palette_rgb": [
+            -0.3287813067436218,
+            -0.5487492084503174,
+            -0.29895874857902527
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nose",
+      "bare_proportion": 0.699999988079071,
+      "full_replay": "nose_full.png",
+      "components": [
+        {
+          "id": "nose_01",
+          "index": 0,
+          "alpha": "nose_01_alpha.png",
+          "palette_rgb": [
+            0.7754853963851929,
+            0.5445517897605896,
+            0.3825317323207855
+          ]
+        },
+        {
+          "id": "nose_02",
+          "index": 1,
+          "alpha": "nose_02_alpha.png",
+          "palette_rgb": [
+            0.9844477772712708,
+            0.9986847043037415,
+            0.994948148727417
+          ]
+        },
+        {
+          "id": "nose_03",
+          "index": 2,
+          "alpha": "nose_03_alpha.png",
+          "palette_rgb": [
+            0.5833258628845215,
+            0.3964292109012604,
+            0.30972135066986084
+          ]
+        },
+        {
+          "id": "nose_04",
+          "index": 3,
+          "alpha": "nose_04_alpha.png",
+          "palette_rgb": [
+            0.10639830678701401,
+            0.07612011581659317,
+            0.11046893894672394
+          ]
+        },
+        {
+          "id": "nose_05",
+          "index": 4,
+          "alpha": "nose_05_alpha.png",
+          "palette_rgb": [
+            0.38705307245254517,
+            0.2575432062149048,
+            0.23349690437316895
+          ]
+        },
+        {
+          "id": "nose_06",
+          "index": 5,
+          "alpha": "nose_06_alpha.png",
+          "palette_rgb": [
+            0.9603264927864075,
+            0.9852942824363708,
+            0.9356647729873657
+          ]
+        },
+        {
+          "id": "nose_07",
+          "index": 6,
+          "alpha": "nose_07_alpha.png",
+          "palette_rgb": [
+            0.9101518392562866,
+            0.8470287919044495,
+            0.7148364186286926
+          ]
+        },
+        {
+          "id": "nose_08",
+          "index": 7,
+          "alpha": "nose_08_alpha.png",
+          "palette_rgb": [
+            0.7337648868560791,
+            0.485012412071228,
+            0.3464895188808441
+          ]
+        },
+        {
+          "id": "nose_09",
+          "index": 8,
+          "alpha": "nose_09_alpha.png",
+          "palette_rgb": [
+            0.2678542733192444,
+            0.1718747764825821,
+            0.17386050522327423
+          ]
+        },
+        {
+          "id": "nose_10",
+          "index": 9,
+          "alpha": "nose_10_alpha.png",
+          "palette_rgb": [
+            0.4652140736579895,
+            0.29274359345436096,
+            0.24820663034915924
+          ]
+        },
+        {
+          "id": "nose_11",
+          "index": 10,
+          "alpha": "nose_11_alpha.png",
+          "palette_rgb": [
+            0.2627880275249481,
+            0.15502122044563293,
+            0.17305755615234375
+          ]
+        },
+        {
+          "id": "nose_12",
+          "index": 11,
+          "alpha": "nose_12_alpha.png",
+          "palette_rgb": [
+            0.7575865387916565,
+            0.6173148155212402,
+            0.49427905678749084
+          ]
+        }
+      ]
+    },
+    {
+      "id": "perioral",
+      "bare_proportion": 0.699999988079071,
+      "full_replay": "perioral_full.png",
+      "components": [
+        {
+          "id": "perioral_01",
+          "index": 0,
+          "alpha": "perioral_01_alpha.png",
+          "palette_rgb": [
+            0.6280731558799744,
+            0.48161381483078003,
+            0.4072984457015991
+          ]
+        },
+        {
+          "id": "perioral_02",
+          "index": 1,
+          "alpha": "perioral_02_alpha.png",
+          "palette_rgb": [
+            0.9314819574356079,
+            0.862453043460846,
+            0.7616239190101624
+          ]
+        },
+        {
+          "id": "perioral_03",
+          "index": 2,
+          "alpha": "perioral_03_alpha.png",
+          "palette_rgb": [
+            0.2680399417877197,
+            -0.13285355269908905,
+            0.04312383010983467
+          ]
+        },
+        {
+          "id": "perioral_04",
+          "index": 3,
+          "alpha": "perioral_04_alpha.png",
+          "palette_rgb": [
+            0.30739179253578186,
+            0.2035033255815506,
+            0.2014058232307434
+          ]
+        },
+        {
+          "id": "perioral_05",
+          "index": 4,
+          "alpha": "perioral_05_alpha.png",
+          "palette_rgb": [
+            0.38845303654670715,
+            0.24971279501914978,
+            0.22955553233623505
+          ]
+        }
+      ]
+    },
+    {
+      "id": "left_brow",
+      "bare_proportion": 0.699999988079071,
+      "full_replay": "left_brow_full.png",
+      "components": [
+        {
+          "id": "left_brow_01",
+          "index": 0,
+          "alpha": "left_brow_01_alpha.png",
+          "palette_rgb": [
+            0.6244776248931885,
+            0.5054230690002441,
+            0.4126841127872467
+          ]
+        },
+        {
+          "id": "left_brow_02",
+          "index": 1,
+          "alpha": "left_brow_02_alpha.png",
+          "palette_rgb": [
+            0.8512737154960632,
+            0.7240155935287476,
+            0.5765631198883057
+          ]
+        },
+        {
+          "id": "left_brow_03",
+          "index": 2,
+          "alpha": "left_brow_03_alpha.png",
+          "palette_rgb": [
+            0.1476026475429535,
+            0.1324034184217453,
+            0.1718163788318634
+          ]
+        },
+        {
+          "id": "left_brow_04",
+          "index": 3,
+          "alpha": "left_brow_04_alpha.png",
+          "palette_rgb": [
+            -0.06422059237957001,
+            -0.04230806604027748,
+            0.029785428196191788
+          ]
+        },
+        {
+          "id": "left_brow_05",
+          "index": 4,
+          "alpha": "left_brow_05_alpha.png",
+          "palette_rgb": [
+            0.3509497046470642,
+            0.2812318801879883,
+            0.27774202823638916
+          ]
+        }
+      ]
+    },
+    {
+      "id": "right_brow",
+      "bare_proportion": 0.699999988079071,
+      "full_replay": "right_brow_full.png",
+      "components": [
+        {
+          "id": "right_brow_01",
+          "index": 0,
+          "alpha": "right_brow_01_alpha.png",
+          "palette_rgb": [
+            0.5934461951255798,
+            0.45295271277427673,
+            0.3547258675098419
+          ]
+        },
+        {
+          "id": "right_brow_02",
+          "index": 1,
+          "alpha": "right_brow_02_alpha.png",
+          "palette_rgb": [
+            0.9413624405860901,
+            0.7800237536430359,
+            0.6175696849822998
+          ]
+        },
+        {
+          "id": "right_brow_03",
+          "index": 2,
+          "alpha": "right_brow_03_alpha.png",
+          "palette_rgb": [
+            0.19172854721546173,
+            0.13092991709709167,
+            0.1308867186307907
+          ]
+        },
+        {
+          "id": "right_brow_04",
+          "index": 3,
+          "alpha": "right_brow_04_alpha.png",
+          "palette_rgb": [
+            -0.14103767275810242,
+            -0.09616594761610031,
+            0.0035867630504071712
+          ]
+        },
+        {
+          "id": "right_brow_05",
+          "index": 4,
+          "alpha": "right_brow_05_alpha.png",
+          "palette_rgb": [
+            -0.03807242959737778,
+            -0.03641780838370323,
+            0.019349506124854088
+          ]
+        }
+      ]
+    },
+    {
+      "id": "left_eye",
+      "bare_proportion": 0.699999988079071,
+      "full_replay": "left_eye_full.png",
+      "components": [
+        {
+          "id": "left_eye_01",
+          "index": 0,
+          "alpha": "left_eye_01_alpha.png",
+          "palette_rgb": [
+            0.39762037992477417,
+            0.3065304458141327,
+            0.3073129951953888
+          ]
+        },
+        {
+          "id": "left_eye_02",
+          "index": 1,
+          "alpha": "left_eye_02_alpha.png",
+          "palette_rgb": [
+            0.007703075651079416,
+            -0.008256704546511173,
+            0.06463745981454849
+          ]
+        },
+        {
+          "id": "left_eye_03",
+          "index": 2,
+          "alpha": "left_eye_03_alpha.png",
+          "palette_rgb": [
+            -0.39331552386283875,
+            -0.24726057052612305,
+            -0.10211006551980972
+          ]
+        },
+        {
+          "id": "left_eye_04",
+          "index": 3,
+          "alpha": "left_eye_04_alpha.png",
+          "palette_rgb": [
+            0.31800803542137146,
+            0.2787153422832489,
+            0.30090174078941345
+          ]
+        },
+        {
+          "id": "left_eye_05",
+          "index": 4,
+          "alpha": "left_eye_05_alpha.png",
+          "palette_rgb": [
+            -0.22811058163642883,
+            -0.15354791283607483,
+            -0.038156770169734955
+          ]
+        },
+        {
+          "id": "left_eye_06",
+          "index": 5,
+          "alpha": "left_eye_06_alpha.png",
+          "palette_rgb": [
+            -0.5518182516098022,
+            -0.358498752117157,
+            -0.17552664875984192
+          ]
+        },
+        {
+          "id": "left_eye_07",
+          "index": 6,
+          "alpha": "left_eye_07_alpha.png",
+          "palette_rgb": [
+            -0.6782114505767822,
+            -0.47352463006973267,
+            -0.24958659708499908
+          ]
+        },
+        {
+          "id": "left_eye_08",
+          "index": 7,
+          "alpha": "left_eye_08_alpha.png",
+          "palette_rgb": [
+            -0.3189617693424225,
+            -0.1499873697757721,
+            -0.014745654538273811
+          ]
+        },
+        {
+          "id": "left_eye_09",
+          "index": 8,
+          "alpha": "left_eye_09_alpha.png",
+          "palette_rgb": [
+            -0.05114208161830902,
+            -0.01935952715575695,
+            0.08309082686901093
+          ]
+        },
+        {
+          "id": "left_eye_10",
+          "index": 9,
+          "alpha": "left_eye_10_alpha.png",
+          "palette_rgb": [
+            0.21993249654769897,
+            0.15950502455234528,
+            0.18793392181396484
+          ]
+        },
+        {
+          "id": "left_eye_11",
+          "index": 10,
+          "alpha": "left_eye_11_alpha.png",
+          "palette_rgb": [
+            -0.8609979152679443,
+            -0.6010187268257141,
+            -0.340361088514328
+          ]
+        },
+        {
+          "id": "left_eye_12",
+          "index": 11,
+          "alpha": "left_eye_12_alpha.png",
+          "palette_rgb": [
+            0.13354994356632233,
+            0.0901150032877922,
+            0.13499659299850464
+          ]
+        },
+        {
+          "id": "left_eye_13",
+          "index": 12,
+          "alpha": "left_eye_13_alpha.png",
+          "palette_rgb": [
+            -0.30444470047950745,
+            -0.20714446902275085,
+            -0.06974678486585617
+          ]
+        },
+        {
+          "id": "left_eye_14",
+          "index": 13,
+          "alpha": "left_eye_14_alpha.png",
+          "palette_rgb": [
+            0.22332645952701569,
+            0.204002246260643,
+            0.2708755135536194
+          ]
+        },
+        {
+          "id": "left_eye_15",
+          "index": 14,
+          "alpha": "left_eye_15_alpha.png",
+          "palette_rgb": [
+            -0.4553300738334656,
+            -0.3155228793621063,
+            -0.15049533545970917
+          ]
+        },
+        {
+          "id": "left_eye_16",
+          "index": 15,
+          "alpha": "left_eye_16_alpha.png",
+          "palette_rgb": [
+            -0.12602491676807404,
+            -0.10467983037233353,
+            0.0011545374291017652
+          ]
+        },
+        {
+          "id": "left_eye_17",
+          "index": 16,
+          "alpha": "left_eye_17_alpha.png",
+          "palette_rgb": [
+            0.36902719736099243,
+            0.3387112617492676,
+            0.4567391872406006
+          ]
+        },
+        {
+          "id": "left_eye_18",
+          "index": 17,
+          "alpha": "left_eye_18_alpha.png",
+          "palette_rgb": [
+            -0.1244223415851593,
+            -0.06548865139484406,
+            0.033565640449523926
+          ]
+        },
+        {
+          "id": "left_eye_19",
+          "index": 18,
+          "alpha": "left_eye_19_alpha.png",
+          "palette_rgb": [
+            -0.6740496754646301,
+            -0.4210232198238373,
+            -0.20533592998981476
+          ]
+        },
+        {
+          "id": "left_eye_20",
+          "index": 19,
+          "alpha": "left_eye_20_alpha.png",
+          "palette_rgb": [
+            0.06491640210151672,
+            0.046670105308294296,
+            0.0978771448135376
+          ]
+        }
+      ]
+    },
+    {
+      "id": "right_eye",
+      "bare_proportion": 0.699999988079071,
+      "full_replay": "right_eye_full.png",
+      "components": [
+        {
+          "id": "right_eye_01",
+          "index": 0,
+          "alpha": "right_eye_01_alpha.png",
+          "palette_rgb": [
+            0.35744136571884155,
+            0.23195390403270721,
+            0.24640727043151855
+          ]
+        },
+        {
+          "id": "right_eye_02",
+          "index": 1,
+          "alpha": "right_eye_02_alpha.png",
+          "palette_rgb": [
+            0.049526166170835495,
+            0.02607162669301033,
+            0.06195808947086334
+          ]
+        },
+        {
+          "id": "right_eye_03",
+          "index": 2,
+          "alpha": "right_eye_03_alpha.png",
+          "palette_rgb": [
+            -0.2539098560810089,
+            -0.18066397309303284,
+            -0.056934285908937454
+          ]
+        },
+        {
+          "id": "right_eye_04",
+          "index": 3,
+          "alpha": "right_eye_04_alpha.png",
+          "palette_rgb": [
+            0.12784205377101898,
+            0.1517971307039261,
+            0.21638475358486176
+          ]
+        },
+        {
+          "id": "right_eye_05",
+          "index": 4,
+          "alpha": "right_eye_05_alpha.png",
+          "palette_rgb": [
+            -0.32081180810928345,
+            -0.2222670614719391,
+            -0.08554365485906601
+          ]
+        },
+        {
+          "id": "right_eye_06",
+          "index": 5,
+          "alpha": "right_eye_06_alpha.png",
+          "palette_rgb": [
+            -0.060353152453899384,
+            -0.04593583568930626,
+            0.01627582125365734
+          ]
+        },
+        {
+          "id": "right_eye_07",
+          "index": 6,
+          "alpha": "right_eye_07_alpha.png",
+          "palette_rgb": [
+            0.47528085112571716,
+            0.33344724774360657,
+            0.3448115587234497
+          ]
+        },
+        {
+          "id": "right_eye_08",
+          "index": 7,
+          "alpha": "right_eye_08_alpha.png",
+          "palette_rgb": [
+            -0.6074154376983643,
+            -0.4559864401817322,
+            -0.26010453701019287
+          ]
+        },
+        {
+          "id": "right_eye_09",
+          "index": 8,
+          "alpha": "right_eye_09_alpha.png",
+          "palette_rgb": [
+            -0.23601005971431732,
+            -0.09144184738397598,
+            0.025627965107560158
+          ]
+        },
+        {
+          "id": "right_eye_10",
+          "index": 9,
+          "alpha": "right_eye_10_alpha.png",
+          "palette_rgb": [
+            0.09782267361879349,
+            0.06014932319521904,
+            0.08986261487007141
+          ]
+        },
+        {
+          "id": "right_eye_11",
+          "index": 10,
+          "alpha": "right_eye_11_alpha.png",
+          "palette_rgb": [
+            -0.3966411054134369,
+            -0.19063974916934967,
+            -0.023860227316617966
+          ]
+        },
+        {
+          "id": "right_eye_12",
+          "index": 11,
+          "alpha": "right_eye_12_alpha.png",
+          "palette_rgb": [
+            -0.5060507655143738,
+            -0.341967910528183,
+            -0.15365001559257507
+          ]
+        },
+        {
+          "id": "right_eye_13",
+          "index": 12,
+          "alpha": "right_eye_13_alpha.png",
+          "palette_rgb": [
+            -0.19964514672756195,
+            -0.13386675715446472,
+            -0.016378456726670265
+          ]
+        },
+        {
+          "id": "right_eye_14",
+          "index": 13,
+          "alpha": "right_eye_14_alpha.png",
+          "palette_rgb": [
+            0.001721958047710359,
+            -0.014135858044028282,
+            0.03770630434155464
+          ]
+        },
+        {
+          "id": "right_eye_15",
+          "index": 14,
+          "alpha": "right_eye_15_alpha.png",
+          "palette_rgb": [
+            -0.41911569237709045,
+            -0.2931893765926361,
+            -0.1270870417356491
+          ]
+        },
+        {
+          "id": "right_eye_16",
+          "index": 15,
+          "alpha": "right_eye_16_alpha.png",
+          "palette_rgb": [
+            0.16435953974723816,
+            0.11096688359975815,
+            0.14400331676006317
+          ]
+        },
+        {
+          "id": "right_eye_17",
+          "index": 16,
+          "alpha": "right_eye_17_alpha.png",
+          "palette_rgb": [
+            -0.13417139649391174,
+            -0.06824808567762375,
+            0.025744540616869926
+          ]
+        },
+        {
+          "id": "right_eye_18",
+          "index": 17,
+          "alpha": "right_eye_18_alpha.png",
+          "palette_rgb": [
+            -0.03438202664256096,
+            0.015369323082268238,
+            0.12254398316144943
+          ]
+        },
+        {
+          "id": "right_eye_19",
+          "index": 18,
+          "alpha": "right_eye_19_alpha.png",
+          "palette_rgb": [
+            0.25389063358306885,
+            0.16584503650665283,
+            0.19352731108665466
+          ]
+        },
+        {
+          "id": "right_eye_20",
+          "index": 19,
+          "alpha": "right_eye_20_alpha.png",
+          "palette_rgb": [
+            -0.1143295019865036,
+            -0.10732918977737427,
+            -0.01303861103951931
+          ]
+        }
+      ]
+    },
+    {
+      "id": "left_midface",
+      "bare_proportion": 0.699999988079071,
+      "full_replay": "left_midface_full.png",
+      "components": [
+        {
+          "id": "left_midface_01",
+          "index": 0,
+          "alpha": "left_midface_01_alpha.png",
+          "palette_rgb": [
+            0.7824094891548157,
+            0.6217304468154907,
+            0.5308064818382263
+          ]
+        },
+        {
+          "id": "left_midface_02",
+          "index": 1,
+          "alpha": "left_midface_02_alpha.png",
+          "palette_rgb": [
+            0.6817775368690491,
+            0.5258393883705139,
+            0.4450797736644745
+          ]
+        },
+        {
+          "id": "left_midface_03",
+          "index": 2,
+          "alpha": "left_midface_03_alpha.png",
+          "palette_rgb": [
+            0.560521125793457,
+            0.4162004590034485,
+            0.35883650183677673
+          ]
+        },
+        {
+          "id": "left_midface_04",
+          "index": 3,
+          "alpha": "left_midface_04_alpha.png",
+          "palette_rgb": [
+            0.21199892461299896,
+            0.12542332708835602,
+            0.14705651998519897
+          ]
+        },
+        {
+          "id": "left_midface_05",
+          "index": 4,
+          "alpha": "left_midface_05_alpha.png",
+          "palette_rgb": [
+            0.4315382242202759,
+            0.3055952191352844,
+            0.2820925712585449
+          ]
+        }
+      ]
+    },
+    {
+      "id": "right_midface",
+      "bare_proportion": 0.699999988079071,
+      "full_replay": "right_midface_full.png",
+      "components": [
+        {
+          "id": "right_midface_01",
+          "index": 0,
+          "alpha": "right_midface_01_alpha.png",
+          "palette_rgb": [
+            0.7875796556472778,
+            0.6144610047340393,
+            0.4992544651031494
+          ]
+        },
+        {
+          "id": "right_midface_02",
+          "index": 1,
+          "alpha": "right_midface_02_alpha.png",
+          "palette_rgb": [
+            0.7289398312568665,
+            0.5188643336296082,
+            0.3942486345767975
+          ]
+        },
+        {
+          "id": "right_midface_03",
+          "index": 2,
+          "alpha": "right_midface_03_alpha.png",
+          "palette_rgb": [
+            0.6047372817993164,
+            0.46098792552948,
+            0.4029369056224823
+          ]
+        },
+        {
+          "id": "right_midface_04",
+          "index": 3,
+          "alpha": "right_midface_04_alpha.png",
+          "palette_rgb": [
+            0.3732074201107025,
+            0.23387937247753143,
+            0.21636046469211578
+          ]
+        },
+        {
+          "id": "right_midface_05",
+          "index": 4,
+          "alpha": "right_midface_05_alpha.png",
+          "palette_rgb": [
+            0.8954192996025085,
+            0.7516369819641113,
+            0.6118183135986328
+          ]
+        }
+      ]
+    },
+    {
+      "id": "left_cheek",
+      "bare_proportion": 0.699999988079071,
+      "full_replay": "left_cheek_full.png",
+      "components": [
+        {
+          "id": "left_cheek_01",
+          "index": 0,
+          "alpha": "left_cheek_01_alpha.png",
+          "palette_rgb": [
+            0.7170268297195435,
+            0.6113861799240112,
+            0.5540152192115784
+          ]
+        },
+        {
+          "id": "left_cheek_02",
+          "index": 1,
+          "alpha": "left_cheek_02_alpha.png",
+          "palette_rgb": [
+            0.6545478701591492,
+            0.49020248651504517,
+            0.40586984157562256
+          ]
+        },
+        {
+          "id": "left_cheek_03",
+          "index": 2,
+          "alpha": "left_cheek_03_alpha.png",
+          "palette_rgb": [
+            0.5635550618171692,
+            0.44502124190330505,
+            0.3971962034702301
+          ]
+        },
+        {
+          "id": "left_cheek_04",
+          "index": 3,
+          "alpha": "left_cheek_04_alpha.png",
+          "palette_rgb": [
+            0.40031036734580994,
+            0.2656862139701843,
+            0.2571675181388855
+          ]
+        },
+        {
+          "id": "left_cheek_05",
+          "index": 4,
+          "alpha": "left_cheek_05_alpha.png",
+          "palette_rgb": [
+            0.5072718262672424,
+            0.3743949830532074,
+            0.3483286201953888
+          ]
+        }
+      ]
+    },
+    {
+      "id": "right_cheek",
+      "bare_proportion": 0.699999988079071,
+      "full_replay": "right_cheek_full.png",
+      "components": [
+        {
+          "id": "right_cheek_01",
+          "index": 0,
+          "alpha": "right_cheek_01_alpha.png",
+          "palette_rgb": [
+            0.640842854976654,
+            0.44795966148376465,
+            0.3602648377418518
+          ]
+        },
+        {
+          "id": "right_cheek_02",
+          "index": 1,
+          "alpha": "right_cheek_02_alpha.png",
+          "palette_rgb": [
+            0.16665025055408478,
+            0.09141024202108383,
+            0.10172735154628754
+          ]
+        },
+        {
+          "id": "right_cheek_03",
+          "index": 2,
+          "alpha": "right_cheek_03_alpha.png",
+          "palette_rgb": [
+            0.4405028820037842,
+            0.3065502345561981,
+            0.3022504150867462
+          ]
+        },
+        {
+          "id": "right_cheek_04",
+          "index": 3,
+          "alpha": "right_cheek_04_alpha.png",
+          "palette_rgb": [
+            0.3371528089046478,
+            0.19859729707241058,
+            0.18429064750671387
+          ]
+        },
+        {
+          "id": "right_cheek_05",
+          "index": 4,
+          "alpha": "right_cheek_05_alpha.png",
+          "palette_rgb": [
+            0.6133311986923218,
+            0.48615553975105286,
+            0.4565924108028412
+          ]
+        }
+      ]
+    }
+  ]
+}

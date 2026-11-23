@@ -1,0 +1,19 @@
+{
+  "schema": "gmr-analysis-archive-v0",
+  "observation_artifact": "mt_demo\\samples\\XMY-063\\results\\XMY-063_obs\\B_observation.json",
+  "regions": [
+    "lips",
+    "nose",
+    "perioral",
+    "left_brow",
+    "right_brow",
+    "left_eye",
+    "right_eye",
+    "left_midface",
+    "right_midface",
+    "left_cheek",
+    "right_cheek"
+  ],
+  "global": "global.npz",
+  "policy": "Preserve all numerical GMR results before any product/UI simplification."
+}

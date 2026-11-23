@@ -1,0 +1,7 @@
+{
+  "region": "right_eye",
+  "component_count": 20,
+  "composition": "Porter-Duff replay with ordered_palette, ordered_membership, and bare_proportion from global.npz.",
+  "coordinate_space": "analysis-image pixels; canonical transport is a later, lossless mapping stage.",
+  "final_rmse_on_makeup_pixels": 2.861147
+}

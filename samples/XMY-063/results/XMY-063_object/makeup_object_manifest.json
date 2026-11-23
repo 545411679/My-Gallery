@@ -1,0 +1,1018 @@
+{
+  "schema": "standard-makeup-object-v1",
+  "artifact_role": "Full-fidelity portable GMR result; product controls are intentionally outside this artifact.",
+  "coordinate_contract": "MediaPipe canonical UV (468 topology). A target model needs a canonical-UV correspondence, not the source B image.",
+  "provenance": {
+    "gmr_run": "mt_demo\\samples\\XMY-063\\results\\XMY-063_gmr\\20260920_165626_XMY-063-original",
+    "frozen_b_observation": "mt_demo\\samples\\XMY-063\\results\\XMY-063_obs\\B_observation.json"
+  },
+  "exact_render": {
+    "source_reconstruction_reference": "gmr_final_uv.png is the exact final GMR reconstruction on source B; it is retained for audit, not applied as a portable full-face texture.",
+    "source_final_uv": "gmr_final_uv.png",
+    "source_bare_uv": "base_uv.png",
+    "source_makeup_uv": "source_makeup_uv.png",
+    "final_2d": "gmr_final_2d.png"
+  },
+  "full_analysis": {
+    "gmr_analysis_directory": "mt_demo\\samples\\XMY-063\\results\\XMY-063_gmr\\20260920_165626_XMY-063-original\\gmr_analysis",
+    "policy": "Raw signed D, masks, palettes, and memberships remain in the GMR archive without UI-oriented trimming."
+  },
+  "source_contract": {
+    "schema": "standard-2d-makeup-document-v1",
+    "adapter": "gmr-v0",
+    "policy": "Generic transport iterates registered SpatialField values; it does not inspect GMR field names."
+  },
+  "canonical_transport": {
+    "uv_size": 768,
+    "correspondence": "canonical_transport/uv_to_b_image_correspondence.npz",
+    "method": "single rasterized UV-texel to B-image correspondence map; all fields sample through the same map.",
+    "regions": [
+      {
+        "region": "lips",
+        "archive": "canonical_transport/lips.npz",
+        "component_count": 16
+      },
+      {
+        "region": "nose",
+        "archive": "canonical_transport/nose.npz",
+        "component_count": 12
+      },
+      {
+        "region": "perioral",
+        "archive": "canonical_transport/perioral.npz",
+        "component_count": 5
+      },
+      {
+        "region": "left_brow",
+        "archive": "canonical_transport/left_brow.npz",
+        "component_count": 5
+      },
+      {
+        "region": "right_brow",
+        "archive": "canonical_transport/right_brow.npz",
+        "component_count": 5
+      },
+      {
+        "region": "left_eye",
+        "archive": "canonical_transport/left_eye.npz",
+        "component_count": 20
+      },
+      {
+        "region": "right_eye",
+        "archive": "canonical_transport/right_eye.npz",
+        "component_count": 20
+      },
+      {
+        "region": "left_midface",
+        "archive": "canonical_transport/left_midface.npz",
+        "component_count": 5
+      },
+      {
+        "region": "right_midface",
+        "archive": "canonical_transport/right_midface.npz",
+        "component_count": 5
+      },
+      {
+        "region": "left_cheek",
+        "archive": "canonical_transport/left_cheek.npz",
+        "component_count": 5
+      },
+      {
+        "region": "right_cheek",
+        "archive": "canonical_transport/right_cheek.npz",
+        "component_count": 5
+      }
+    ]
+  },
+  "layers": [
+    {
+      "id": "lips_01",
+      "region": "lips",
+      "component_index": 0,
+      "transport_archive": "canonical_transport/lips.npz",
+      "coverage_preview": "layer_coverage_preview/lips_01_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 0
+    },
+    {
+      "id": "lips_02",
+      "region": "lips",
+      "component_index": 1,
+      "transport_archive": "canonical_transport/lips.npz",
+      "coverage_preview": "layer_coverage_preview/lips_02_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 1
+    },
+    {
+      "id": "lips_03",
+      "region": "lips",
+      "component_index": 2,
+      "transport_archive": "canonical_transport/lips.npz",
+      "coverage_preview": "layer_coverage_preview/lips_03_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 2
+    },
+    {
+      "id": "lips_04",
+      "region": "lips",
+      "component_index": 3,
+      "transport_archive": "canonical_transport/lips.npz",
+      "coverage_preview": "layer_coverage_preview/lips_04_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 3
+    },
+    {
+      "id": "lips_05",
+      "region": "lips",
+      "component_index": 4,
+      "transport_archive": "canonical_transport/lips.npz",
+      "coverage_preview": "layer_coverage_preview/lips_05_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 4
+    },
+    {
+      "id": "lips_06",
+      "region": "lips",
+      "component_index": 5,
+      "transport_archive": "canonical_transport/lips.npz",
+      "coverage_preview": "layer_coverage_preview/lips_06_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 5
+    },
+    {
+      "id": "lips_07",
+      "region": "lips",
+      "component_index": 6,
+      "transport_archive": "canonical_transport/lips.npz",
+      "coverage_preview": "layer_coverage_preview/lips_07_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 6
+    },
+    {
+      "id": "lips_08",
+      "region": "lips",
+      "component_index": 7,
+      "transport_archive": "canonical_transport/lips.npz",
+      "coverage_preview": "layer_coverage_preview/lips_08_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 7
+    },
+    {
+      "id": "lips_09",
+      "region": "lips",
+      "component_index": 8,
+      "transport_archive": "canonical_transport/lips.npz",
+      "coverage_preview": "layer_coverage_preview/lips_09_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 8
+    },
+    {
+      "id": "lips_10",
+      "region": "lips",
+      "component_index": 9,
+      "transport_archive": "canonical_transport/lips.npz",
+      "coverage_preview": "layer_coverage_preview/lips_10_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 9
+    },
+    {
+      "id": "lips_11",
+      "region": "lips",
+      "component_index": 10,
+      "transport_archive": "canonical_transport/lips.npz",
+      "coverage_preview": "layer_coverage_preview/lips_11_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 10
+    },
+    {
+      "id": "lips_12",
+      "region": "lips",
+      "component_index": 11,
+      "transport_archive": "canonical_transport/lips.npz",
+      "coverage_preview": "layer_coverage_preview/lips_12_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 11
+    },
+    {
+      "id": "lips_13",
+      "region": "lips",
+      "component_index": 12,
+      "transport_archive": "canonical_transport/lips.npz",
+      "coverage_preview": "layer_coverage_preview/lips_13_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 12
+    },
+    {
+      "id": "lips_14",
+      "region": "lips",
+      "component_index": 13,
+      "transport_archive": "canonical_transport/lips.npz",
+      "coverage_preview": "layer_coverage_preview/lips_14_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 13
+    },
+    {
+      "id": "lips_15",
+      "region": "lips",
+      "component_index": 14,
+      "transport_archive": "canonical_transport/lips.npz",
+      "coverage_preview": "layer_coverage_preview/lips_15_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 14
+    },
+    {
+      "id": "lips_16",
+      "region": "lips",
+      "component_index": 15,
+      "transport_archive": "canonical_transport/lips.npz",
+      "coverage_preview": "layer_coverage_preview/lips_16_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 15
+    },
+    {
+      "id": "nose_01",
+      "region": "nose",
+      "component_index": 0,
+      "transport_archive": "canonical_transport/nose.npz",
+      "coverage_preview": "layer_coverage_preview/nose_01_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 0
+    },
+    {
+      "id": "nose_02",
+      "region": "nose",
+      "component_index": 1,
+      "transport_archive": "canonical_transport/nose.npz",
+      "coverage_preview": "layer_coverage_preview/nose_02_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 1
+    },
+    {
+      "id": "nose_03",
+      "region": "nose",
+      "component_index": 2,
+      "transport_archive": "canonical_transport/nose.npz",
+      "coverage_preview": "layer_coverage_preview/nose_03_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 2
+    },
+    {
+      "id": "nose_04",
+      "region": "nose",
+      "component_index": 3,
+      "transport_archive": "canonical_transport/nose.npz",
+      "coverage_preview": "layer_coverage_preview/nose_04_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 3
+    },
+    {
+      "id": "nose_05",
+      "region": "nose",
+      "component_index": 4,
+      "transport_archive": "canonical_transport/nose.npz",
+      "coverage_preview": "layer_coverage_preview/nose_05_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 4
+    },
+    {
+      "id": "nose_06",
+      "region": "nose",
+      "component_index": 5,
+      "transport_archive": "canonical_transport/nose.npz",
+      "coverage_preview": "layer_coverage_preview/nose_06_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 5
+    },
+    {
+      "id": "nose_07",
+      "region": "nose",
+      "component_index": 6,
+      "transport_archive": "canonical_transport/nose.npz",
+      "coverage_preview": "layer_coverage_preview/nose_07_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 6
+    },
+    {
+      "id": "nose_08",
+      "region": "nose",
+      "component_index": 7,
+      "transport_archive": "canonical_transport/nose.npz",
+      "coverage_preview": "layer_coverage_preview/nose_08_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 7
+    },
+    {
+      "id": "nose_09",
+      "region": "nose",
+      "component_index": 8,
+      "transport_archive": "canonical_transport/nose.npz",
+      "coverage_preview": "layer_coverage_preview/nose_09_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 8
+    },
+    {
+      "id": "nose_10",
+      "region": "nose",
+      "component_index": 9,
+      "transport_archive": "canonical_transport/nose.npz",
+      "coverage_preview": "layer_coverage_preview/nose_10_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 9
+    },
+    {
+      "id": "nose_11",
+      "region": "nose",
+      "component_index": 10,
+      "transport_archive": "canonical_transport/nose.npz",
+      "coverage_preview": "layer_coverage_preview/nose_11_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 10
+    },
+    {
+      "id": "nose_12",
+      "region": "nose",
+      "component_index": 11,
+      "transport_archive": "canonical_transport/nose.npz",
+      "coverage_preview": "layer_coverage_preview/nose_12_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 11
+    },
+    {
+      "id": "perioral_01",
+      "region": "perioral",
+      "component_index": 0,
+      "transport_archive": "canonical_transport/perioral.npz",
+      "coverage_preview": "layer_coverage_preview/perioral_01_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 0
+    },
+    {
+      "id": "perioral_02",
+      "region": "perioral",
+      "component_index": 1,
+      "transport_archive": "canonical_transport/perioral.npz",
+      "coverage_preview": "layer_coverage_preview/perioral_02_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 1
+    },
+    {
+      "id": "perioral_03",
+      "region": "perioral",
+      "component_index": 2,
+      "transport_archive": "canonical_transport/perioral.npz",
+      "coverage_preview": "layer_coverage_preview/perioral_03_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 2
+    },
+    {
+      "id": "perioral_04",
+      "region": "perioral",
+      "component_index": 3,
+      "transport_archive": "canonical_transport/perioral.npz",
+      "coverage_preview": "layer_coverage_preview/perioral_04_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 3
+    },
+    {
+      "id": "perioral_05",
+      "region": "perioral",
+      "component_index": 4,
+      "transport_archive": "canonical_transport/perioral.npz",
+      "coverage_preview": "layer_coverage_preview/perioral_05_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 4
+    },
+    {
+      "id": "left_brow_01",
+      "region": "left_brow",
+      "component_index": 0,
+      "transport_archive": "canonical_transport/left_brow.npz",
+      "coverage_preview": "layer_coverage_preview/left_brow_01_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 0
+    },
+    {
+      "id": "left_brow_02",
+      "region": "left_brow",
+      "component_index": 1,
+      "transport_archive": "canonical_transport/left_brow.npz",
+      "coverage_preview": "layer_coverage_preview/left_brow_02_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 1
+    },
+    {
+      "id": "left_brow_03",
+      "region": "left_brow",
+      "component_index": 2,
+      "transport_archive": "canonical_transport/left_brow.npz",
+      "coverage_preview": "layer_coverage_preview/left_brow_03_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 2
+    },
+    {
+      "id": "left_brow_04",
+      "region": "left_brow",
+      "component_index": 3,
+      "transport_archive": "canonical_transport/left_brow.npz",
+      "coverage_preview": "layer_coverage_preview/left_brow_04_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 3
+    },
+    {
+      "id": "left_brow_05",
+      "region": "left_brow",
+      "component_index": 4,
+      "transport_archive": "canonical_transport/left_brow.npz",
+      "coverage_preview": "layer_coverage_preview/left_brow_05_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 4
+    },
+    {
+      "id": "right_brow_01",
+      "region": "right_brow",
+      "component_index": 0,
+      "transport_archive": "canonical_transport/right_brow.npz",
+      "coverage_preview": "layer_coverage_preview/right_brow_01_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 0
+    },
+    {
+      "id": "right_brow_02",
+      "region": "right_brow",
+      "component_index": 1,
+      "transport_archive": "canonical_transport/right_brow.npz",
+      "coverage_preview": "layer_coverage_preview/right_brow_02_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 1
+    },
+    {
+      "id": "right_brow_03",
+      "region": "right_brow",
+      "component_index": 2,
+      "transport_archive": "canonical_transport/right_brow.npz",
+      "coverage_preview": "layer_coverage_preview/right_brow_03_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 2
+    },
+    {
+      "id": "right_brow_04",
+      "region": "right_brow",
+      "component_index": 3,
+      "transport_archive": "canonical_transport/right_brow.npz",
+      "coverage_preview": "layer_coverage_preview/right_brow_04_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 3
+    },
+    {
+      "id": "right_brow_05",
+      "region": "right_brow",
+      "component_index": 4,
+      "transport_archive": "canonical_transport/right_brow.npz",
+      "coverage_preview": "layer_coverage_preview/right_brow_05_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 4
+    },
+    {
+      "id": "left_eye_01",
+      "region": "left_eye",
+      "component_index": 0,
+      "transport_archive": "canonical_transport/left_eye.npz",
+      "coverage_preview": "layer_coverage_preview/left_eye_01_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 0
+    },
+    {
+      "id": "left_eye_02",
+      "region": "left_eye",
+      "component_index": 1,
+      "transport_archive": "canonical_transport/left_eye.npz",
+      "coverage_preview": "layer_coverage_preview/left_eye_02_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 1
+    },
+    {
+      "id": "left_eye_03",
+      "region": "left_eye",
+      "component_index": 2,
+      "transport_archive": "canonical_transport/left_eye.npz",
+      "coverage_preview": "layer_coverage_preview/left_eye_03_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 2
+    },
+    {
+      "id": "left_eye_04",
+      "region": "left_eye",
+      "component_index": 3,
+      "transport_archive": "canonical_transport/left_eye.npz",
+      "coverage_preview": "layer_coverage_preview/left_eye_04_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 3
+    },
+    {
+      "id": "left_eye_05",
+      "region": "left_eye",
+      "component_index": 4,
+      "transport_archive": "canonical_transport/left_eye.npz",
+      "coverage_preview": "layer_coverage_preview/left_eye_05_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 4
+    },
+    {
+      "id": "left_eye_06",
+      "region": "left_eye",
+      "component_index": 5,
+      "transport_archive": "canonical_transport/left_eye.npz",
+      "coverage_preview": "layer_coverage_preview/left_eye_06_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 5
+    },
+    {
+      "id": "left_eye_07",
+      "region": "left_eye",
+      "component_index": 6,
+      "transport_archive": "canonical_transport/left_eye.npz",
+      "coverage_preview": "layer_coverage_preview/left_eye_07_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 6
+    },
+    {
+      "id": "left_eye_08",
+      "region": "left_eye",
+      "component_index": 7,
+      "transport_archive": "canonical_transport/left_eye.npz",
+      "coverage_preview": "layer_coverage_preview/left_eye_08_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 7
+    },
+    {
+      "id": "left_eye_09",
+      "region": "left_eye",
+      "component_index": 8,
+      "transport_archive": "canonical_transport/left_eye.npz",
+      "coverage_preview": "layer_coverage_preview/left_eye_09_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 8
+    },
+    {
+      "id": "left_eye_10",
+      "region": "left_eye",
+      "component_index": 9,
+      "transport_archive": "canonical_transport/left_eye.npz",
+      "coverage_preview": "layer_coverage_preview/left_eye_10_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 9
+    },
+    {
+      "id": "left_eye_11",
+      "region": "left_eye",
+      "component_index": 10,
+      "transport_archive": "canonical_transport/left_eye.npz",
+      "coverage_preview": "layer_coverage_preview/left_eye_11_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 10
+    },
+    {
+      "id": "left_eye_12",
+      "region": "left_eye",
+      "component_index": 11,
+      "transport_archive": "canonical_transport/left_eye.npz",
+      "coverage_preview": "layer_coverage_preview/left_eye_12_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 11
+    },
+    {
+      "id": "left_eye_13",
+      "region": "left_eye",
+      "component_index": 12,
+      "transport_archive": "canonical_transport/left_eye.npz",
+      "coverage_preview": "layer_coverage_preview/left_eye_13_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 12
+    },
+    {
+      "id": "left_eye_14",
+      "region": "left_eye",
+      "component_index": 13,
+      "transport_archive": "canonical_transport/left_eye.npz",
+      "coverage_preview": "layer_coverage_preview/left_eye_14_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 13
+    },
+    {
+      "id": "left_eye_15",
+      "region": "left_eye",
+      "component_index": 14,
+      "transport_archive": "canonical_transport/left_eye.npz",
+      "coverage_preview": "layer_coverage_preview/left_eye_15_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 14
+    },
+    {
+      "id": "left_eye_16",
+      "region": "left_eye",
+      "component_index": 15,
+      "transport_archive": "canonical_transport/left_eye.npz",
+      "coverage_preview": "layer_coverage_preview/left_eye_16_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 15
+    },
+    {
+      "id": "left_eye_17",
+      "region": "left_eye",
+      "component_index": 16,
+      "transport_archive": "canonical_transport/left_eye.npz",
+      "coverage_preview": "layer_coverage_preview/left_eye_17_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 16
+    },
+    {
+      "id": "left_eye_18",
+      "region": "left_eye",
+      "component_index": 17,
+      "transport_archive": "canonical_transport/left_eye.npz",
+      "coverage_preview": "layer_coverage_preview/left_eye_18_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 17
+    },
+    {
+      "id": "left_eye_19",
+      "region": "left_eye",
+      "component_index": 18,
+      "transport_archive": "canonical_transport/left_eye.npz",
+      "coverage_preview": "layer_coverage_preview/left_eye_19_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 18
+    },
+    {
+      "id": "left_eye_20",
+      "region": "left_eye",
+      "component_index": 19,
+      "transport_archive": "canonical_transport/left_eye.npz",
+      "coverage_preview": "layer_coverage_preview/left_eye_20_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 19
+    },
+    {
+      "id": "right_eye_01",
+      "region": "right_eye",
+      "component_index": 0,
+      "transport_archive": "canonical_transport/right_eye.npz",
+      "coverage_preview": "layer_coverage_preview/right_eye_01_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 0
+    },
+    {
+      "id": "right_eye_02",
+      "region": "right_eye",
+      "component_index": 1,
+      "transport_archive": "canonical_transport/right_eye.npz",
+      "coverage_preview": "layer_coverage_preview/right_eye_02_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 1
+    },
+    {
+      "id": "right_eye_03",
+      "region": "right_eye",
+      "component_index": 2,
+      "transport_archive": "canonical_transport/right_eye.npz",
+      "coverage_preview": "layer_coverage_preview/right_eye_03_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 2
+    },
+    {
+      "id": "right_eye_04",
+      "region": "right_eye",
+      "component_index": 3,
+      "transport_archive": "canonical_transport/right_eye.npz",
+      "coverage_preview": "layer_coverage_preview/right_eye_04_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 3
+    },
+    {
+      "id": "right_eye_05",
+      "region": "right_eye",
+      "component_index": 4,
+      "transport_archive": "canonical_transport/right_eye.npz",
+      "coverage_preview": "layer_coverage_preview/right_eye_05_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 4
+    },
+    {
+      "id": "right_eye_06",
+      "region": "right_eye",
+      "component_index": 5,
+      "transport_archive": "canonical_transport/right_eye.npz",
+      "coverage_preview": "layer_coverage_preview/right_eye_06_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 5
+    },
+    {
+      "id": "right_eye_07",
+      "region": "right_eye",
+      "component_index": 6,
+      "transport_archive": "canonical_transport/right_eye.npz",
+      "coverage_preview": "layer_coverage_preview/right_eye_07_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 6
+    },
+    {
+      "id": "right_eye_08",
+      "region": "right_eye",
+      "component_index": 7,
+      "transport_archive": "canonical_transport/right_eye.npz",
+      "coverage_preview": "layer_coverage_preview/right_eye_08_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 7
+    },
+    {
+      "id": "right_eye_09",
+      "region": "right_eye",
+      "component_index": 8,
+      "transport_archive": "canonical_transport/right_eye.npz",
+      "coverage_preview": "layer_coverage_preview/right_eye_09_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 8
+    },
+    {
+      "id": "right_eye_10",
+      "region": "right_eye",
+      "component_index": 9,
+      "transport_archive": "canonical_transport/right_eye.npz",
+      "coverage_preview": "layer_coverage_preview/right_eye_10_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 9
+    },
+    {
+      "id": "right_eye_11",
+      "region": "right_eye",
+      "component_index": 10,
+      "transport_archive": "canonical_transport/right_eye.npz",
+      "coverage_preview": "layer_coverage_preview/right_eye_11_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 10
+    },
+    {
+      "id": "right_eye_12",
+      "region": "right_eye",
+      "component_index": 11,
+      "transport_archive": "canonical_transport/right_eye.npz",
+      "coverage_preview": "layer_coverage_preview/right_eye_12_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 11
+    },
+    {
+      "id": "right_eye_13",
+      "region": "right_eye",
+      "component_index": 12,
+      "transport_archive": "canonical_transport/right_eye.npz",
+      "coverage_preview": "layer_coverage_preview/right_eye_13_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 12
+    },
+    {
+      "id": "right_eye_14",
+      "region": "right_eye",
+      "component_index": 13,
+      "transport_archive": "canonical_transport/right_eye.npz",
+      "coverage_preview": "layer_coverage_preview/right_eye_14_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 13
+    },
+    {
+      "id": "right_eye_15",
+      "region": "right_eye",
+      "component_index": 14,
+      "transport_archive": "canonical_transport/right_eye.npz",
+      "coverage_preview": "layer_coverage_preview/right_eye_15_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 14
+    },
+    {
+      "id": "right_eye_16",
+      "region": "right_eye",
+      "component_index": 15,
+      "transport_archive": "canonical_transport/right_eye.npz",
+      "coverage_preview": "layer_coverage_preview/right_eye_16_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 15
+    },
+    {
+      "id": "right_eye_17",
+      "region": "right_eye",
+      "component_index": 16,
+      "transport_archive": "canonical_transport/right_eye.npz",
+      "coverage_preview": "layer_coverage_preview/right_eye_17_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 16
+    },
+    {
+      "id": "right_eye_18",
+      "region": "right_eye",
+      "component_index": 17,
+      "transport_archive": "canonical_transport/right_eye.npz",
+      "coverage_preview": "layer_coverage_preview/right_eye_18_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 17
+    },
+    {
+      "id": "right_eye_19",
+      "region": "right_eye",
+      "component_index": 18,
+      "transport_archive": "canonical_transport/right_eye.npz",
+      "coverage_preview": "layer_coverage_preview/right_eye_19_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 18
+    },
+    {
+      "id": "right_eye_20",
+      "region": "right_eye",
+      "component_index": 19,
+      "transport_archive": "canonical_transport/right_eye.npz",
+      "coverage_preview": "layer_coverage_preview/right_eye_20_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 19
+    },
+    {
+      "id": "left_midface_01",
+      "region": "left_midface",
+      "component_index": 0,
+      "transport_archive": "canonical_transport/left_midface.npz",
+      "coverage_preview": "layer_coverage_preview/left_midface_01_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 0
+    },
+    {
+      "id": "left_midface_02",
+      "region": "left_midface",
+      "component_index": 1,
+      "transport_archive": "canonical_transport/left_midface.npz",
+      "coverage_preview": "layer_coverage_preview/left_midface_02_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 1
+    },
+    {
+      "id": "left_midface_03",
+      "region": "left_midface",
+      "component_index": 2,
+      "transport_archive": "canonical_transport/left_midface.npz",
+      "coverage_preview": "layer_coverage_preview/left_midface_03_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 2
+    },
+    {
+      "id": "left_midface_04",
+      "region": "left_midface",
+      "component_index": 3,
+      "transport_archive": "canonical_transport/left_midface.npz",
+      "coverage_preview": "layer_coverage_preview/left_midface_04_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 3
+    },
+    {
+      "id": "left_midface_05",
+      "region": "left_midface",
+      "component_index": 4,
+      "transport_archive": "canonical_transport/left_midface.npz",
+      "coverage_preview": "layer_coverage_preview/left_midface_05_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 4
+    },
+    {
+      "id": "right_midface_01",
+      "region": "right_midface",
+      "component_index": 0,
+      "transport_archive": "canonical_transport/right_midface.npz",
+      "coverage_preview": "layer_coverage_preview/right_midface_01_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 0
+    },
+    {
+      "id": "right_midface_02",
+      "region": "right_midface",
+      "component_index": 1,
+      "transport_archive": "canonical_transport/right_midface.npz",
+      "coverage_preview": "layer_coverage_preview/right_midface_02_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 1
+    },
+    {
+      "id": "right_midface_03",
+      "region": "right_midface",
+      "component_index": 2,
+      "transport_archive": "canonical_transport/right_midface.npz",
+      "coverage_preview": "layer_coverage_preview/right_midface_03_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 2
+    },
+    {
+      "id": "right_midface_04",
+      "region": "right_midface",
+      "component_index": 3,
+      "transport_archive": "canonical_transport/right_midface.npz",
+      "coverage_preview": "layer_coverage_preview/right_midface_04_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 3
+    },
+    {
+      "id": "right_midface_05",
+      "region": "right_midface",
+      "component_index": 4,
+      "transport_archive": "canonical_transport/right_midface.npz",
+      "coverage_preview": "layer_coverage_preview/right_midface_05_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 4
+    },
+    {
+      "id": "left_cheek_01",
+      "region": "left_cheek",
+      "component_index": 0,
+      "transport_archive": "canonical_transport/left_cheek.npz",
+      "coverage_preview": "layer_coverage_preview/left_cheek_01_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 0
+    },
+    {
+      "id": "left_cheek_02",
+      "region": "left_cheek",
+      "component_index": 1,
+      "transport_archive": "canonical_transport/left_cheek.npz",
+      "coverage_preview": "layer_coverage_preview/left_cheek_02_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 1
+    },
+    {
+      "id": "left_cheek_03",
+      "region": "left_cheek",
+      "component_index": 2,
+      "transport_archive": "canonical_transport/left_cheek.npz",
+      "coverage_preview": "layer_coverage_preview/left_cheek_03_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 2
+    },
+    {
+      "id": "left_cheek_04",
+      "region": "left_cheek",
+      "component_index": 3,
+      "transport_archive": "canonical_transport/left_cheek.npz",
+      "coverage_preview": "layer_coverage_preview/left_cheek_04_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 3
+    },
+    {
+      "id": "left_cheek_05",
+      "region": "left_cheek",
+      "component_index": 4,
+      "transport_archive": "canonical_transport/left_cheek.npz",
+      "coverage_preview": "layer_coverage_preview/left_cheek_05_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 4
+    },
+    {
+      "id": "right_cheek_01",
+      "region": "right_cheek",
+      "component_index": 0,
+      "transport_archive": "canonical_transport/right_cheek.npz",
+      "coverage_preview": "layer_coverage_preview/right_cheek_01_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 0
+    },
+    {
+      "id": "right_cheek_02",
+      "region": "right_cheek",
+      "component_index": 1,
+      "transport_archive": "canonical_transport/right_cheek.npz",
+      "coverage_preview": "layer_coverage_preview/right_cheek_02_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 1
+    },
+    {
+      "id": "right_cheek_03",
+      "region": "right_cheek",
+      "component_index": 2,
+      "transport_archive": "canonical_transport/right_cheek.npz",
+      "coverage_preview": "layer_coverage_preview/right_cheek_03_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 2
+    },
+    {
+      "id": "right_cheek_04",
+      "region": "right_cheek",
+      "component_index": 3,
+      "transport_archive": "canonical_transport/right_cheek.npz",
+      "coverage_preview": "layer_coverage_preview/right_cheek_04_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 3
+    },
+    {
+      "id": "right_cheek_05",
+      "region": "right_cheek",
+      "component_index": 4,
+      "transport_archive": "canonical_transport/right_cheek.npz",
+      "coverage_preview": "layer_coverage_preview/right_cheek_05_alpha.png",
+      "palette_kind": "raw signed GMR palette in transport_archive; do not infer cosmetic semantics from a GMM component alone.",
+      "composition_order": 4
+    }
+  ],
+  "composition": "Per-region Porter-Duff replay using ordered_palette, ordered_membership_uv, and bare_proportion inside each region archive. Regions follow original GMR claimed-mask ordering.",
+  "application_plan": "application_plan.json"
+}

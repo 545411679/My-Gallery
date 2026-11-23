@@ -1,0 +1,29 @@
+{
+  "schema": "gmr-run-v0",
+  "input": {
+    "bare": "mt_demo\\samples\\XMY-063\\inputs\\XMY-063\\B_aligned.png",
+    "makeup": "mt_demo\\XMY-063-original.png",
+    "original_size": [
+      361,
+      361
+    ]
+  },
+  "analysis_size": [
+    361,
+    361
+  ],
+  "observation_artifact": "mt_demo\\samples\\XMY-063\\results\\XMY-063_obs\\B_observation.json",
+  "regions": [
+    "lips",
+    "nose",
+    "perioral",
+    "left_brow",
+    "right_brow",
+    "left_eye",
+    "right_eye",
+    "left_midface",
+    "right_midface",
+    "left_cheek",
+    "right_cheek"
+  ]
+}

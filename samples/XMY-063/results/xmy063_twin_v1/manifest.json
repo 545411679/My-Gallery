@@ -1,0 +1,35 @@
+{
+  "schema": "face-twin-v1-method",
+  "artifact_role": "b-specific-face-twin-v1-method",
+  "provider": "3DDFA-V2-per-image-NN-in-2D",
+  "mesh": "face_twin.obj",
+  "posed_mesh": "face_twin_posed_px.obj",
+  "topology": "mediapipe-468",
+  "source_image": "mt_demo\\samples\\XMY-063\\inputs\\XMY-063\\B_aligned.png",
+  "mediapipe_observation": "mt_demo\\samples\\XMY-063\\results\\XMY-063_obs\\B_observation.json",
+  "identity": "XMY-063",
+  "reconstruction": {
+    "method": "Per-image 2D NN: posed mesh (R+offset+expression) for selection, canonical (neutral) for positions",
+    "canonical_vertices": 38365,
+    "posed_vertices": 38365,
+    "unique_selected": 456,
+    "duplicate_selections": 12
+  },
+  "pixel_distance": {
+    "mean": 0.6432317446783974,
+    "p95": 1.311184713011336,
+    "max": 4.855871103570779
+  },
+  "measurements": {
+    "image_size": [
+      361,
+      361
+    ],
+    "detected_faces": 1,
+    "twin_x_range_bfm": 144017.59375,
+    "twin_y_range_bfm": 168503.796875,
+    "twin_z_range_bfm": 114851.328125
+  },
+  "viewer_scale": 0.0001,
+  "uv_contract": "MediaPipe canonical UV; directly compatible with canonical-UV Makeup Objects."
+}

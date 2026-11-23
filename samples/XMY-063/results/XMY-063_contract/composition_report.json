@@ -1,0 +1,54 @@
+{
+  "schema": "canonical-makeup-composite-v0",
+  "object_schema": "standard-makeup-object-v1",
+  "applied_regions": [
+    {
+      "region": "lips",
+      "component_count": 16
+    },
+    {
+      "region": "nose",
+      "component_count": 12
+    },
+    {
+      "region": "perioral",
+      "component_count": 5
+    },
+    {
+      "region": "left_brow",
+      "component_count": 5
+    },
+    {
+      "region": "right_brow",
+      "component_count": 5
+    },
+    {
+      "region": "left_eye",
+      "component_count": 20
+    },
+    {
+      "region": "right_eye",
+      "component_count": 20
+    },
+    {
+      "region": "left_midface",
+      "component_count": 5
+    },
+    {
+      "region": "right_midface",
+      "component_count": 5
+    },
+    {
+      "region": "left_cheek",
+      "component_count": 5
+    },
+    {
+      "region": "right_cheek",
+      "component_count": 5
+    }
+  ],
+  "component_count": 103,
+  "source_b_free": true,
+  "object_dir": "mt_demo\\samples\\XMY-063\\results\\XMY-063_object",
+  "target_bare_uv": "mt_demo\\samples\\XMY-063\\results\\XMY-063_object\\base_uv.png"
+}

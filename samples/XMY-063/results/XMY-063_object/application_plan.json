@@ -1,0 +1,932 @@
+{
+  "schema": "makeup-application-plan-v1",
+  "coordinate_contract": "MediaPipe canonical UV (468 topology). A target model needs a canonical-UV correspondence, not the source B image.",
+  "replay_mode": "pipeline_q_ordered_prefix",
+  "duration_ms": 6000,
+  "role": "Portable event plan only. It has no target bare face, UV texture, or pre-rendered frame.",
+  "renderer_contract": "For each region, replay the first prefix components while preserving the full ordered alpha suffix in the Porter-Duff denominator.",
+  "events": [
+    {
+      "index": 0,
+      "time_ms": null,
+      "label": "bare",
+      "new_components": [],
+      "region_component_prefixes": {
+        "lips": 0,
+        "nose": 0,
+        "perioral": 0,
+        "left_brow": 0,
+        "right_brow": 0,
+        "left_eye": 0,
+        "right_eye": 0,
+        "left_midface": 0,
+        "right_midface": 0,
+        "left_cheek": 0,
+        "right_cheek": 0
+      }
+    },
+    {
+      "index": 1,
+      "time_ms": 0,
+      "label": "replay 1",
+      "new_components": [
+        "lips_01",
+        "nose_01",
+        "perioral_01",
+        "left_brow_01",
+        "right_brow_01",
+        "left_eye_01",
+        "right_eye_01",
+        "left_midface_01",
+        "right_midface_01",
+        "left_cheek_01",
+        "right_cheek_01"
+      ],
+      "region_component_prefixes": {
+        "lips": 1,
+        "nose": 1,
+        "perioral": 1,
+        "left_brow": 1,
+        "right_brow": 1,
+        "left_eye": 1,
+        "right_eye": 1,
+        "left_midface": 1,
+        "right_midface": 1,
+        "left_cheek": 1,
+        "right_cheek": 1
+      }
+    },
+    {
+      "index": 2,
+      "time_ms": 300,
+      "label": "replay 2",
+      "new_components": [
+        "left_eye_02",
+        "right_eye_02"
+      ],
+      "region_component_prefixes": {
+        "lips": 1,
+        "nose": 1,
+        "perioral": 1,
+        "left_brow": 1,
+        "right_brow": 1,
+        "left_eye": 2,
+        "right_eye": 2,
+        "left_midface": 1,
+        "right_midface": 1,
+        "left_cheek": 1,
+        "right_cheek": 1
+      }
+    },
+    {
+      "index": 3,
+      "time_ms": 375,
+      "label": "replay 3",
+      "new_components": [
+        "lips_02"
+      ],
+      "region_component_prefixes": {
+        "lips": 2,
+        "nose": 1,
+        "perioral": 1,
+        "left_brow": 1,
+        "right_brow": 1,
+        "left_eye": 2,
+        "right_eye": 2,
+        "left_midface": 1,
+        "right_midface": 1,
+        "left_cheek": 1,
+        "right_cheek": 1
+      }
+    },
+    {
+      "index": 4,
+      "time_ms": 500,
+      "label": "replay 4",
+      "new_components": [
+        "nose_02"
+      ],
+      "region_component_prefixes": {
+        "lips": 2,
+        "nose": 2,
+        "perioral": 1,
+        "left_brow": 1,
+        "right_brow": 1,
+        "left_eye": 2,
+        "right_eye": 2,
+        "left_midface": 1,
+        "right_midface": 1,
+        "left_cheek": 1,
+        "right_cheek": 1
+      }
+    },
+    {
+      "index": 5,
+      "time_ms": 600,
+      "label": "replay 5",
+      "new_components": [
+        "left_eye_03",
+        "right_eye_03"
+      ],
+      "region_component_prefixes": {
+        "lips": 2,
+        "nose": 2,
+        "perioral": 1,
+        "left_brow": 1,
+        "right_brow": 1,
+        "left_eye": 3,
+        "right_eye": 3,
+        "left_midface": 1,
+        "right_midface": 1,
+        "left_cheek": 1,
+        "right_cheek": 1
+      }
+    },
+    {
+      "index": 6,
+      "time_ms": 750,
+      "label": "replay 6",
+      "new_components": [
+        "lips_03"
+      ],
+      "region_component_prefixes": {
+        "lips": 3,
+        "nose": 2,
+        "perioral": 1,
+        "left_brow": 1,
+        "right_brow": 1,
+        "left_eye": 3,
+        "right_eye": 3,
+        "left_midface": 1,
+        "right_midface": 1,
+        "left_cheek": 1,
+        "right_cheek": 1
+      }
+    },
+    {
+      "index": 7,
+      "time_ms": 900,
+      "label": "replay 7",
+      "new_components": [
+        "left_eye_04",
+        "right_eye_04"
+      ],
+      "region_component_prefixes": {
+        "lips": 3,
+        "nose": 2,
+        "perioral": 1,
+        "left_brow": 1,
+        "right_brow": 1,
+        "left_eye": 4,
+        "right_eye": 4,
+        "left_midface": 1,
+        "right_midface": 1,
+        "left_cheek": 1,
+        "right_cheek": 1
+      }
+    },
+    {
+      "index": 8,
+      "time_ms": 1000,
+      "label": "replay 8",
+      "new_components": [
+        "nose_03"
+      ],
+      "region_component_prefixes": {
+        "lips": 3,
+        "nose": 3,
+        "perioral": 1,
+        "left_brow": 1,
+        "right_brow": 1,
+        "left_eye": 4,
+        "right_eye": 4,
+        "left_midface": 1,
+        "right_midface": 1,
+        "left_cheek": 1,
+        "right_cheek": 1
+      }
+    },
+    {
+      "index": 9,
+      "time_ms": 1125,
+      "label": "replay 9",
+      "new_components": [
+        "lips_04"
+      ],
+      "region_component_prefixes": {
+        "lips": 4,
+        "nose": 3,
+        "perioral": 1,
+        "left_brow": 1,
+        "right_brow": 1,
+        "left_eye": 4,
+        "right_eye": 4,
+        "left_midface": 1,
+        "right_midface": 1,
+        "left_cheek": 1,
+        "right_cheek": 1
+      }
+    },
+    {
+      "index": 10,
+      "time_ms": 1200,
+      "label": "replay 10",
+      "new_components": [
+        "perioral_02",
+        "left_brow_02",
+        "right_brow_02",
+        "left_eye_05",
+        "right_eye_05",
+        "left_midface_02",
+        "right_midface_02",
+        "left_cheek_02",
+        "right_cheek_02"
+      ],
+      "region_component_prefixes": {
+        "lips": 4,
+        "nose": 3,
+        "perioral": 2,
+        "left_brow": 2,
+        "right_brow": 2,
+        "left_eye": 5,
+        "right_eye": 5,
+        "left_midface": 2,
+        "right_midface": 2,
+        "left_cheek": 2,
+        "right_cheek": 2
+      }
+    },
+    {
+      "index": 11,
+      "time_ms": 1500,
+      "label": "replay 11",
+      "new_components": [
+        "lips_05",
+        "nose_04",
+        "left_eye_06",
+        "right_eye_06"
+      ],
+      "region_component_prefixes": {
+        "lips": 5,
+        "nose": 4,
+        "perioral": 2,
+        "left_brow": 2,
+        "right_brow": 2,
+        "left_eye": 6,
+        "right_eye": 6,
+        "left_midface": 2,
+        "right_midface": 2,
+        "left_cheek": 2,
+        "right_cheek": 2
+      }
+    },
+    {
+      "index": 12,
+      "time_ms": 1800,
+      "label": "replay 12",
+      "new_components": [
+        "left_eye_07",
+        "right_eye_07"
+      ],
+      "region_component_prefixes": {
+        "lips": 5,
+        "nose": 4,
+        "perioral": 2,
+        "left_brow": 2,
+        "right_brow": 2,
+        "left_eye": 7,
+        "right_eye": 7,
+        "left_midface": 2,
+        "right_midface": 2,
+        "left_cheek": 2,
+        "right_cheek": 2
+      }
+    },
+    {
+      "index": 13,
+      "time_ms": 1875,
+      "label": "replay 13",
+      "new_components": [
+        "lips_06"
+      ],
+      "region_component_prefixes": {
+        "lips": 6,
+        "nose": 4,
+        "perioral": 2,
+        "left_brow": 2,
+        "right_brow": 2,
+        "left_eye": 7,
+        "right_eye": 7,
+        "left_midface": 2,
+        "right_midface": 2,
+        "left_cheek": 2,
+        "right_cheek": 2
+      }
+    },
+    {
+      "index": 14,
+      "time_ms": 2000,
+      "label": "replay 14",
+      "new_components": [
+        "nose_05"
+      ],
+      "region_component_prefixes": {
+        "lips": 6,
+        "nose": 5,
+        "perioral": 2,
+        "left_brow": 2,
+        "right_brow": 2,
+        "left_eye": 7,
+        "right_eye": 7,
+        "left_midface": 2,
+        "right_midface": 2,
+        "left_cheek": 2,
+        "right_cheek": 2
+      }
+    },
+    {
+      "index": 15,
+      "time_ms": 2100,
+      "label": "replay 15",
+      "new_components": [
+        "left_eye_08",
+        "right_eye_08"
+      ],
+      "region_component_prefixes": {
+        "lips": 6,
+        "nose": 5,
+        "perioral": 2,
+        "left_brow": 2,
+        "right_brow": 2,
+        "left_eye": 8,
+        "right_eye": 8,
+        "left_midface": 2,
+        "right_midface": 2,
+        "left_cheek": 2,
+        "right_cheek": 2
+      }
+    },
+    {
+      "index": 16,
+      "time_ms": 2250,
+      "label": "replay 16",
+      "new_components": [
+        "lips_07"
+      ],
+      "region_component_prefixes": {
+        "lips": 7,
+        "nose": 5,
+        "perioral": 2,
+        "left_brow": 2,
+        "right_brow": 2,
+        "left_eye": 8,
+        "right_eye": 8,
+        "left_midface": 2,
+        "right_midface": 2,
+        "left_cheek": 2,
+        "right_cheek": 2
+      }
+    },
+    {
+      "index": 17,
+      "time_ms": 2400,
+      "label": "replay 17",
+      "new_components": [
+        "perioral_03",
+        "left_brow_03",
+        "right_brow_03",
+        "left_eye_09",
+        "right_eye_09",
+        "left_midface_03",
+        "right_midface_03",
+        "left_cheek_03",
+        "right_cheek_03"
+      ],
+      "region_component_prefixes": {
+        "lips": 7,
+        "nose": 5,
+        "perioral": 3,
+        "left_brow": 3,
+        "right_brow": 3,
+        "left_eye": 9,
+        "right_eye": 9,
+        "left_midface": 3,
+        "right_midface": 3,
+        "left_cheek": 3,
+        "right_cheek": 3
+      }
+    },
+    {
+      "index": 18,
+      "time_ms": 2500,
+      "label": "replay 18",
+      "new_components": [
+        "nose_06"
+      ],
+      "region_component_prefixes": {
+        "lips": 7,
+        "nose": 6,
+        "perioral": 3,
+        "left_brow": 3,
+        "right_brow": 3,
+        "left_eye": 9,
+        "right_eye": 9,
+        "left_midface": 3,
+        "right_midface": 3,
+        "left_cheek": 3,
+        "right_cheek": 3
+      }
+    },
+    {
+      "index": 19,
+      "time_ms": 2625,
+      "label": "replay 19",
+      "new_components": [
+        "lips_08"
+      ],
+      "region_component_prefixes": {
+        "lips": 8,
+        "nose": 6,
+        "perioral": 3,
+        "left_brow": 3,
+        "right_brow": 3,
+        "left_eye": 9,
+        "right_eye": 9,
+        "left_midface": 3,
+        "right_midface": 3,
+        "left_cheek": 3,
+        "right_cheek": 3
+      }
+    },
+    {
+      "index": 20,
+      "time_ms": 2700,
+      "label": "replay 20",
+      "new_components": [
+        "left_eye_10",
+        "right_eye_10"
+      ],
+      "region_component_prefixes": {
+        "lips": 8,
+        "nose": 6,
+        "perioral": 3,
+        "left_brow": 3,
+        "right_brow": 3,
+        "left_eye": 10,
+        "right_eye": 10,
+        "left_midface": 3,
+        "right_midface": 3,
+        "left_cheek": 3,
+        "right_cheek": 3
+      }
+    },
+    {
+      "index": 21,
+      "time_ms": 3000,
+      "label": "replay 21",
+      "new_components": [
+        "lips_09",
+        "nose_07",
+        "left_eye_11",
+        "right_eye_11"
+      ],
+      "region_component_prefixes": {
+        "lips": 9,
+        "nose": 7,
+        "perioral": 3,
+        "left_brow": 3,
+        "right_brow": 3,
+        "left_eye": 11,
+        "right_eye": 11,
+        "left_midface": 3,
+        "right_midface": 3,
+        "left_cheek": 3,
+        "right_cheek": 3
+      }
+    },
+    {
+      "index": 22,
+      "time_ms": 3300,
+      "label": "replay 22",
+      "new_components": [
+        "left_eye_12",
+        "right_eye_12"
+      ],
+      "region_component_prefixes": {
+        "lips": 9,
+        "nose": 7,
+        "perioral": 3,
+        "left_brow": 3,
+        "right_brow": 3,
+        "left_eye": 12,
+        "right_eye": 12,
+        "left_midface": 3,
+        "right_midface": 3,
+        "left_cheek": 3,
+        "right_cheek": 3
+      }
+    },
+    {
+      "index": 23,
+      "time_ms": 3375,
+      "label": "replay 23",
+      "new_components": [
+        "lips_10"
+      ],
+      "region_component_prefixes": {
+        "lips": 10,
+        "nose": 7,
+        "perioral": 3,
+        "left_brow": 3,
+        "right_brow": 3,
+        "left_eye": 12,
+        "right_eye": 12,
+        "left_midface": 3,
+        "right_midface": 3,
+        "left_cheek": 3,
+        "right_cheek": 3
+      }
+    },
+    {
+      "index": 24,
+      "time_ms": 3500,
+      "label": "replay 24",
+      "new_components": [
+        "nose_08"
+      ],
+      "region_component_prefixes": {
+        "lips": 10,
+        "nose": 8,
+        "perioral": 3,
+        "left_brow": 3,
+        "right_brow": 3,
+        "left_eye": 12,
+        "right_eye": 12,
+        "left_midface": 3,
+        "right_midface": 3,
+        "left_cheek": 3,
+        "right_cheek": 3
+      }
+    },
+    {
+      "index": 25,
+      "time_ms": 3600,
+      "label": "replay 25",
+      "new_components": [
+        "perioral_04",
+        "left_brow_04",
+        "right_brow_04",
+        "left_eye_13",
+        "right_eye_13",
+        "left_midface_04",
+        "right_midface_04",
+        "left_cheek_04",
+        "right_cheek_04"
+      ],
+      "region_component_prefixes": {
+        "lips": 10,
+        "nose": 8,
+        "perioral": 4,
+        "left_brow": 4,
+        "right_brow": 4,
+        "left_eye": 13,
+        "right_eye": 13,
+        "left_midface": 4,
+        "right_midface": 4,
+        "left_cheek": 4,
+        "right_cheek": 4
+      }
+    },
+    {
+      "index": 26,
+      "time_ms": 3750,
+      "label": "replay 26",
+      "new_components": [
+        "lips_11"
+      ],
+      "region_component_prefixes": {
+        "lips": 11,
+        "nose": 8,
+        "perioral": 4,
+        "left_brow": 4,
+        "right_brow": 4,
+        "left_eye": 13,
+        "right_eye": 13,
+        "left_midface": 4,
+        "right_midface": 4,
+        "left_cheek": 4,
+        "right_cheek": 4
+      }
+    },
+    {
+      "index": 27,
+      "time_ms": 3900,
+      "label": "replay 27",
+      "new_components": [
+        "left_eye_14",
+        "right_eye_14"
+      ],
+      "region_component_prefixes": {
+        "lips": 11,
+        "nose": 8,
+        "perioral": 4,
+        "left_brow": 4,
+        "right_brow": 4,
+        "left_eye": 14,
+        "right_eye": 14,
+        "left_midface": 4,
+        "right_midface": 4,
+        "left_cheek": 4,
+        "right_cheek": 4
+      }
+    },
+    {
+      "index": 28,
+      "time_ms": 4000,
+      "label": "replay 28",
+      "new_components": [
+        "nose_09"
+      ],
+      "region_component_prefixes": {
+        "lips": 11,
+        "nose": 9,
+        "perioral": 4,
+        "left_brow": 4,
+        "right_brow": 4,
+        "left_eye": 14,
+        "right_eye": 14,
+        "left_midface": 4,
+        "right_midface": 4,
+        "left_cheek": 4,
+        "right_cheek": 4
+      }
+    },
+    {
+      "index": 29,
+      "time_ms": 4125,
+      "label": "replay 29",
+      "new_components": [
+        "lips_12"
+      ],
+      "region_component_prefixes": {
+        "lips": 12,
+        "nose": 9,
+        "perioral": 4,
+        "left_brow": 4,
+        "right_brow": 4,
+        "left_eye": 14,
+        "right_eye": 14,
+        "left_midface": 4,
+        "right_midface": 4,
+        "left_cheek": 4,
+        "right_cheek": 4
+      }
+    },
+    {
+      "index": 30,
+      "time_ms": 4200,
+      "label": "replay 30",
+      "new_components": [
+        "left_eye_15",
+        "right_eye_15"
+      ],
+      "region_component_prefixes": {
+        "lips": 12,
+        "nose": 9,
+        "perioral": 4,
+        "left_brow": 4,
+        "right_brow": 4,
+        "left_eye": 15,
+        "right_eye": 15,
+        "left_midface": 4,
+        "right_midface": 4,
+        "left_cheek": 4,
+        "right_cheek": 4
+      }
+    },
+    {
+      "index": 31,
+      "time_ms": 4500,
+      "label": "replay 31",
+      "new_components": [
+        "lips_13",
+        "nose_10",
+        "left_eye_16",
+        "right_eye_16"
+      ],
+      "region_component_prefixes": {
+        "lips": 13,
+        "nose": 10,
+        "perioral": 4,
+        "left_brow": 4,
+        "right_brow": 4,
+        "left_eye": 16,
+        "right_eye": 16,
+        "left_midface": 4,
+        "right_midface": 4,
+        "left_cheek": 4,
+        "right_cheek": 4
+      }
+    },
+    {
+      "index": 32,
+      "time_ms": 4800,
+      "label": "replay 32",
+      "new_components": [
+        "perioral_05",
+        "left_brow_05",
+        "right_brow_05",
+        "left_eye_17",
+        "right_eye_17",
+        "left_midface_05",
+        "right_midface_05",
+        "left_cheek_05",
+        "right_cheek_05"
+      ],
+      "region_component_prefixes": {
+        "lips": 13,
+        "nose": 10,
+        "perioral": 5,
+        "left_brow": 5,
+        "right_brow": 5,
+        "left_eye": 17,
+        "right_eye": 17,
+        "left_midface": 5,
+        "right_midface": 5,
+        "left_cheek": 5,
+        "right_cheek": 5
+      }
+    },
+    {
+      "index": 33,
+      "time_ms": 4875,
+      "label": "replay 33",
+      "new_components": [
+        "lips_14"
+      ],
+      "region_component_prefixes": {
+        "lips": 14,
+        "nose": 10,
+        "perioral": 5,
+        "left_brow": 5,
+        "right_brow": 5,
+        "left_eye": 17,
+        "right_eye": 17,
+        "left_midface": 5,
+        "right_midface": 5,
+        "left_cheek": 5,
+        "right_cheek": 5
+      }
+    },
+    {
+      "index": 34,
+      "time_ms": 5000,
+      "label": "replay 34",
+      "new_components": [
+        "nose_11"
+      ],
+      "region_component_prefixes": {
+        "lips": 14,
+        "nose": 11,
+        "perioral": 5,
+        "left_brow": 5,
+        "right_brow": 5,
+        "left_eye": 17,
+        "right_eye": 17,
+        "left_midface": 5,
+        "right_midface": 5,
+        "left_cheek": 5,
+        "right_cheek": 5
+      }
+    },
+    {
+      "index": 35,
+      "time_ms": 5100,
+      "label": "replay 35",
+      "new_components": [
+        "left_eye_18",
+        "right_eye_18"
+      ],
+      "region_component_prefixes": {
+        "lips": 14,
+        "nose": 11,
+        "perioral": 5,
+        "left_brow": 5,
+        "right_brow": 5,
+        "left_eye": 18,
+        "right_eye": 18,
+        "left_midface": 5,
+        "right_midface": 5,
+        "left_cheek": 5,
+        "right_cheek": 5
+      }
+    },
+    {
+      "index": 36,
+      "time_ms": 5250,
+      "label": "replay 36",
+      "new_components": [
+        "lips_15"
+      ],
+      "region_component_prefixes": {
+        "lips": 15,
+        "nose": 11,
+        "perioral": 5,
+        "left_brow": 5,
+        "right_brow": 5,
+        "left_eye": 18,
+        "right_eye": 18,
+        "left_midface": 5,
+        "right_midface": 5,
+        "left_cheek": 5,
+        "right_cheek": 5
+      }
+    },
+    {
+      "index": 37,
+      "time_ms": 5400,
+      "label": "replay 37",
+      "new_components": [
+        "left_eye_19",
+        "right_eye_19"
+      ],
+      "region_component_prefixes": {
+        "lips": 15,
+        "nose": 11,
+        "perioral": 5,
+        "left_brow": 5,
+        "right_brow": 5,
+        "left_eye": 19,
+        "right_eye": 19,
+        "left_midface": 5,
+        "right_midface": 5,
+        "left_cheek": 5,
+        "right_cheek": 5
+      }
+    },
+    {
+      "index": 38,
+      "time_ms": 5500,
+      "label": "replay 38",
+      "new_components": [
+        "nose_12"
+      ],
+      "region_component_prefixes": {
+        "lips": 15,
+        "nose": 12,
+        "perioral": 5,
+        "left_brow": 5,
+        "right_brow": 5,
+        "left_eye": 19,
+        "right_eye": 19,
+        "left_midface": 5,
+        "right_midface": 5,
+        "left_cheek": 5,
+        "right_cheek": 5
+      }
+    },
+    {
+      "index": 39,
+      "time_ms": 5625,
+      "label": "replay 39",
+      "new_components": [
+        "lips_16"
+      ],
+      "region_component_prefixes": {
+        "lips": 16,
+        "nose": 12,
+        "perioral": 5,
+        "left_brow": 5,
+        "right_brow": 5,
+        "left_eye": 19,
+        "right_eye": 19,
+        "left_midface": 5,
+        "right_midface": 5,
+        "left_cheek": 5,
+        "right_cheek": 5
+      }
+    },
+    {
+      "index": 40,
+      "time_ms": 5700,
+      "label": "full",
+      "new_components": [
+        "left_eye_20",
+        "right_eye_20"
+      ],
+      "region_component_prefixes": {
+        "lips": 16,
+        "nose": 12,
+        "perioral": 5,
+        "left_brow": 5,
+        "right_brow": 5,
+        "left_eye": 20,
+        "right_eye": 20,
+        "left_midface": 5,
+        "right_midface": 5,
+        "left_cheek": 5,
+        "right_cheek": 5
+      }
+    }
+  ]
+}

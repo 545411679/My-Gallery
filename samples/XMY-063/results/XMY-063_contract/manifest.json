@@ -1,0 +1,19 @@
+{
+  "schema": "canonical-makeup-composite-v0",
+  "artifact_role": "Target bare UV plus portable Makeup Object compositor result; no source-final texture is applied.",
+  "base_uv": "base_uv.png",
+  "source_bare": "source_bare.png",
+  "source_makeup": "source_makeup.png",
+  "steps": [],
+  "timeline": {
+    "kind": "portable_application_plan",
+    "plan": "timeline_plan.json",
+    "contract": "Target-free pipeline_q prefix plan. The viewer supplies the current Twin bare UV and replays it live; no timeline images are stored."
+  },
+  "asset_revision": "portable_plan_timeline_v1",
+  "composition_report": "composition_report.json",
+  "editable_layers": "editable_layers/manifest.json",
+  "editable_component_count": 103,
+  "source_makeup_uv": "source_makeup_uv.png",
+  "source_bare_uv": "source_bare_uv.png"
+}

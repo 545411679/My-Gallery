@@ -40,7 +40,7 @@
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">Projects</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -57,7 +57,7 @@
                     <span class="text-primary">Z.</span>
                 </h1>
                 <div class="subheading mb-5">
-                    SZ, CHN ·
+                    SZ, CHN |
                     <a href="mailto:jintong.zhang23@student.xjtlu.edu.cn">jintong.zhang23@student.xjtlu.edu.cn</a>
                 </div>
                 <p class="lead mb-5">
@@ -94,35 +94,79 @@
                                     <i class="fas fa-circle-notch fa-spin me-1"></i>OPEN · IN PROGRESS
                                 </span>
                             </h3>
-                            <div class="subheading mb-3">妆教编译器 / makeup decompiler · Computer Vision · Pigment Decomposition · MediaPipe · Porter-Duff Compositing</div>
+                            <div class="subheading mb-3">妆教编译器 / makeup decompiler | Computer Vision | Pigment Decomposition | MediaPipe | Porter-Duff Compositing</div>
                         </div>
                         <div class="text-md-end">
                             <span class="badge bg-secondary">Role: Solo — Design + Implementation · 2026.01–present</span>
                         </div>
                     </div>
-                    <!-- Showcase: same bare face → 3 looks, each decompiled & replayed stroke-by-stroke (autoplay loop) -->
-                    <div class="gmr-show">
-                        <figure>
-                            <video src="assets/GMR/gmr-m1.mp4" poster="assets/GMR/gmr-m1-poster.jpg" autoplay loop muted playsinline preload="metadata"></video>
-                            <figcaption><b>Look 1 · clean / 日杂</b> — left: per-region decomposition + palette; right: the look replayed stroke by stroke.</figcaption>
-                        </figure>
-                        <figure>
-                            <video src="assets/GMR/gmr-m2.mp4" poster="assets/GMR/gmr-m2-poster.jpg" autoplay loop muted playsinline preload="metadata"></video>
-                            <figcaption><b>Look 2 · HK retro / 港风</b> — same face, different target, same four-stage pipeline.</figcaption>
-                        </figure>
-                        <figure>
-                            <video src="assets/GMR/gmr-m3.mp4" poster="assets/GMR/gmr-m3-poster.jpg" autoplay loop muted playsinline preload="metadata"></video>
-                            <figcaption><b>Look 3 · K-soft / 韩系挂雾</b> — final stroke reconstructs the target exactly.</figcaption>
-                        </figure>
-                    </div>
+<div class="makeup-demo">
+<div class="page">
 
-                    <!-- 3D twin + makeup try-on prototype (single small video) -->
-                    <div class="tryon-show">
-                        <figure>
-                            <video src="assets/GMR/3d-twin-tryon.mp4" autoplay loop muted playsinline preload="metadata"></video>
-                            <figcaption><b>3D twin + makeup try-on</b> — later prototype: a 3D face twin with makeup try-on.</figcaption>
-                        </figure>
-                    </div>
+  <div class="top3">
+    <section class="feature">
+      <h2>Nuance-Preserving Transfer</h2>
+      <div class="demo transfer-picker">
+        <div>
+          <span class="thumb-label">the person</span>
+          <div class="thumb-row" id="foundation-row"></div>
+        </div>
+        <div>
+          <span class="thumb-label">the makeup reference / the style</span>
+          <div class="thumb-row" id="makeup-row"></div>
+        </div>
+        <div class="transfer-result" id="transfer-result">
+          <img id="transfer-before" alt="foundation base">
+          <img id="transfer-after" class="after" alt="transferred makeup">
+        </div>
+      </div>
+      <p>Makeup as a stylist's technique, not a painting: the foundation is applied to both faces first, then the makeup — highlights, shading, regional tone, ratio — is extracted and transferred, so daily-makeup subtlety survives.</p>
+    </section>
+
+    <section class="feature">
+      <h2>Makeup Replay as Brushes</h2>
+      <div class="placeholder">brush replay — updating</div>
+    </section>
+
+    <section class="feature">
+      <h2>Light-weight 3D Twin <span class="h2-sub">and makeup try-on</span></h2>
+      <figure class="twin-cell">
+        <div class="viewer" id="viewer-xmy059"><div class="viewer-fallback">3D</div></div>
+        <figcaption>XMY-059</figcaption>
+        <div class="uv-toggle-row">
+          <button class="uv-toggle active" data-uv="makeup" type="button">makeup</button>
+          <button class="uv-toggle" data-uv="bare" type="button">bare</button>
+          <button class="uv-toggle" data-uv="recon" type="button">recon</button>
+        </div>
+      </figure>
+    </section>
+  </div>
+
+  <section class="feature">
+    <h2>Brush-wise Replay <span class="h2-sub">of Any Makeup on Any Face</span></h2>
+    <div class="one-demo">
+      <div class="twin-stage">
+        <div class="palette-mount" id="palette-mount"><div class="viewer-fallback">palette</div></div>
+        <div class="twin-space">
+          <div class="twin-view" id="viewer-playing"><div class="viewer-fallback">3D</div></div>
+          <div class="twin-view" id="viewer-fixed"><div class="viewer-fallback">3D</div></div>
+        </div>
+      </div>
+      <div class="thumb-picker">
+        <span class="thumb-label">the person</span>
+        <div class="thumb-row" id="head-picker"></div>
+      </div>
+      <div class="thumb-picker">
+        <span class="thumb-label">the makeup reference / the style</span>
+        <div class="thumb-row" id="look-picker"></div>
+      </div>
+      <div class="picker-row" id="stroke-picker"><span class="picker-label">brushes</span></div>
+    </div>
+    <p>Every twin shares one canonical UV map, so a look is a texture independent of the head it lands on. Toggle brushes to lift the look back into its brush program: each Bézier stroke, recolored from the palette, traced in application order.</p>
+  </section>
+
+</div>
+</div>
 
                     <p class="mb-2">
                         A <strong>makeup decompiler</strong>: give it a finished makeup photo and it returns a sequence
@@ -141,16 +185,12 @@
                         quantification, brand-color matching, layered-tutorial generation.
                     </p>
                     <p class="mb-2">
-                        <strong>3D twin &amp; try-on</strong> · later designed and implemented a prototype for a 3D
-                        face twin and makeup try-ons (demo below).
+                        <strong>3D twin &amp; try-on</strong> · a canonical 3D twin and makeup try-on, now in the live demo above.
                     </p>
                     <p class="mb-3">
                         <strong>Next</strong> · grafting this decomposable, controllable makeup representation onto a
                         DiT / diffusion backbone for end-to-end controllable generation.
                     </p>
-                    <a class="btn btn-primary" href="[GMR_LIVE_URL]" target="_blank" rel="noopener">
-                        <i class="fas fa-external-link-alt me-1"></i> Live Demo
-                    </a>
                     <a class="btn btn-outline-secondary ms-2" href="[GMR_REPO_URL]" target="_blank" rel="noopener">
                         <i class="fab fa-github me-1"></i> Repository (on request)
                     </a>
@@ -158,44 +198,85 @@
 
                 <hr class="divider" />
 
-                <!-- Project 2: HZKJ Canvas -->
+                <!-- Project: CVdresser -->
                 <div class="project project--open mb-5">
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-3">
                         <div class="flex-grow-1">
                             <h3 class="mb-1">
-                                HZKJ — Claude Code Agent on a Creative Canvas
-                                <span class="status-pill status-pill--open" title="Active / in-progress">
-                                    <i class="fas fa-circle-notch fa-spin me-1"></i>OPEN · IN PROGRESS
-                                </span>
+                                CVDresser | Make CV dynamic and sharable by URL
                             </h3>
-                            <div class="subheading mb-3">Agent Runtime · Claude Code subprocess · Tool-List API design · 漫剧 production platform</div>
+                            <div class="subheading subheading--normal mb-3">Acquired by <a href="https://keyinspiring.com/" target="_blank" rel="noopener">Keyinspiring</a><br>Try operate on our conceptual demo here (API and file upload are not wired). Unlock full version at <a href="https://keyinternship.com/students" target="_blank" rel="noopener">KeyIntern</a>.</div>
                         </div>
                         <div class="text-md-end">
-                            <span class="badge bg-secondary">Role: Agent Feature Lead · 2025.12–present</span>
+                            <span class="badge bg-secondary">UI + Data + Growth engineer</span>
                         </div>
                     </div>
-                    <a href="assets/hzkj.png" class="project-image-link" target="_blank" rel="noopener" title="Open full screenshot">
-                        <img class="img-fluid hzkj-shot mb-3" src="assets/hzkj.png" alt="HZKJ canvas with Claude Code Agent creating nodes across the canvas, dev console on the right" loading="lazy" />
-                    </a>
-                    <p class="text-muted small mb-3">
-                        ▲ The agent driving the canvas: a single prompt ("create 5 nodes, each in a different language")
-                        is decomposed into tool calls that build the nodes directly on the canvas.
-                    </p>
+
+                    <!-- Code-driven demo: a compact, working replica of the app's workspace -->
+                    <div class="cvd-demo" id="cvd-demo"></div>
+                    <div class="cvd-caption">▲ Live preview — edit the header fields and watch the render update; hover the attached images to preview them. (Swipe sideways on a phone.)</div>
+
                     <p class="mb-2">
-                        At <strong>HZKJ</strong> — Suzhou's first OPC in the motion-comic (漫剧) industry — I own the
-                        entire Claude Code Agent feature built on top of the company's production canvas, turning the
-                        model from a "chat assistant" into a real production tool that non-technical directors can drive.
+                        A <strong>resume builder</strong> that keeps one CV as the single source of truth and
+                        <strong>dresses</strong> it into any format (with 6 classic popular ones, or use our template generator by describing desired format in natural language). Every CV is <strong>hosted at a
+                        shareable URL</strong> — one clickable link you can send to anyone — with a real-time,
+                        PDF-faithful preview synced to a modular form editor.
+                    </p>
+                    <p class="mb-2"><strong>Highlight features</strong></p>
+                    <ul class="proj-pipeline mb-3">
+                        <li><strong>CV as homepage</strong> — our site hosts users' CVs at distinct URLs, and each works as a personal homepage for non-coders.</li>
+                        <li><strong>Six formatter templates</strong> — Classic Professional, Elegant, Classic Two-Column, Modern Two-Column, Premium Sidebar, Academic; one data model, six distinct layouts + accents.</li>
+                        <li><strong>Natural-language generation</strong> — describe the role and mood, and the workshop compiles a new template, gated by static checks and a repair loop with a 30-minute restore window.</li>
+                        <li><strong>Evidence images</strong> — attach images to any project and hover them right inside the live render to preview the artifact.</li>
+                    </ul>
+                    <p class="mb-3"><strong>Engineering</strong> · <strong>JD-CV matching database</strong>: our internal knowledge base can fit users' CV to employers' job description (JD) — it can expand the JD to higher dimensions and therefore decode employers' expectations underlying each keyword, so LangChain RAG can help you exploit the matching parts out of an experience, and write descriptions that better approach the job; <strong>Generative UI</strong>: upon a user prompt, we generate React components (JSX) under a predefined <code>Interface</code> as contract, and gated by coverage checks, a forbidden-API denylist, esbuild compilation, and an auto-repair loop.</p>
+                    <a class="btn btn-primary" href="https://github.com/545411679/CVdresser" target="_blank" rel="noopener">
+                        <i class="fab fa-github me-1"></i> Repository
+                    </a>
+                    <a class="btn btn-outline-secondary ms-2" href="https://ai.studio/apps/7efcab35-877c-48bc-907c-4d09e3d9e4b6" target="_blank" rel="noopener">
+                        <i class="fas fa-external-link-alt me-1"></i> Live (AI Studio)
+                    </a>
+                </div>
+
+                <hr class="divider" />
+
+                <!-- Project 2: HZKJ Canvas -->
+                <div class="project mb-5">
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-3">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-1">Agent-Orchestrated Content Creation</h3>
+                            <div class="subheading mb-3">Agent orchestrating workflow @ Mulan.ai &amp; Agent operating cDrama full pipeline @ Huazong.ai</div>
+                        </div>
+                        <div class="text-md-end">
+                            <span class="badge bg-secondary">Role: Agent Feature Lead</span>
+                        </div>
+                    </div>
+
+                    <!-- Two media in parallel: Huazong screenshot + Mulan video -->
+                    <div class="row g-3 mb-3">
+                        <div class="col-md-6">
+                            <a href="assets/hzkj.png" class="project-image-link" target="_blank" rel="noopener" title="Open full screenshot">
+                                <img class="img-fluid hzkj-shot" src="assets/hzkj.png" alt="Huazong canvas with Claude Code Agent driving the cDrama pipeline" loading="lazy" />
+                            </a>
+                            <p class="text-muted small mt-2 mb-0">▲ <strong>Huazong.ai</strong> — the agent operates the full cDrama pipeline on the production canvas.</p>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="media-ph">Mulan.ai — agent orchestrating workflow<br /><span class="text-muted">(video coming)</span></div>
+                            <p class="text-muted small mt-2 mb-0">▲ <strong>Mulan.ai</strong> — the agent orchestrates multi-step content workflows.</p>
+                        </div>
+                    </div>
+
+                    <p class="mb-2">
+                        Two production agent systems that turn the model from a "chat assistant" into the operator.
+                        At <strong>Mulan.ai</strong>, an agent orchestrates multi-step content workflows — image and video
+                        generation configured by natural language, with no manual node assembly. At <strong>Huazong.ai</strong>,
+                        an agent operates the full cDrama (漫剧) pipeline on the production canvas, driving 400+ creators.
                     </p>
                     <ul class="proj-pipeline mb-3">
-                        <li><strong>Agent Runtime</strong> — spawn Claude Code as an independent subprocess so the agent stays decoupled from the main app and can update on its own cadence.</li>
-                        <li><strong>Graphical interface</strong> — built on the CLI plus a browser-plugin approach, so directors operate the agent without ever touching a terminal.</li>
-                        <li><strong>Tool-List infrastructure</strong> — every canvas operation exposed as an API and registered to Claude Code's tool list, letting the model manipulate the canvas directly.</li>
-                        <li><strong>Skill integration</strong> — loading the company's private knowledge assets and custom Skills, then iterating tools against real production workflows.</li>
+                        <li><strong>Agent orchestrating workflow @ Mulan.ai</strong> — reusable image/video generation workflows and natural-language agent interfaces, no manual node assembly.</li>
+                        <li><strong>Agent operating cDrama pipeline @ Huazong.ai</strong> — Claude Code subprocess runtime decoupled from the app; a tool-list API exposes every canvas operation so the model drives production directly.</li>
+                        <li><strong>Skill integration</strong> — loading private knowledge assets and custom Skills, then iterating tools against real production workflows.</li>
                     </ul>
-                    <p class="text-muted small mb-3">
-                        <i class="fas fa-flask me-1"></i>
-                        Status: open / actively iterating — 5 of 20 planned tools currently stable; platform reaches 400+ creators.
-                    </p>
                     <a class="btn btn-primary" href="[HZKJ_LIVE_URL]" target="_blank" rel="noopener">
                         <i class="fas fa-external-link-alt me-1"></i> Live (WIP)
                     </a>
@@ -211,7 +292,7 @@
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-3">
                         <div class="flex-grow-1">
                             <h3 class="mb-1">AIGC Product Visuals Gallery — AIGC商品物料</h3>
-                            <div class="subheading mb-3">Generative product imagery · Cross-platform · Multi-category</div>
+                            <div class="subheading mb-3">Generative product imagery | Cross-platform | Multi-category</div>
                         </div>
                         <div class="text-md-end">
                             <span class="badge bg-secondary">Role: AIGC Artist / Visual Production</span>
@@ -246,161 +327,12 @@
 
                 <hr class="divider" />
 
-                <!-- Project 4: TrainerSync -->
-                <div class="project mb-5">
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-3">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-1">TrainerSync</h3>
-                            <div class="subheading mb-3">Product design · Prototyping · CPT208 group project</div>
-                        </div>
-                        <div class="text-md-end">
-                            <span class="badge bg-secondary">Role: Lead Designer · Ideation</span>
-                        </div>
-                    </div>
-                    <p class="mb-3">
-                        TrainerSync is a concept gym-training app built around three functional pillars —
-                        <strong>Plan</strong>, <strong>Monitor</strong>, and <strong>Connect</strong>. Plan lets users
-                        filter and queue exercises with live visual guidance and per-set logging; Monitor tracks
-                        heart-rate in real time with breathing-light pacing cues and an intelligent post-session
-                        summary; Connect surfaces live equipment occupancy and lightweight peer messaging for set-checks
-                        and next-turn booking. I led the ideation and visual design — core user flows, information
-                        architecture, and the component system.
-                    </p>
-
-                    <!-- Screenshot row 1: FR1 Plan + FR2 Monitor (dark UI) -->
-                    <div class="ts-shots">
-                        <div class="ts-shots__label">FR1 · Plan · &nbsp;FR2 · Monitor</div>
-                        <div class="ts-shots__grid">
-                            <figure class="ts-shots__item">
-                                <img src="assets/TrainerSync/f1-1.png" alt="TrainerSync exercise library" loading="lazy" />
-                                <figcaption><b>Exercise Library</b> — filter chips by muscle group, numbered queue building</figcaption>
-                            </figure>
-                            <figure class="ts-shots__item">
-                                <img src="assets/TrainerSync/f1-2.png" alt="TrainerSync live session" loading="lazy" />
-                                <figcaption><b>Live Session</b> — exercise demo panel with set counter and reorder controls</figcaption>
-                            </figure>
-                            <figure class="ts-shots__item">
-                                <img src="assets/TrainerSync/f2-1.png" alt="TrainerSync in-session monitor" loading="lazy" />
-                                <figcaption><b>In-Session Monitor</b> — live HR ring with current bpm readout</figcaption>
-                            </figure>
-                            <figure class="ts-shots__item">
-                                <img src="assets/TrainerSync/f2-2.png" alt="TrainerSync pace guidance" loading="lazy" />
-                                <figcaption><b>Pace Guidance</b> — breathing-light overlay responds to HR zone</figcaption>
-                            </figure>
-                            <figure class="ts-shots__item">
-                                <img src="assets/TrainerSync/f2-3.png" alt="TrainerSync HR zones" loading="lazy" />
-                                <figcaption><b>HR Zones</b> — blue (rest) · green (target 120–150) · red (high intensity)</figcaption>
-                            </figure>
-                            <figure class="ts-shots__item">
-                                <img src="assets/TrainerSync/f4.png" alt="TrainerSync session summary" loading="lazy" />
-                                <figcaption><b>Session Summary</b> — HR timeline, sets completed, AI analysis text</figcaption>
-                            </figure>
-                        </div>
-                    </div>
-
-                    <!-- Screenshot row 2: FR3 Connect (light UI) -->
-                    <div class="ts-shots mb-3">
-                        <div class="ts-shots__label">FR3 · Connect</div>
-                        <div class="ts-shots__grid">
-                            <figure class="ts-shots__item">
-                                <img src="assets/TrainerSync/f3-1.png" alt="TrainerSync gym floor map" loading="lazy" />
-                                <figcaption><b>Gym Floor Map</b> — live zone occupancy counts and peer positions</figcaption>
-                            </figure>
-                            <figure class="ts-shots__item">
-                                <img src="assets/TrainerSync/f3-2.png" alt="TrainerSync buddy chat" loading="lazy" />
-                                <figcaption><b>Buddy Chat</b> — conversation panel with gym peer</figcaption>
-                            </figure>
-                            <figure class="ts-shots__item">
-                                <img src="assets/TrainerSync/f3-3.png" alt="TrainerSync set-check message" loading="lazy" />
-                                <figcaption><b>Set-Check</b> — pre-canned message asking how many sets remain</figcaption>
-                            </figure>
-                            <figure class="ts-shots__item">
-                                <img src="assets/TrainerSync/f3-4.png" alt="TrainerSync next-turn pre-booking" loading="lazy" />
-                                <figcaption><b>Pre-Book</b> — request next turn at the current equipment</figcaption>
-                            </figure>
-                            <figure class="ts-shots__item">
-                                <img src="assets/TrainerSync/f3-5.png" alt="TrainerSync booking confirmation" loading="lazy" />
-                                <figcaption><b>Confirmed</b> — booking status reply and message thread</figcaption>
-                            </figure>
-                        </div>
-                    </div>
-                    <a class="btn btn-primary" href="https://rainm1st.github.io/CPT208-TrainerSync/" target="_blank" rel="noopener">
-                        <i class="fas fa-external-link-alt me-1"></i> Live Site
-                    </a>
-                </div>
-
-                <hr class="divider" />
-
-                <!-- Project 5: Consilium -->
-                <div class="project mb-5">
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-3">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-1">Consilium — Expert Consultation Booking</h3>
-                            <div class="subheading mb-3">Full-stack web · Team of [N] · University course project</div>
-                        </div>
-                        <div class="text-md-end">
-                            <span class="badge bg-secondary">Role: Group Leader · Main Developer · Deliverables Orchestrator</span>
-                        </div>
-                    </div>
-                    <p class="mb-3">
-                        A booking platform that matches end-users with verified domain experts for paid one-on-one
-                        consultations — covering search, scheduling, payment, and post-session review, across three
-                        role surfaces: <strong>Customer</strong>, <strong>Specialist</strong>, and <strong>Admin</strong>.
-                        As group leader I owned the architecture, drove the main implementation, and orchestrated all
-                        course deliverables (requirements, design docs, sprint reports, final presentation) for a team
-                        of [N] contributors.
-                    </p>
-
-                    <!-- main hero (left) + 3 role rows (right), matched heights -->
-                    <div class="con-shots">
-                        <a class="con-shots__main" href="assets/Consilium/main.png" target="_blank" rel="noopener" title="Open homepage screenshot">
-                            <img src="assets/Consilium/main.png" alt="Consilium homepage" loading="lazy" />
-                        </a>
-                        <div class="con-shots__rows">
-                            <div class="con-shots__row">
-                                <div class="con-shots__label">Customer pages</div>
-                                <div class="con-shots__line">
-                                    <figure><img src="assets/Consilium/cus1.png" alt="Consilium customer page 1" loading="lazy" /></figure>
-                                    <figure><img src="assets/Consilium/cus2.png" alt="Consilium customer page 2" loading="lazy" /></figure>
-                                    <figure><img src="assets/Consilium/cus3.png" alt="Consilium customer page 3" loading="lazy" /></figure>
-                                    <figure><img src="assets/Consilium/cus4.png" alt="Consilium customer page 4" loading="lazy" /></figure>
-                                </div>
-                            </div>
-                            <div class="con-shots__row">
-                                <div class="con-shots__label">Specialist pages</div>
-                                <div class="con-shots__line">
-                                    <figure><img src="assets/Consilium/sp1.png" alt="Consilium specialist page 1" loading="lazy" /></figure>
-                                    <figure><img src="assets/Consilium/sp2.png" alt="Consilium specialist page 2" loading="lazy" /></figure>
-                                    <figure><img src="assets/Consilium/sp3.png" alt="Consilium specialist page 3" loading="lazy" /></figure>
-                                    <figure><img src="assets/Consilium/sp4.png" alt="Consilium specialist page 4" loading="lazy" /></figure>
-                                    <figure><img src="assets/Consilium/sp5.png" alt="Consilium specialist page 5" loading="lazy" /></figure>
-                                </div>
-                            </div>
-                            <div class="con-shots__row">
-                                <div class="con-shots__label">Admin pages</div>
-                                <div class="con-shots__line">
-                                    <figure><img src="assets/Consilium/admin1.png" alt="Consilium admin page 1" loading="lazy" /></figure>
-                                    <figure><img src="assets/Consilium/admin2.png" alt="Consilium admin page 2" loading="lazy" /></figure>
-                                    <figure><img src="assets/Consilium/admin3.png" alt="Consilium admin page 3" loading="lazy" /></figure>
-                                    <figure><img src="assets/Consilium/admin4.png" alt="Consilium admin page 4" loading="lazy" /></figure>
-                                    <figure><img src="assets/Consilium/admin5.png" alt="Consilium admin page 5" loading="lazy" /></figure>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <a class="btn btn-primary" href="https://github.com/545411679/Consilium-Expert-Consultation-Booking" target="_blank" rel="noopener">
-                        <i class="fab fa-github me-1"></i> View Repository
-                    </a>
-                </div>
-
-                <hr class="divider" />
-
                 <!-- Project 6: iGEM -->
                 <div class="project mb-5">
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-3">
                         <div class="flex-grow-1">
                             <h3 class="mb-1">iGEM 2024 — XJTLU-China</h3>
-                            <div class="subheading mb-3">Synthetic Biology · MIT Grand Jamboree (Paris) · Manufacture track · Protein modeling + commercialization</div>
+                            <div class="subheading mb-3">Synthetic Biology | MIT Grand Jamboree (Paris) | Manufacture track | Protein modeling + commercialization</div>
                         </div>
                         <div class="text-md-end">
                             <span class="badge bg-secondary">Role: Protein Modeling + Commercialization · 2023.12–2025.1</span>
@@ -547,14 +479,14 @@
         <hr class="m-0" />
 
         <!-- Experience / Education -->
-        <section class="resume-section" id="experience">
+        <section class="resume-section" id="education">
             <div class="resume-section-content">
                 <h2 class="mb-5">Education</h2>
 
                 <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                     <div class="flex-grow-1">
                         <h3 class="mb-0">BSc, Information &amp; Computing Science (ICS)</h3>
-                        <div class="subheading mb-2">XJTLU 西交利物浦大学 · Suzhou / Shanghai · fully English-taught</div>
+                        <div class="subheading mb-2">XJTLU 西交利物浦大学 | Suzhou / Shanghai | fully English-taught</div>
                         <p class="mb-0">Rank <strong>5 / 200</strong> · GPA <strong>3.92 / 4.0</strong> · Academic Excellence Scholarship · SAT-college student representative (2024–2026).</p>
                     </div>
                     <div class="flex-shrink-0"><span class="text-primary">2023 – 2027</span></div>
@@ -563,7 +495,7 @@
                 <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                     <div class="flex-grow-1">
                         <h3 class="mb-0">NFLS 南京外国语学校</h3>
-                        <div class="subheading mb-2">Nanjing Foreign Language School · middle + high school</div>
+                        <div class="subheading mb-2">Nanjing Foreign Language School | middle + high school</div>
                         <p class="mb-0">Informatics &amp; biology olympiad track · <strong>First Prize</strong>, Jiangsu Provincial Biology Competition (2021).</p>
                     </div>
                     <div class="flex-shrink-0"><span class="text-primary">— 2023</span></div>
@@ -602,5 +534,1074 @@
         });
         document.getElementById('year').textContent = new Date().getFullYear();
     </script>
+    <script src="js/cvd-demo.js"></script>
+<script src="assets/vendor/three.global.js"></script>
+<script src="assets/vendor/OrbitControls.global.js"></script>
+<script src="assets/xmy059_twin_geometry.js"></script>
+<script src="samples/XMY-063/assets/xmy063_twin_geometry.js"></script>
+<script src="samples/157_6/assets/157_6_twin_geometry.js"></script>
+<script src="samples/157_6/assets/157_6_brush_centerlines.js"></script>
+<script src="samples/189_4/assets/189_4_twin_geometry.js"></script>
+<script src="samples/154_1/assets/154_1_twin_geometry.js"></script>
+<script src="samples/157_24/assets/157_24_twin_geometry.js"></script>
+<script src="samples/157_15/assets/157_15_twin_geometry.js"></script>
+<script src="samples/157_16/assets/157_16_twin_geometry.js"></script>
+<script src="samples/189_1/assets/189_1_twin_geometry.js"></script>
+<script src="samples/189_2/assets/189_2_twin_geometry.js"></script>
+<script src="samples/189_5/assets/189_5_twin_geometry.js"></script>
+<script>
+(function () {
+  const SUBJECTS = [
+    { key: 'XMY059', uv: 'assets/', id: 'viewer-xmy059' }
+  ];
+
+  function initViewer(subject) {
+    const mount = document.getElementById(subject.id);
+    const geometryData = window[subject.key + '_TWIN_GEOMETRY'];
+    const fb = mount.querySelector('.viewer-fallback');
+    if (!geometryData || !window.THREE) {
+      if (fb) fb.textContent = '3D failed to load';
+      return;
+    }
+
+    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    mount.appendChild(renderer.domElement);
+    if (fb) fb.style.display = 'none';
+
+    const scene = new THREE.Scene();
+    // Orthographic keeps frontal proportions identical to the source photo.
+    const FRUSTUM = 0.8;
+    const camera = new THREE.OrthographicCamera(-FRUSTUM, FRUSTUM, FRUSTUM, -FRUSTUM, 0.1, 100);
+    camera.position.set(0, 0.05, 2.8);
+
+    const geometry = new THREE.BufferGeometry();
+    geometry.setIndex(geometryData.indices);
+    geometry.setAttribute('position', new THREE.Float32BufferAttribute(geometryData.positions, 3));
+    geometry.setAttribute('uv', new THREE.Float32BufferAttribute(geometryData.uvs, 2));
+    geometry.computeVertexNormals();
+
+    const loader = new THREE.TextureLoader();
+    const uvTextures = {
+      bare: loader.load(subject.uv + 'uv_bare.png'),
+      makeup: loader.load(subject.uv + 'uv_makeup.png'),
+      recon: loader.load(subject.uv + 'uv_recon.png'),
+    };
+    Object.values(uvTextures).forEach(function (t) { t.colorSpace = THREE.SRGBColorSpace; });
+
+    const face = new THREE.Mesh(
+      geometry,
+      new THREE.MeshStandardMaterial({ map: uvTextures.makeup, roughness: 0.82, metalness: 0.03 })
+    );
+    scene.add(face);
+
+    const cell = mount.closest('.twin-cell');
+    const uvButtons = cell.querySelectorAll('.uv-toggle');
+    uvButtons.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        uvButtons.forEach(function (b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+        face.material.map = uvTextures[btn.dataset.uv];
+        face.material.needsUpdate = true;
+      });
+    });
+
+    scene.add(new THREE.HemisphereLight(0xffffff, 0xc2c2c2, 3.0));
+
+    const controls = new THREE.OrbitControls(camera, renderer.domElement);
+    controls.target.set(0, 0, 0);
+    controls.enableDamping = true;
+    controls.dampingFactor = 0.08;
+    controls.autoRotate = true;
+    controls.autoRotateSpeed = 0.625;
+    const stopAutoRotate = function () { controls.autoRotate = false; };
+    renderer.domElement.addEventListener('pointerdown', stopAutoRotate, { once: true });
+    renderer.domElement.addEventListener('touchstart', stopAutoRotate, { once: true });
+    renderer.domElement.addEventListener('wheel', stopAutoRotate, { once: true });
+    controls.minZoom = 0.5;
+    controls.maxZoom = 3;
+
+    function resize() {
+      const w = mount.clientWidth, h = mount.clientHeight;
+      if (!w || !h) return;
+      renderer.setSize(w, h);
+      const aspect = w / h;
+      camera.left = -FRUSTUM * aspect;
+      camera.right = FRUSTUM * aspect;
+      camera.top = FRUSTUM;
+      camera.bottom = -FRUSTUM;
+      camera.updateProjectionMatrix();
+    }
+    resize();
+    new ResizeObserver(resize).observe(mount);
+    renderer.setAnimationLoop(function () { controls.update(); renderer.render(scene, camera); });
+  }
+
+  SUBJECTS.forEach(initViewer);
+})();
+
+(function () {
+  const SAMPLES = ['154_1', '157_6', '157_15', '157_16', '157_24', '189_1', '189_2', '189_4', '189_5'];
+  const FACE = 'hq_trials/fullface_joint_core_v1/faces/';
+  const mount = document.getElementById('viewer-playing');
+  const fixedMount = document.getElementById('viewer-fixed');
+  const paletteMount = document.getElementById('palette-mount');
+  if (!window.THREE || !mount) return;
+
+  const geos = {};
+  SAMPLES.forEach(function (s) { geos[s] = window[s + '_TWIN_GEOMETRY']; });
+  if (!geos['157_15']) return;
+
+  const FRUSTUM = 0.55;
+  function makeRenderer(parentMount) {
+    const r = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    r.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    parentMount.appendChild(r.domElement);
+    const f = parentMount.querySelector('.viewer-fallback');
+    if (f) f.style.display = 'none';
+    return r;
+  }
+  function makeOrtho() {
+    const c = new THREE.OrthographicCamera(-FRUSTUM, FRUSTUM, FRUSTUM, -FRUSTUM, 0.1, 100);
+    c.position.set(-0.75, 1.0, 2.8);
+    return c;
+  }
+
+  // Playing model: stroke-by-stroke reveal.
+  const renderer = makeRenderer(mount);
+  const scene = new THREE.Scene();
+  const camera = makeOrtho();
+
+  // Fixed model: full makeup + all centerlines, static.
+  const fixedRenderer = makeRenderer(fixedMount);
+  const fixedScene = new THREE.Scene();
+  const fixedCamera = makeOrtho();
+
+  // Palette: rotatable RGB cube.
+  const paletteRenderer = makeRenderer(paletteMount);
+  const paletteScene = new THREE.Scene();
+  const paletteCamera = new THREE.PerspectiveCamera(42, 1, 0.1, 100);
+  paletteCamera.position.set(2.45, 2.2, 1.15);
+
+  const ref = geos['157_15'];
+  const geometry = new THREE.BufferGeometry();
+  geometry.setIndex(ref.indices);
+  geometry.setAttribute('uv', new THREE.Float32BufferAttribute(ref.uvs, 2));
+  geometry.setAttribute('position', new THREE.Float32BufferAttribute(ref.positions, 3));
+  geometry.computeVertexNormals();
+
+  const loader = new THREE.TextureLoader();
+  const bareTextures = {};
+  SAMPLES.forEach(function (s) {
+    const b = loader.load('samples/' + s + '/assets/uv_bare.png');
+    b.colorSpace = THREE.SRGBColorSpace;
+    bareTextures[s] = b;
+  });
+
+  // Unlit base: the brush/coverage/reveal overlays are unlit (MeshBasicMaterial /
+  // ShaderMaterial), so the base must be unlit too, or a lit base against unlit
+  // overlays leaves a seam (most visible in the concave philtrum above the lips).
+  const material = new THREE.MeshBasicMaterial({ map: bareTextures['157_15'] });
+  const face = new THREE.Mesh(geometry, material);
+  scene.add(face);
+
+  // Fixed face: shows the full makeup result of the current (head, look) pair.
+  const fixedFace = new THREE.Mesh(geometry, new THREE.MeshBasicMaterial({ map: null }));
+  fixedScene.add(fixedFace);
+
+  let currentHead = '157_15';
+  let currentLook = '157_15';
+  let strokesOn = false;
+  let coverageOn = false;
+
+  // Brush strokes overlay: transported coverage colored by the makeup result.
+  const strokeMesh = new THREE.Mesh(geometry, new THREE.MeshBasicMaterial({
+    map: null, transparent: true, depthWrite: false, side: THREE.DoubleSide,
+    polygonOffset: true, polygonOffsetFactor: -1, polygonOffsetUnits: -1
+  }));
+  strokeMesh.visible = false;
+  strokeMesh.renderOrder = 2;
+  scene.add(strokeMesh);
+
+  // Brush coverage overlay: transported coverage heatmap.
+  const coverageMesh = new THREE.Mesh(geometry, new THREE.MeshBasicMaterial({
+    map: null, transparent: true, depthWrite: false, side: THREE.DoubleSide,
+    polygonOffset: true, polygonOffsetFactor: -1, polygonOffsetUnits: -1
+  }));
+  coverageMesh.visible = false;
+  coverageMesh.renderOrder = 1;
+  scene.add(coverageMesh);
+
+  // Stroke-by-stroke reveal: progressively show the transported coverage field in
+  // application order, so the final frame matches "show strokes" byte-for-byte.
+  const REVEAL_DURATION = 18;   // seconds to draw the whole brush program at 1x speed
+  let speed = 0.5;             // playback speed multiplier (0.25 / 0.5 / 1 / 2) — halved for a slower default
+  const revealUniform = {
+    uReveal: { value: 0 },
+    uColor: { value: null },
+    uOrder: { value: null }
+  };
+  const revealMat = new THREE.ShaderMaterial({
+    uniforms: revealUniform,
+    transparent: true,
+    depthWrite: false,
+    side: THREE.DoubleSide,
+    polygonOffset: true,
+    polygonOffsetFactor: -1,
+    polygonOffsetUnits: -1,
+    vertexShader: [
+      'varying vec2 vUv;',
+      'void main() {',
+      '  vUv = uv;',
+      '  gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);',
+      '}'
+    ].join('\n'),
+    fragmentShader: [
+      'uniform float uReveal;',
+      'uniform sampler2D uColor;',
+      'uniform sampler2D uOrder;',
+      'varying vec2 vUv;',
+      'void main() {',
+      '  vec4 c = texture2D(uColor, vUv);',
+      '  float order = texture2D(uOrder, vUv).r;',
+      '  float reveal = smoothstep(order - 0.006, order + 0.006, uReveal);',
+      '  gl_FragColor = vec4(c.rgb, c.a * reveal);',
+      '}'
+    ].join('\n')
+  });
+  const revealMesh = new THREE.Mesh(geometry, revealMat);
+  revealMesh.visible = false;
+  revealMesh.renderOrder = 3;
+  scene.add(revealMesh);
+
+  // Stroke guide: the spine of each brush as a 1px polyline lifted off the surface,
+  // revealed as a comet tail behind a moving tip.
+  const ORDER_SCALE = 0.96;          // coverage order field is scaled to [0, 0.96]
+  const N_CENTER_SAMPLES = 24;       // matches build_demo_brush_centerlines_cross N_SAMPLES
+  let N_STROKES = 0;
+  let CENTER = null;
+  let centerPos = null;
+  const centerUniform = {
+    uP: { value: 0 },
+    uTail: { value: 3.0 },
+    uHead: { value: 3.0 }
+  };
+  const centerMat = new THREE.ShaderMaterial({
+    uniforms: centerUniform,
+    transparent: true,
+    depthWrite: false,
+    vertexShader: [
+      'attribute float aStroke;',
+      'attribute vec3 aColor;',
+      'varying float vStroke;',
+      'varying vec3 vColor;',
+      'void main() {',
+      '  vStroke = aStroke;',
+      '  vColor = aColor;',
+      '  gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);',
+      '}'
+    ].join('\n'),
+    fragmentShader: [
+      'uniform float uP;',
+      'uniform float uTail;',
+      'uniform float uHead;',
+      'varying float vStroke;',
+      'varying vec3 vColor;',
+      'void main() {',
+      '  float d = vStroke - uP;',
+      '  float a = 0.0;',
+      '  if (d <= 0.0) {',
+      '    a = smoothstep(-uTail, 0.0, d);',
+      '  } else {',
+      '    a = 1.0 - smoothstep(0.0, uHead, d);',
+      '  }',
+      '  if (a <= 0.002) discard;',
+      '  gl_FragColor = vec4(vColor, a);',
+      '}'
+    ].join('\n')
+  });
+  const centerMesh = new THREE.LineSegments(new THREE.BufferGeometry(), centerMat);
+  centerMesh.visible = false;
+  centerMesh.renderOrder = 4;
+  scene.add(centerMesh);
+
+  const tipMesh = new THREE.Mesh(
+    new THREE.SphereGeometry(0.011, 12, 12),
+    new THREE.MeshBasicMaterial({ color: 0xff5a3c })
+  );
+  tipMesh.visible = false;
+  tipMesh.renderOrder = 5;
+  scene.add(tipMesh);
+
+  // Fixed model: all centerlines drawn statically (simple full-draw shader, no
+  // comet-tail gating — the "comet" shader only ever shows a window around the tip).
+  const fixedCenterMat = new THREE.ShaderMaterial({
+    transparent: true,
+    depthWrite: false,
+    vertexShader: [
+      'attribute vec3 aColor;',
+      'varying vec3 vColor;',
+      'void main() {',
+      '  vColor = aColor;',
+      '  gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);',
+      '}'
+    ].join('\n'),
+    fragmentShader: [
+      'varying vec3 vColor;',
+      'void main() {',
+      '  gl_FragColor = vec4(vColor, 1.0);',
+      '}'
+    ].join('\n')
+  });
+  const fixedCenterMesh = new THREE.LineSegments(new THREE.BufferGeometry(), fixedCenterMat);
+  fixedCenterMesh.renderOrder = 2;
+  fixedScene.add(fixedCenterMesh);
+
+  // Palette: rotatable RGB cube with one dot per unique brush color, plus a
+  // pulsing highlight marker for the color of the stroke currently being drawn.
+  const paletteControls = new THREE.OrbitControls(paletteCamera, paletteRenderer.domElement);
+  paletteControls.target.set(0.5, 0.5, 0.5);
+  paletteControls.enableDamping = true;
+  paletteControls.dampingFactor = 0.12;
+  paletteControls.minZoom = 0.5;
+  paletteControls.maxZoom = 4;
+  {
+    const box = new THREE.LineSegments(
+      new THREE.EdgesGeometry(new THREE.BoxGeometry(1, 1, 1)),
+      new THREE.LineBasicMaterial({ color: 0xc9c5bd })
+    );
+    box.position.set(0.5, 0.5, 0.5);
+    paletteScene.add(box);
+    const axisLabel = function (text, color, pos) {
+      const c = document.createElement('canvas'); c.width = 128; c.height = 64;
+      const cx = c.getContext('2d'); cx.font = '600 40px "Inter", sans-serif';
+      cx.fillStyle = color; cx.textAlign = 'center'; cx.textBaseline = 'middle'; cx.fillText(text, 64, 33);
+      const tex = new THREE.CanvasTexture(c); tex.minFilter = THREE.LinearFilter;
+      const sp = new THREE.Sprite(new THREE.SpriteMaterial({ map: tex, depthTest: false, transparent: true }));
+      sp.scale.set(0.13, 0.065, 1); sp.position.set(pos[0], pos[1], pos[2]);
+      paletteScene.add(sp);
+    };
+    axisLabel('R', '#d84b4b', [1.14, 0, 0]);
+    axisLabel('G', '#3fa26a', [0, 1.14, 0]);
+    axisLabel('B', '#3a6ea8', [0, 0, 1.14]);
+  }
+  const paletteDots = [];
+  const highlight = new THREE.Mesh(
+    new THREE.SphereGeometry(0.03, 16, 16),
+    new THREE.MeshBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0.85 })
+  );
+  highlight.visible = false;
+  paletteScene.add(highlight);
+
+  function buildPalette(center) {
+    paletteDots.forEach(function (d) { paletteScene.remove(d.sphere); });
+    paletteDots.length = 0;
+    highlight.visible = false;
+    if (!center || !center.meta) return;
+    const seen = {};
+    center.meta.forEach(function (m) {
+      const key = m.color.map(function (c) { return Math.round(c * 255); }).join(',');
+      if (seen[key]) return;
+      seen[key] = true;
+      const sphere = new THREE.Mesh(
+        new THREE.SphereGeometry(0.02, 12, 12),
+        new THREE.MeshBasicMaterial({ color: new THREE.Color(m.color[0], m.color[1], m.color[2]) })
+      );
+      sphere.position.set(m.color[0], m.color[1], m.color[2]);
+      paletteScene.add(sphere);
+      paletteDots.push({ sphere: sphere, color: m.color });
+    });
+  }
+
+  function highlightColor(c) {
+    if (c) {
+      highlight.position.set(c[0], c[1], c[2]);
+      highlight.visible = true;
+    } else {
+      highlight.visible = false;
+    }
+  }
+
+  let milestones = null;
+  let strokeReadout = null;
+
+  function applyCenterlines(center) {
+    CENTER = center;
+    if (centerMesh.geometry) centerMesh.geometry.dispose();
+    const g = new THREE.BufferGeometry();
+    if (center && center.positions && center.positions.length) {
+      N_STROKES = center.meta.length;
+      centerPos = new Float32Array(center.positions);
+      g.setAttribute('position', new THREE.Float32BufferAttribute(center.positions, 3));
+      g.setAttribute('aStroke', new THREE.Float32BufferAttribute(center.strokeIds, 1));
+      g.setAttribute('aColor', new THREE.Float32BufferAttribute(center.colors, 3));
+      const idx = [];
+      for (let s = 0; s < N_STROKES; s++) {
+        for (let i = 0; i < N_CENTER_SAMPLES - 1; i++) {
+          const a = s * N_CENTER_SAMPLES + i;
+          idx.push(a, a + 1);
+        }
+      }
+      g.setIndex(idx);
+    } else {
+      N_STROKES = 0;
+      centerPos = null;
+    }
+    centerMesh.geometry = g;
+    fixedCenterMesh.geometry = g;
+    buildPalette(center);
+    rebuildMilestones();
+  }
+
+  function rebuildMilestones() {
+    if (!milestones) return;
+    milestones.innerHTML = '';
+    if (!CENTER || !CENTER.meta) { if (strokeReadout) strokeReadout.textContent = '—'; return; }
+    const seen = {};
+    CENTER.meta.forEach(function (m, i) {
+      const name = m.region.replace(/^(left_|right_)/, '');
+      if (seen[name]) return;
+      seen[name] = true;
+      const flag = document.createElement('span');
+      flag.className = 'milestone';
+      const pct = i / N_STROKES * 100;
+      flag.style.left = pct + '%';
+      if (pct <= 2) flag.style.transform = 'translateX(0)';
+      else if (pct >= 98) flag.style.transform = 'translateX(-100%)';
+      flag.title = name;
+      flag.innerHTML = '<i></i><em>' + name + '</em>';
+      milestones.appendChild(flag);
+    });
+    if (strokeReadout) strokeReadout.textContent = '—';
+  }
+
+  const tipPos = new THREE.Vector3();
+  function tipPosition(P) {
+    const S = P * N_STROKES / ORDER_SCALE;
+    const s = Math.min(Math.floor(S), N_STROKES - 1);
+    const t = S - Math.floor(S);
+    const base = s * N_CENTER_SAMPLES;
+    const fi = t * (N_CENTER_SAMPLES - 1);
+    const i0 = Math.min(Math.floor(fi), N_CENTER_SAMPLES - 2);
+    const frac = fi - i0;
+    const p0 = (base + i0) * 3, p1 = (base + i0 + 1) * 3;
+    tipPos.set(
+      centerPos[p0] + (centerPos[p1] - centerPos[p0]) * frac,
+      centerPos[p0 + 1] + (centerPos[p1 + 1] - centerPos[p0 + 1]) * frac,
+      centerPos[p0 + 2] + (centerPos[p1 + 2] - centerPos[p0 + 2]) * frac
+    );
+    return tipPos;
+  }
+
+  let scrub = null;
+  function setProgress(P) {
+    const S = P * N_STROKES / ORDER_SCALE;
+    revealUniform.uReveal.value = P;
+    centerUniform.uP.value = S;
+    if (centerPos) tipMesh.position.copy(tipPosition(P));
+    if (scrub) scrub.value = P;
+    if (N_STROKES > 0 && CENTER) {
+      const s = Math.min(Math.floor(S), N_STROKES - 1);
+      const m = CENTER.meta[s];
+      highlightColor(m.color);
+      if (strokeReadout) {
+        strokeReadout.textContent = 'stroke ' + (s + 1) + '/' + N_STROKES + ' · ' + m.region + ' · w≈' + m.width_px + 'px';
+      }
+    }
+  }
+
+  function refreshFaceMap() {
+    const overlay = strokesOn || coverageOn || revealMesh.visible;
+    material.map = overlay ? bareTextures[currentHead] : (pairLoaded ? pairLoaded.makeup : bareTextures[currentHead]);
+    material.needsUpdate = true;
+  }
+
+  // Lazy, cached loader for one (target T, source S) pair: the four UV textures plus
+  // the centerlines JS (injected as a <script> the first time the pair is requested).
+  const pairCache = {};
+  function loadPair(T, S) {
+    const key = T + '|' + S;
+    if (pairCache[key]) return pairCache[key];
+    const base = 'samples/' + T + '/assets/cross/' + S + '/';
+    pairCache[key] = new Promise(function (resolve) {
+      let pending = 6;
+      const out = { T: T, S: S, makeup: null, strokes: null, revealStrokes: null, coverage: null, order: null, center: null };
+      function settle() { if (--pending === 0) resolve(out); }
+      function tex(file, key, srgb, nearest) {
+        loader.load(base + file, function (t) {
+          if (srgb) t.colorSpace = THREE.SRGBColorSpace;
+          if (nearest) { t.magFilter = THREE.NearestFilter; t.minFilter = THREE.NearestFilter; }
+          out[key] = t;
+          settle();
+        }, undefined, settle);
+      }
+      tex('uv_makeup.png', 'makeup', true, false);
+      tex('uv_brush_strokes.png', 'strokes', true, false);
+      // The reveal shader writes raw values straight through, so it needs the SAME
+      // texture WITHOUT sRGB decoding (a second, NoColorSpace copy).
+      tex('uv_brush_strokes.png', 'revealStrokes', false, false);
+      tex('uv_brush.png', 'coverage', true, false);
+      tex('uv_brush_order.png', 'order', false, true);
+      const sym = T + '_' + S + '_BRUSH_CENTERLINES';
+      if (window[sym]) { out.center = window[sym]; settle(); }
+      else {
+        const sc = document.createElement('script');
+        sc.src = base + 'centerlines.js';
+        sc.onload = function () { out.center = window[sym] || null; settle(); };
+        sc.onerror = function () { out.center = null; settle(); };
+        document.head.appendChild(sc);
+      }
+    });
+    return pairCache[key];
+  }
+
+  let pairLoaded = null;
+  function ensurePair(T, S) {
+    return loadPair(T, S).then(function (bundle) {
+      strokeMesh.material.map = bundle.strokes;
+      strokeMesh.material.needsUpdate = true;
+      coverageMesh.material.map = bundle.coverage;
+      coverageMesh.material.needsUpdate = true;
+      revealUniform.uColor.value = bundle.revealStrokes;
+      revealUniform.uOrder.value = bundle.order;
+      fixedFace.material.map = bundle.makeup;
+      fixedFace.material.needsUpdate = true;
+      applyCenterlines(bundle.center);
+      pairLoaded = { T: T, S: S, makeup: bundle.makeup };
+      refreshFaceMap();
+      return bundle;
+    });
+  }
+
+  let revealPlaying = false;
+  let revealStart = 0;
+  let autoPlayed = false;
+  function hideReveal() {
+    revealPlaying = false;
+    revealMesh.visible = false;
+    centerMesh.visible = false;
+    tipMesh.visible = false;
+    pausedProgress = 0;
+    setPlayButton('idle');
+    refreshFaceMap();
+  }
+  function playReveal() {
+    ensurePair(currentHead, currentLook).then(function () {
+      setStrokes(false);
+      setCoverage(false);
+      revealMesh.visible = true;
+      centerMesh.visible = N_STROKES > 0;
+      tipMesh.visible = N_STROKES > 0;
+      setProgress(0);
+      revealStart = performance.now();
+      revealPlaying = true;
+      refreshFaceMap();
+      setPlayButton('playing');
+    });
+  }
+
+  const controls = new THREE.OrbitControls(camera, renderer.domElement);
+  controls.target.set(0, 0, 0);
+  controls.enableDamping = true;
+  controls.dampingFactor = 0.08;
+  controls.autoRotate = false;
+  controls.autoRotateSpeed = 0.625;
+  const stop = function () { controls.autoRotate = false; };
+  renderer.domElement.addEventListener('pointerdown', stop, { once: true });
+  renderer.domElement.addEventListener('touchstart', stop, { once: true });
+  renderer.domElement.addEventListener('wheel', stop, { once: true });
+  controls.minZoom = 0.5;
+  controls.maxZoom = 3;
+
+  const fixedControls = new THREE.OrbitControls(fixedCamera, fixedRenderer.domElement);
+  fixedControls.target.set(0, 0, 0);
+  fixedControls.enableDamping = true;
+  fixedControls.dampingFactor = 0.08;
+  fixedControls.autoRotate = false;
+  fixedControls.autoRotateSpeed = 0.625;
+  const stopFixed = function () { fixedControls.autoRotate = false; };
+  fixedRenderer.domElement.addEventListener('pointerdown', stopFixed, { once: true });
+  fixedRenderer.domElement.addEventListener('touchstart', stopFixed, { once: true });
+  fixedRenderer.domElement.addEventListener('wheel', stopFixed, { once: true });
+  fixedControls.minZoom = 0.5;
+  fixedControls.maxZoom = 3;
+
+  function setActive(container, btn) {
+    container.querySelectorAll('.thumb-btn').forEach(function (b) { b.classList.toggle('active', b === btn); });
+  }
+
+  const headPicker = document.getElementById('head-picker');
+  SAMPLES.forEach(function (s) {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'thumb-btn' + (s === '157_15' ? ' active' : '');
+    b.title = s;
+    const img = document.createElement('img');
+    img.src = FACE + s + '/B.png';
+    img.alt = s;
+    b.appendChild(img);
+    b.addEventListener('click', function () {
+      const g = geos[s];
+      if (!g) return;
+      geometry.setAttribute('position', new THREE.Float32BufferAttribute(g.positions, 3));
+      geometry.attributes.position.needsUpdate = true;
+      geometry.computeVertexNormals();
+      if (geometry.attributes.normal) geometry.attributes.normal.needsUpdate = true;
+      setActive(headPicker, b);
+      currentHead = s;
+      hideReveal(); setStrokes(false); setCoverage(false);
+      ensurePair(s, currentLook);
+    });
+    headPicker.appendChild(b);
+  });
+
+  const lookPicker = document.getElementById('look-picker');
+  SAMPLES.forEach(function (s) {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'thumb-btn' + (s === '157_15' ? ' active' : '');
+    b.title = s;
+    const img = document.createElement('img');
+    img.src = FACE + s + '/joint.png';
+    img.alt = s;
+    b.appendChild(img);
+    b.addEventListener('click', function () {
+      currentLook = s;
+      setStrokes(false); setCoverage(false); hideReveal();
+      setActive(lookPicker, b);
+      ensurePair(currentHead, s);
+    });
+    lookPicker.appendChild(b);
+  });
+
+  function setStrokes(on) {
+    strokesOn = on;
+    if (on) hideReveal();
+    strokeMesh.visible = on;
+    refreshFaceMap();
+    if (strokeButton) {
+      strokeButton.classList.toggle('active', on);
+      strokeButton.textContent = on ? 'hide strokes' : 'show strokes';
+    }
+  }
+
+  function setCoverage(on) {
+    coverageOn = on;
+    if (on) hideReveal();
+    coverageMesh.visible = on;
+    refreshFaceMap();
+    if (coverageButton) {
+      coverageButton.classList.toggle('active', on);
+      coverageButton.textContent = on ? 'hide coverage' : 'show coverage';
+    }
+  }
+
+  const strokePicker = document.getElementById('stroke-picker');
+  let replayButton = null;
+  let pausedProgress = 0;
+
+  function setPlayButton(state) {
+    if (!replayButton) return;
+    if (state === 'playing') {
+      replayButton.innerHTML = '<span class="ico">⏸</span><span>pause</span>';
+      replayButton.classList.add('active');
+    } else if (state === 'paused') {
+      replayButton.innerHTML = '<span class="ico">▶</span><span>resume</span>';
+      replayButton.classList.add('active');
+    } else {
+      replayButton.innerHTML = '<span class="ico">▶</span><span>play strokes</span>';
+      replayButton.classList.remove('active');
+    }
+  }
+
+  if (strokePicker) {
+    replayButton = document.createElement('button');
+    replayButton.type = 'button';
+    replayButton.className = 'play-btn';
+    replayButton.innerHTML = '<span class="ico">▶</span><span>play strokes</span>';
+    replayButton.addEventListener('click', function () {
+      if (revealPlaying) {
+        revealPlaying = false;
+        pausedProgress = Math.min((performance.now() - revealStart) / 1000 / (REVEAL_DURATION / speed), 1);
+        setPlayButton('paused');
+      } else if (revealMesh.visible && pausedProgress < 1) {
+        revealPlaying = true;
+        revealStart = performance.now() - pausedProgress * (REVEAL_DURATION / speed) * 1000;
+        setPlayButton('playing');
+      } else {
+        autoPlayed = true;
+        playReveal();
+      }
+    });
+    strokePicker.appendChild(replayButton);
+  }
+
+  let strokeButton = null;
+  if (strokePicker) {
+    strokeButton = document.createElement('button');
+    strokeButton.type = 'button';
+    strokeButton.className = 'picker';
+    strokeButton.textContent = 'show strokes';
+    strokeButton.addEventListener('click', function () {
+      ensurePair(currentHead, currentLook);
+      setStrokes(!strokesOn);
+    });
+    strokePicker.appendChild(strokeButton);
+  }
+
+  let coverageButton = null;
+  if (strokePicker) {
+    coverageButton = document.createElement('button');
+    coverageButton.type = 'button';
+    coverageButton.className = 'picker';
+    coverageButton.textContent = 'show coverage';
+    coverageButton.addEventListener('click', function () {
+      ensurePair(currentHead, currentLook);
+      setCoverage(!coverageOn);
+    });
+    strokePicker.appendChild(coverageButton);
+  }
+
+  // Playback speed presets. Resyncs revealStart so a mid-play speed change keeps
+  // the current progress instead of jumping.
+  const SPEEDS = [0.25, 0.5, 1, 2];
+  function setSpeed(s) {
+    if (s === speed) return;
+    const oldSpeed = speed;
+    let p = 0;
+    if (revealPlaying) {
+      p = Math.min((performance.now() - revealStart) / 1000 / (REVEAL_DURATION / oldSpeed), 1);
+    }
+    speed = s;
+    if (revealPlaying) {
+      revealStart = performance.now() - p * (REVEAL_DURATION / speed) * 1000;
+    }
+    if (strokePicker) {
+      strokePicker.querySelectorAll('.speed-buttons .picker').forEach(function (b) {
+        b.classList.toggle('active', b.textContent === s + '×');
+      });
+    }
+  }
+  if (strokePicker) {
+    const speedGroup = document.createElement('div');
+    speedGroup.className = 'speed-buttons';
+    const speedLabel = document.createElement('span');
+    speedLabel.className = 'speed-label';
+    speedLabel.textContent = 'speed';
+    speedGroup.appendChild(speedLabel);
+    SPEEDS.forEach(function (s) {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'picker' + (s === 0.5 ? ' active' : '');
+      b.textContent = s + '×';
+      b.addEventListener('click', function () { setSpeed(s); });
+      speedGroup.appendChild(b);
+    });
+    strokePicker.appendChild(speedGroup);
+  }
+
+  // Timeline scrub bar + stroke readout.
+  if (strokePicker) {
+    const timelineRow = document.createElement('div');
+    timelineRow.className = 'stroke-timeline';
+    scrub = document.createElement('input');
+    scrub.type = 'range';
+    scrub.min = '0';
+    scrub.max = '1';
+    scrub.step = '0.001';
+    scrub.value = '0';
+    milestones = document.createElement('div');
+    milestones.className = 'stroke-milestones';
+    strokeReadout = document.createElement('span');
+    strokeReadout.className = 'stroke-readout';
+    strokeReadout.textContent = '—';
+    timelineRow.appendChild(scrub);
+    timelineRow.appendChild(milestones);
+    timelineRow.appendChild(strokeReadout);
+    strokePicker.appendChild(timelineRow);
+    scrub.addEventListener('input', function () {
+      revealPlaying = false;   // pause auto-play while scrubbing
+      ensurePair(currentHead, currentLook).then(function () {
+        if (!revealMesh.visible) {
+          setStrokes(false);
+          setCoverage(false);
+          revealMesh.visible = true;
+          centerMesh.visible = N_STROKES > 0;
+          tipMesh.visible = N_STROKES > 0;
+          refreshFaceMap();
+        }
+        setProgress(parseFloat(scrub.value));
+        pausedProgress = parseFloat(scrub.value);
+        setPlayButton('paused');
+      });
+    });
+  }
+
+  // Auto-play the stroke-by-stroke build-up once, when the viewer first scrolls
+  // into view (falls back to a short delay if IntersectionObserver is missing).
+  function autoPlayOnce() {
+    if (!autoPlayed) { autoPlayed = true; playReveal(); }
+  }
+  if (typeof IntersectionObserver !== 'undefined') {
+    const io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { autoPlayOnce(); io.disconnect(); }
+      });
+    }, { threshold: 0.35 });
+    io.observe(mount);
+  } else {
+    setTimeout(autoPlayOnce, 1500);
+  }
+
+  function resize() {
+    function fit(r, cam, parentMount) {
+      const w = parentMount.clientWidth, h = parentMount.clientHeight;
+      if (!w || !h) return;
+      r.setSize(w, h);
+      if (cam.isOrthographicCamera) {
+        const aspect = w / h;
+        cam.left = -FRUSTUM * aspect;
+        cam.right = FRUSTUM * aspect;
+        cam.top = FRUSTUM;
+        cam.bottom = -FRUSTUM;
+        cam.updateProjectionMatrix();
+      } else {
+        cam.aspect = w / h;
+        cam.updateProjectionMatrix();
+      }
+    }
+    fit(renderer, camera, mount);
+    fit(fixedRenderer, fixedCamera, fixedMount);
+    fit(paletteRenderer, paletteCamera, paletteMount);
+  }
+  resize();
+  new ResizeObserver(resize).observe(mount);
+  new ResizeObserver(resize).observe(fixedMount);
+  new ResizeObserver(resize).observe(paletteMount);
+  renderer.setAnimationLoop(function () {
+    if (revealPlaying) {
+      const p = Math.min((performance.now() - revealStart) / 1000 / (REVEAL_DURATION / speed), 1);
+      setProgress(p);
+      if (p >= 1) {
+        revealPlaying = false;
+        setProgress(1);
+        setPlayButton('idle');
+      }
+    }
+    // Pulse the highlighted palette dot (变大 + glow).
+    if (highlight.visible) {
+      const t = performance.now() / 1000;
+      highlight.scale.setScalar(1 + 0.35 * Math.sin(t * 8));
+      highlight.material.opacity = 0.5 + 0.5 * Math.sin(t * 8);
+    }
+    controls.update();
+    fixedControls.update();
+    paletteControls.update();
+    renderer.render(scene, camera);
+    fixedRenderer.render(fixedScene, fixedCamera);
+    paletteRenderer.render(paletteScene, paletteCamera);
+  });
+
+  // Warm the default (head 157_15, look 157_15) pair so the face shows makeup at once.
+  ensurePair('157_15', '157_15');
+})();
+</script>
+
+<script>
+// ①/② — reusable 9 person × 9 makeup transfer picker (thumbnail-only buttons).
+// prefix '' → section ①; 'replay-' → section ②. onSelect(person, makeup) fires on change.
+
+// before/after compare slider: drag the vertical divider to peel back the after
+// layer and reveal the before layer underneath. Default = full after (divider 0%).
+function attachCompareSlider(resultEl) {
+  resultEl.insertAdjacentHTML('beforeend',
+    '<span class="cmp-label before">before</span>' +
+    '<span class="cmp-label after">after</span>' +
+    '<div class="cmp-divider"><span class="cmp-handle">&lsaquo;&rsaquo;</span></div>');
+  const divider = resultEl.querySelector('.cmp-divider');
+  let dragging = false;
+
+  function setPos(pct) {
+    resultEl.style.setProperty('--cmp-pos', Math.max(0, Math.min(100, pct)) + '%');
+  }
+  function posFromEvent(e) {
+    const r = resultEl.getBoundingClientRect();
+    return ((e.clientX - r.left) / r.width) * 100;
+  }
+
+  divider.addEventListener('pointerdown', function (e) {
+    dragging = true;
+    e.preventDefault();
+    divider.setPointerCapture(e.pointerId);
+    setPos(posFromEvent(e));
+  });
+  divider.addEventListener('pointermove', function (e) {
+    if (dragging) setPos(posFromEvent(e));
+  });
+  divider.addEventListener('pointerup', function () { dragging = false; });
+  divider.addEventListener('pointercancel', function () { dragging = false; });
+
+  setPos(0); // full after
+}
+
+function initTransferPicker(prefix, onSelect) {
+  const SAMPLES = ['157_6', '157_24', '154_1', '157_15', '157_16', '189_1', '189_2', '189_4', '189_5'];
+  const FACE = 'hq_trials/fullface_joint_core_v1/faces/';
+  const TRANS = 'hq_trials/brush_transfer_9x9/';
+  const foundationRow = document.getElementById(prefix + 'foundation-row');
+  const makeupRow = document.getElementById(prefix + 'makeup-row');
+  const beforeImg = document.getElementById(prefix + 'transfer-before');
+  const afterImg = document.getElementById(prefix + 'transfer-after');
+  const resultEl = document.getElementById(prefix + 'transfer-result');
+  if (!foundationRow || !makeupRow || !beforeImg || !afterImg) return;
+
+  // Shared hover preview: makeup (source) thumbnails only — show a bigger makeup picture.
+  let preview = document.querySelector('.thumb-preview');
+  if (!preview) {
+    preview = document.createElement('div');
+    preview.className = 'thumb-preview';
+    preview.innerHTML = '<img alt="">';
+    document.body.appendChild(preview);
+  }
+  const previewImg = preview.querySelector('img');
+
+  function movePreview(e) {
+    const pad = 16;
+    const w = preview.offsetWidth || 220;
+    const h = preview.offsetHeight || 220;
+    let x = e.clientX + pad;
+    let y = e.clientY + pad;
+    if (x + w > window.innerWidth - 8) x = e.clientX - w - pad;
+    if (y + h > window.innerHeight - 8) y = e.clientY - h - pad;
+    preview.style.left = x + 'px';
+    preview.style.top = y + 'px';
+  }
+
+  let selFoundation = '157_6';
+  let selMakeup = '157_6';
+
+  function buildRow(row, kind) {
+    SAMPLES.forEach(function (s) {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'thumb-btn';
+      b.dataset.sample = s;
+      b.title = s;
+      const img = document.createElement('img');
+      img.src = FACE + s + '/' + (kind === 'foundation' ? 'B.png' : 'joint.png');
+      img.alt = s;
+      b.appendChild(img);
+      b.addEventListener('click', function () {
+        if (kind === 'foundation') selFoundation = s; else selMakeup = s;
+        refresh();
+      });
+      if (kind === 'makeup') {
+        b.addEventListener('mouseenter', function (e) {
+          previewImg.src = FACE + s + '/joint.png';
+          preview.classList.add('show');
+          movePreview(e);
+        });
+        b.addEventListener('mousemove', movePreview);
+        b.addEventListener('mouseleave', function () {
+          preview.classList.remove('show');
+        });
+      }
+      row.appendChild(b);
+    });
+  }
+
+  function refresh() {
+    foundationRow.querySelectorAll('.thumb-btn').forEach(function (b) {
+      b.classList.toggle('active', b.dataset.sample === selFoundation);
+    });
+    makeupRow.querySelectorAll('.thumb-btn').forEach(function (b) {
+      b.classList.toggle('active', b.dataset.sample === selMakeup);
+    });
+    beforeImg.src = FACE + selFoundation + '/B.png';
+    afterImg.src = TRANS + selFoundation + '__from__' + selMakeup + '.png';
+    if (onSelect) onSelect(selFoundation, selMakeup);
+  }
+
+  attachCompareSlider(resultEl);
+
+  buildRow(foundationRow, 'foundation');
+  buildRow(makeupRow, 'makeup');
+  refresh();
+}
+
+// ① Nuance-Preserving Transfer — picker only.
+initTransferPicker('', null);
+
+// ② Transfer & Replay by Brushes — same picker + stroke-by-stroke eye replay on the right.
+function initEyeReplay() {
+  const canvas = document.getElementById('eye-replay');
+  if (!canvas) return null;
+  const ctx = canvas.getContext('2d');
+  // eye crop in the 768px UV atlas (geometry UV x∈[0.144,0.498]; y flipped → [0.273,0.488]).
+  const CX = 0.144, CY = 0.273, CW = 0.354, CH = 0.215;
+  let strokes = null, order = null, W = 0, H = 0, N = 0, reveal = 0, ready = false;
+
+  function setPair(person, makeup) {
+    const base = 'samples/' + person + '/assets/cross/' + makeup + '/';
+    ready = false; strokes = null; order = null;
+    const s = new Image();
+    s.onload = function () {
+      const w = s.naturalWidth, h = s.naturalHeight;
+      const sx = Math.round(CX * (w - 1)), sy = Math.round(CY * (h - 1));
+      const sw = Math.round(CW * (w - 1)), sh = Math.round(CH * (h - 1));
+      const oc = document.createElement('canvas');
+      oc.width = sw; oc.height = sh;
+      oc.getContext('2d').drawImage(s, sx, sy, sw, sh, 0, 0, sw, sh);
+      strokes = oc.getContext('2d').getImageData(0, 0, sw, sh);
+      W = sw; H = sh; N = sw * sh;
+      canvas.width = sw; canvas.height = sh;
+      maybeReady();
+    };
+    s.src = base + 'uv_brush_strokes.png';
+    const o = new Image();
+    o.onload = function () {
+      const w = o.naturalWidth, h = o.naturalHeight;
+      const sx = Math.round(CX * (w - 1)), sy = Math.round(CY * (h - 1));
+      const sw = Math.round(CW * (w - 1)), sh = Math.round(CH * (h - 1));
+      const oc = document.createElement('canvas');
+      oc.width = sw; oc.height = sh;
+      oc.getContext('2d').drawImage(o, sx, sy, sw, sh, 0, 0, sw, sh);
+      const od = oc.getContext('2d').getImageData(0, 0, sw, sh);
+      order = new Uint8Array(sw * sh);
+      for (let i = 0; i < sw * sh; i++) order[i] = od.data[i * 4];
+      maybeReady();
+    };
+    o.src = base + 'uv_brush_order.png';
+  }
+
+  function maybeReady() { if (strokes && order) { ready = true; reveal = 0; } }
+
+  function render() {
+    if (!ready) return;
+    const out = ctx.createImageData(W, H);
+    const sd = strokes.data, od = order, dd = out.data;
+    const threshold = reveal * 255;
+    for (let i = 0; i < N; i++) {
+      const p = i * 4;
+      dd[p] = sd[p]; dd[p + 1] = sd[p + 1]; dd[p + 2] = sd[p + 2];
+      dd[p + 3] = od[i] < threshold ? sd[p + 3] : 0;
+    }
+    ctx.putImageData(out, 0, 0);
+  }
+
+  function loop() {
+    requestAnimationFrame(loop);
+    if (ready) { reveal += 0.002; if (reveal >= 1) reveal = 0; }
+    render();
+  }
+  loop();
+  return setPair;
+}
+
+const setEyePair = initEyeReplay();
+initTransferPicker('replay-', function (person, makeup) {
+  if (setEyePair) setEyePair(person, makeup);
+});
+</script>
 </body>
 </html>

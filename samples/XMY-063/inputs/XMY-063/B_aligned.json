@@ -1,0 +1,23 @@
+{
+  "schema": "b-to-m-global-alignment-v0",
+  "source_B": "mt_demo\\XMY-063-foundation-concealer-v2.png",
+  "target_M": "mt_demo\\XMY-063-original.png",
+  "output": "mt_demo\\samples\\XMY-063\\inputs\\XMY-063\\B_aligned.png",
+  "method": "LMEDS global similarity; no dense/local warp.",
+  "affine_2x3": [
+    [
+      0.28767543871499496,
+      -0.00023695262975472094,
+      0.20678986139986644
+    ],
+    [
+      0.00023695262975472094,
+      0.28767543871499496,
+      0.2533253807596419
+    ]
+  ],
+  "landmark_residual_mean_px": 0.791,
+  "landmark_residual_p95_px": 1.78,
+  "landmark_residual_mean_pct_face_height": 0.291,
+  "inliers": 461
+}
