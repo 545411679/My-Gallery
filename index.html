@@ -120,25 +120,62 @@
           <img id="transfer-after" class="after" alt="transferred makeup">
         </div>
       </div>
-      <p>Makeup as a stylist's technique, not a painting: the foundation is applied to both faces first, then the makeup — highlights, shading, regional tone, ratio — is extracted and transferred, so daily-makeup subtlety survives.</p>
     </section>
 
     <section class="feature">
       <h2>Makeup Replay as Brushes</h2>
-      <div class="placeholder">brush replay — updating</div>
+      <div class="brush-replay">
+        <div class="brush-replay__full">
+          <canvas id="replay-main-canvas"></canvas>
+          <div class="tf-loading" id="replay-loading">
+            <span class="tf-loading__guy"><span class="tf-loading__eye"></span><span class="tf-loading__eye"></span></span>
+            <span class="tf-loading__txt">loading…</span>
+          </div>
+        </div>
+        <div class="brush-replay__zoom"><canvas id="replay-local-canvas"></canvas></div>
+      </div>
     </section>
 
     <section class="feature">
       <h2>Light-weight 3D Twin <span class="h2-sub">and makeup try-on</span></h2>
-      <figure class="twin-cell">
-        <div class="viewer" id="viewer-xmy059"><div class="viewer-fallback">3D</div></div>
-        <figcaption>XMY-059</figcaption>
-        <div class="uv-toggle-row">
-          <button class="uv-toggle active" data-uv="makeup" type="button">makeup</button>
-          <button class="uv-toggle" data-uv="bare" type="button">bare</button>
-          <button class="uv-toggle" data-uv="recon" type="button">recon</button>
-        </div>
-      </figure>
+      <div class="twin-grid">
+        <figure class="twin-cell">
+          <div class="viewer" id="viewer-xmy059"><div class="viewer-fallback">3D</div></div>
+          <figcaption>XMY-059</figcaption>
+          <div class="uv-toggle-row">
+            <button class="uv-toggle active" data-uv="makeup" type="button">makeup</button>
+            <button class="uv-toggle" data-uv="bare" type="button">bare</button>
+            <button class="uv-toggle" data-uv="recon" type="button">recon</button>
+          </div>
+        </figure>
+        <figure class="twin-cell">
+          <div class="viewer" id="viewer-xmy063"><div class="viewer-fallback">3D</div></div>
+          <figcaption>XMY-063</figcaption>
+          <div class="uv-toggle-row">
+            <button class="uv-toggle active" data-uv="makeup" type="button">makeup</button>
+            <button class="uv-toggle" data-uv="bare" type="button">bare</button>
+            <button class="uv-toggle" data-uv="recon" type="button">recon</button>
+          </div>
+        </figure>
+        <figure class="twin-cell">
+          <div class="viewer" id="viewer-157_6"><div class="viewer-fallback">3D</div></div>
+          <figcaption>157_6</figcaption>
+          <div class="uv-toggle-row">
+            <button class="uv-toggle active" data-uv="makeup" type="button">makeup</button>
+            <button class="uv-toggle" data-uv="bare" type="button">bare</button>
+            <button class="uv-toggle" data-uv="recon" type="button">recon</button>
+          </div>
+        </figure>
+        <figure class="twin-cell">
+          <div class="viewer" id="viewer-189_4"><div class="viewer-fallback">3D</div></div>
+          <figcaption>189_4</figcaption>
+          <div class="uv-toggle-row">
+            <button class="uv-toggle active" data-uv="makeup" type="button">makeup</button>
+            <button class="uv-toggle" data-uv="bare" type="button">bare</button>
+            <button class="uv-toggle" data-uv="recon" type="button">recon</button>
+          </div>
+        </figure>
+      </div>
     </section>
   </div>
 
@@ -152,17 +189,20 @@
           <div class="twin-view" id="viewer-fixed"><div class="viewer-fallback">3D</div></div>
         </div>
       </div>
-      <div class="thumb-picker">
-        <span class="thumb-label">the person</span>
-        <div class="thumb-row" id="head-picker"></div>
+      <div class="replay-controls">
+        <div class="replay-thumbs">
+          <div class="thumb-picker">
+            <span class="thumb-label">the person</span>
+            <div class="thumb-row" id="head-picker"></div>
+          </div>
+          <div class="thumb-picker">
+            <span class="thumb-label">the makeup reference / the style</span>
+            <div class="thumb-row" id="look-picker"></div>
+          </div>
+        </div>
+        <div class="picker-row" id="stroke-picker"><span class="picker-label">brushes</span></div>
       </div>
-      <div class="thumb-picker">
-        <span class="thumb-label">the makeup reference / the style</span>
-        <div class="thumb-row" id="look-picker"></div>
-      </div>
-      <div class="picker-row" id="stroke-picker"><span class="picker-label">brushes</span></div>
     </div>
-    <p>Every twin shares one canonical UV map, so a look is a texture independent of the head it lands on. Toggle brushes to lift the look back into its brush program: each Bézier stroke, recolored from the palette, traced in application order.</p>
   </section>
 
 </div>
@@ -541,6 +581,7 @@
 <script src="samples/XMY-063/assets/xmy063_twin_geometry.js"></script>
 <script src="samples/157_6/assets/157_6_twin_geometry.js"></script>
 <script src="samples/157_6/assets/157_6_brush_centerlines.js"></script>
+<script src="samples/157_6/assets/cross/157_6/centerlines.js"></script>
 <script src="samples/189_4/assets/189_4_twin_geometry.js"></script>
 <script src="samples/154_1/assets/154_1_twin_geometry.js"></script>
 <script src="samples/157_24/assets/157_24_twin_geometry.js"></script>
@@ -552,7 +593,10 @@
 <script>
 (function () {
   const SUBJECTS = [
-    { key: 'XMY059', uv: 'assets/', id: 'viewer-xmy059' }
+    { key: 'XMY059', uv: 'assets/', id: 'viewer-xmy059' },
+    { key: 'XMY063', uv: 'samples/XMY-063/assets/', id: 'viewer-xmy063' },
+    { key: '157_6', uv: 'samples/157_6/assets/', id: 'viewer-157_6' },
+    { key: '189_4', uv: 'samples/189_4/assets/', id: 'viewer-189_4' },
   ];
 
   function initViewer(subject) {
@@ -1412,7 +1456,7 @@
 // prefix '' → section ①; 'replay-' → section ②. onSelect(person, makeup) fires on change.
 
 // before/after compare slider: drag the vertical divider to peel back the after
-// layer and reveal the before layer underneath. Default = full after (divider 0%).
+// layer and reveal the before layer underneath. Default = divider at 35% (some before visible).
 function attachCompareSlider(resultEl) {
   resultEl.insertAdjacentHTML('beforeend',
     '<span class="cmp-label before">before</span>' +
@@ -1441,7 +1485,7 @@ function attachCompareSlider(resultEl) {
   divider.addEventListener('pointerup', function () { dragging = false; });
   divider.addEventListener('pointercancel', function () { dragging = false; });
 
-  setPos(0); // full after
+  setPos(35); // initial divider at 35% — reveal a slice of the before layer
 }
 
 function initTransferPicker(prefix, onSelect) {
@@ -1510,6 +1554,29 @@ function initTransferPicker(prefix, onSelect) {
     });
   }
 
+  // Loading placeholder: a checkerboard + tiny bouncing Kevin-face, so the result
+  // never freezes on the previous image while the next one loads.
+  const loadingEl = document.createElement('div');
+  loadingEl.className = 'tf-loading';
+  loadingEl.innerHTML =
+    '<span class="tf-loading__guy"><span class="tf-loading__eye"></span><span class="tf-loading__eye"></span></span>' +
+    '<span class="tf-loading__txt">loading…</span>';
+  resultEl.appendChild(loadingEl);
+
+  function setLoading(on) {
+    loadingEl.classList.toggle('on', on);
+    beforeImg.classList.toggle('is-pending', on);
+    afterImg.classList.toggle('is-pending', on);
+  }
+
+  function swap(img, url, done) {
+    // Already showing this exact image and it's decoded — nothing to fetch.
+    if (img.getAttribute('src') === url && img.complete && img.naturalWidth) { done(); return; }
+    img.onload = done;
+    img.onerror = done;
+    img.src = url;
+  }
+
   function refresh() {
     foundationRow.querySelectorAll('.thumb-btn').forEach(function (b) {
       b.classList.toggle('active', b.dataset.sample === selFoundation);
@@ -1517,8 +1584,17 @@ function initTransferPicker(prefix, onSelect) {
     makeupRow.querySelectorAll('.thumb-btn').forEach(function (b) {
       b.classList.toggle('active', b.dataset.sample === selMakeup);
     });
-    beforeImg.src = FACE + selFoundation + '/B.png';
-    afterImg.src = TRANS + selFoundation + '__from__' + selMakeup + '.png';
+
+    const beforeUrl = FACE + selFoundation + '/B.png';
+    const afterUrl = TRANS + selFoundation + '__from__' + selMakeup + '.png';
+
+    setLoading(true);
+    let pending = 2;
+    const done = function () { if (--pending === 0) setLoading(false); };
+
+    swap(beforeImg, beforeUrl, done);
+    swap(afterImg, afterUrl, done);
+
     if (onSelect) onSelect(selFoundation, selMakeup);
   }
 
@@ -1527,81 +1603,354 @@ function initTransferPicker(prefix, onSelect) {
   buildRow(foundationRow, 'foundation');
   buildRow(makeupRow, 'makeup');
   refresh();
+
+  // Warm the transfer-image cache in the background once the page is otherwise ready,
+  // so switching face/look is instant instead of fetching on click.
+  function whenIdle(cb) {
+    if (window.requestIdleCallback) window.requestIdleCallback(cb, { timeout: 400 });
+    else setTimeout(cb, 140);
+  }
+  function preloadAll() {
+    const urls = [];
+    SAMPLES.forEach(function (s) {
+      SAMPLES.forEach(function (m) {
+        urls.push(TRANS + s + '__from__' + m + '.png');
+      });
+    });
+    let i = 0;
+    function step() {
+      for (let k = 0; k < 6 && i < urls.length; k++, i++) {
+        const im = new Image();
+        im.src = urls[i];
+      }
+      if (i < urls.length) whenIdle(step);
+    }
+    whenIdle(step);
+  }
+  function setSelection(foundation, makeup) {
+    selFoundation = foundation;
+    selMakeup = makeup;
+    refresh();
+  }
+  function getSelection() { return [selFoundation, selMakeup]; }
+
+  if (document.readyState === 'complete') whenIdle(preloadAll);
+  else window.addEventListener('load', function () { whenIdle(preloadAll); });
+
+  return { setSelection: setSelection, getSelection: getSelection, SAMPLES: SAMPLES };
 }
 
-// ① Nuance-Preserving Transfer — picker only.
-initTransferPicker('', null);
+// ② Makeup Replay as Brushes — full atlas (with the zoom region boxed) + a smaller
+// eye close-up that traces the brush centerlines, looping.
+function initReplayDemo() {
+  const main = document.getElementById('replay-main-canvas');
+  const local = document.getElementById('replay-local-canvas');
+  if (!main || !local) return;
 
-// ② Transfer & Replay by Brushes — same picker + stroke-by-stroke eye replay on the right.
-function initEyeReplay() {
-  const canvas = document.getElementById('eye-replay');
-  if (!canvas) return null;
-  const ctx = canvas.getContext('2d');
-  // eye crop in the 768px UV atlas (geometry UV x∈[0.144,0.498]; y flipped → [0.273,0.488]).
+  const mctx = main.getContext('2d');
+  const lctx = local.getContext('2d');
+
+  // Eye crop in atlas texture space (same crop the section ① eye close-up used).
   const CX = 0.144, CY = 0.273, CW = 0.354, CH = 0.215;
-  let strokes = null, order = null, W = 0, H = 0, N = 0, reveal = 0, ready = false;
+  const MW = 512, MH = 512;                              // full atlas
+  const LW = 320, LH = Math.round(LW * CH / CW);         // eye crop (wide)
+  main.width = MW; main.height = MH;
+  local.width = LW; local.height = LH;
+
+  const N_SAMPLES = 24;       // matches build_demo_brush_centerlines_cross N_SAMPLES
+  const ORDER_SCALE = 0.96;   // order field is scaled to [0, 0.96]
+  const DURATION = 14;        // seconds per full program at 1x
+
+  const loadingEl = document.getElementById('replay-loading');
+
+  let bareImg = null;
+  let strokesImg = null;
+  let orderImg = null;
+  let center = null;
+  let N_STROKES = 0;
+  let ready = false, P = 0, lastT = null, holdUntil = 0;
+  let loadToken = 0;
+  const centerlineCache = {};
+
+  // Order-based reveal (faithful to mt_demo). If getImageData is blocked (file://),
+  // these stay null and render() falls back to drawing the full strokes statically.
+  let strokes = null;          // { data, N } at MW x MH
+  let order = null;            // Uint8Array at MW x MH
+  let lbare = null;            // local crop ImageData
+  let lstrokes = null;         // local crop ImageData
+  let lorder = null;           // Uint8Array at LW x LH
+
+  const mainLayer = document.createElement('canvas');
+  mainLayer.width = MW; mainLayer.height = MH;
+  const mainLayerCtx = mainLayer.getContext('2d');
+  const masked = mainLayerCtx.createImageData(MW, MH);
+
+  const localLayer = document.createElement('canvas');
+  localLayer.width = LW; localLayer.height = LH;
+  const localLayerCtx = localLayer.getContext('2d');
+  const lmasked = localLayerCtx.createImageData(LW, LH);
+
+  function setLoading(on) {
+    if (loadingEl) loadingEl.classList.toggle('on', on);
+    if (on) { mctx.clearRect(0, 0, MW, MH); lctx.clearRect(0, 0, LW, LH); }
+  }
+
+  function loadImage(src) {
+    return new Promise(function (res, rej) {
+      const img = new Image();
+      img.onload = function () { res(img); };
+      img.onerror = rej;
+      img.src = src;
+    });
+  }
+  function loadCenterlines(base, person, makeup) {
+    const sym = person + '_' + makeup + '_BRUSH_CENTERLINES';
+    if (centerlineCache[sym]) return Promise.resolve(centerlineCache[sym]);
+    if (window[sym] && window[sym].uvs) {
+      centerlineCache[sym] = window[sym];
+      return Promise.resolve(window[sym]);
+    }
+    return new Promise(function (res) {
+      const sc = document.createElement('script');
+      sc.src = base + 'centerlines.js';
+      sc.onload = function () { centerlineCache[sym] = window[sym] || null; res(window[sym] || null); };
+      sc.onerror = function () { centerlineCache[sym] = null; res(null); };
+      document.head.appendChild(sc);
+    });
+  }
+  function drawScaled(img, w, h) {
+    const c = document.createElement('canvas');
+    c.width = w; c.height = h;
+    const cc = c.getContext('2d');
+    cc.drawImage(img, 0, 0, w, h);
+    return cc.getImageData(0, 0, w, h);
+  }
+  function cropScaled(img, w, h) {
+    const c = document.createElement('canvas');
+    c.width = w; c.height = h;
+    const cc = c.getContext('2d');
+    const iw = img.naturalWidth, ih = img.naturalHeight;
+    const sx = Math.round(CX * (iw - 1)), sy = Math.round(CY * (ih - 1));
+    const sw = Math.round(CW * (iw - 1)), sh = Math.round(CH * (ih - 1));
+    cc.drawImage(img, sx, sy, sw, sh, 0, 0, w, h);
+    return cc.getImageData(0, 0, w, h);
+  }
+  function applyMask(md, sd, od, N, thr) {
+    for (let i = 0, j = 0; i < N; i++, j += 4) {
+      md[j] = sd[j];
+      md[j + 1] = sd[j + 1];
+      md[j + 2] = sd[j + 2];
+      md[j + 3] = (od[i] <= thr) ? sd[j + 3] : 0;
+    }
+  }
+  function eyeRect(img) {
+    const iw = img.naturalWidth, ih = img.naturalHeight;
+    return {
+      sx: Math.round(CX * (iw - 1)), sy: Math.round(CY * (ih - 1)),
+      sw: Math.round(CW * (iw - 1)), sh: Math.round(CH * (ih - 1))
+    };
+  }
 
   function setPair(person, makeup) {
+    const token = ++loadToken;
     const base = 'samples/' + person + '/assets/cross/' + makeup + '/';
-    ready = false; strokes = null; order = null;
-    const s = new Image();
-    s.onload = function () {
-      const w = s.naturalWidth, h = s.naturalHeight;
-      const sx = Math.round(CX * (w - 1)), sy = Math.round(CY * (h - 1));
-      const sw = Math.round(CW * (w - 1)), sh = Math.round(CH * (h - 1));
-      const oc = document.createElement('canvas');
-      oc.width = sw; oc.height = sh;
-      oc.getContext('2d').drawImage(s, sx, sy, sw, sh, 0, 0, sw, sh);
-      strokes = oc.getContext('2d').getImageData(0, 0, sw, sh);
-      W = sw; H = sh; N = sw * sh;
-      canvas.width = sw; canvas.height = sh;
-      maybeReady();
-    };
-    s.src = base + 'uv_brush_strokes.png';
-    const o = new Image();
-    o.onload = function () {
-      const w = o.naturalWidth, h = o.naturalHeight;
-      const sx = Math.round(CX * (w - 1)), sy = Math.round(CY * (h - 1));
-      const sw = Math.round(CW * (w - 1)), sh = Math.round(CH * (h - 1));
-      const oc = document.createElement('canvas');
-      oc.width = sw; oc.height = sh;
-      oc.getContext('2d').drawImage(o, sx, sy, sw, sh, 0, 0, sw, sh);
-      const od = oc.getContext('2d').getImageData(0, 0, sw, sh);
-      order = new Uint8Array(sw * sh);
-      for (let i = 0; i < sw * sh; i++) order[i] = od.data[i * 4];
-      maybeReady();
-    };
-    o.src = base + 'uv_brush_order.png';
+    const bareSrc = 'samples/' + person + '/assets/uv_bare.png';
+    setLoading(true);
+    ready = false; P = 0; holdUntil = 0;
+    strokes = null; order = null; lbare = null; lstrokes = null; lorder = null;
+    Promise.all([
+      loadImage(bareSrc),
+      loadImage(base + 'uv_brush_strokes.png'),
+      loadImage(base + 'uv_brush_order.png'),
+      loadCenterlines(base, person, makeup)
+    ]).then(function (res) {
+      if (token !== loadToken) return;
+      bareImg = res[0];
+      strokesImg = res[1];
+      orderImg = res[2];
+      center = res[3];
+      N_STROKES = (center && center.meta) ? center.meta.length : 0;
+
+      // Build the order-based reveal masks; if getImageData is blocked (file://),
+      // leave them null and render() falls back to static full strokes.
+      try {
+        const sd = drawScaled(strokesImg, MW, MH);
+        strokes = { data: sd.data, N: MW * MH };
+        const od = drawScaled(orderImg, MW, MH);
+        order = new Uint8Array(MW * MH);
+        for (let i = 0; i < MW * MH; i++) order[i] = od.data[i * 4];
+
+        lbare = cropScaled(bareImg, LW, LH);
+        lstrokes = cropScaled(strokesImg, LW, LH);
+        const lod = cropScaled(orderImg, LW, LH);
+        lorder = new Uint8Array(LW * LH);
+        for (let i = 0; i < LW * LH; i++) lorder[i] = lod.data[i * 4];
+      } catch (e) {
+        strokes = null; order = null; lbare = null; lstrokes = null; lorder = null;
+      }
+
+      ready = true;
+      lastT = null;
+      setLoading(false);
+      render();
+    }).catch(function () {
+      if (token === loadToken) { ready = false; setLoading(false); }
+    });
   }
 
-  function maybeReady() { if (strokes && order) { ready = true; reveal = 0; } }
+  function rgba(r, g, b, a) {
+    return 'rgba(' + Math.round(r * 255) + ',' + Math.round(g * 255) + ',' + Math.round(b * 255) + ',' + a + ')';
+  }
+  function uvToLocal(u, v) {
+    const tv = 1 - v;                       // canonical v -> texture v
+    return [(u - CX) / CW * LW, (tv - CY) / CH * LH];
+  }
+  function drawCenterlines() {
+    if (!center || !center.uvs || !N_STROKES) return;
+    const S = P * N_STROKES / ORDER_SCALE;
+    const s = Math.min(Math.floor(S), N_STROKES - 1);
+    lctx.save();
+    lctx.lineJoin = 'round';
+    lctx.lineCap = 'round';
+    for (let g = 0; g < N_STROKES; g++) {
+      const b = g * N_SAMPLES;
+      const r = center.colors[b * 3], gg = center.colors[b * 3 + 1], bb = center.colors[b * 3 + 2];
+      lctx.beginPath();
+      for (let i = 0; i < N_SAMPLES; i++) {
+        const idx = (b + i) * 2;
+        const p = uvToLocal(center.uvs[idx], center.uvs[idx + 1]);
+        if (i === 0) lctx.moveTo(p[0], p[1]); else lctx.lineTo(p[0], p[1]);
+      }
+      if (g === s) {
+        lctx.lineWidth = 7; lctx.strokeStyle = rgba(r, gg, bb, 0.22); lctx.stroke();
+        lctx.lineWidth = 3; lctx.strokeStyle = rgba(r, gg, bb, 1); lctx.stroke();
+      } else if (g < s) {
+        lctx.lineWidth = 1.25; lctx.strokeStyle = rgba(r, gg, bb, 0.30); lctx.stroke();
+      } else {
+        lctx.lineWidth = 1; lctx.strokeStyle = rgba(r, gg, bb, 0.12); lctx.stroke();
+      }
+    }
+    // moving tip on the current stroke
+    const b = s * N_SAMPLES;
+    const t = S - s;
+    const fi = t * (N_SAMPLES - 1);
+    const i0 = Math.min(Math.floor(fi), N_SAMPLES - 2);
+    const frac = fi - i0;
+    const u0 = center.uvs[(b + i0) * 2], v0 = center.uvs[(b + i0) * 2 + 1];
+    const u1 = center.uvs[(b + i0 + 1) * 2], v1 = center.uvs[(b + i0 + 1) * 2 + 1];
+    const p = uvToLocal(u0 + (u1 - u0) * frac, v0 + (v1 - v0) * frac);
+    lctx.beginPath();
+    lctx.arc(p[0], p[1], 4, 0, Math.PI * 2);
+    lctx.fillStyle = '#ff5a3c';
+    lctx.fill();
+    lctx.restore();
+  }
 
   function render() {
-    if (!ready) return;
-    const out = ctx.createImageData(W, H);
-    const sd = strokes.data, od = order, dd = out.data;
-    const threshold = reveal * 255;
-    for (let i = 0; i < N; i++) {
-      const p = i * 4;
-      dd[p] = sd[p]; dd[p + 1] = sd[p + 1]; dd[p + 2] = sd[p + 2];
-      dd[p + 3] = od[i] < threshold ? sd[p + 3] : 0;
+    const thr = P * 255;
+
+    mctx.clearRect(0, 0, MW, MH);
+    lctx.clearRect(0, 0, LW, LH);
+
+    if (bareImg) mctx.drawImage(bareImg, 0, 0, MW, MH);
+    if (lbare) {
+      lctx.putImageData(lbare, 0, 0);
+    } else if (bareImg) {
+      const r = eyeRect(bareImg);
+      lctx.drawImage(bareImg, r.sx, r.sy, r.sw, r.sh, 0, 0, LW, LH);
     }
-    ctx.putImageData(out, 0, 0);
+
+    if (strokes) {
+      applyMask(masked.data, strokes.data, order, MW * MH, thr);
+      mainLayerCtx.putImageData(masked, 0, 0);
+      mctx.drawImage(mainLayer, 0, 0);
+    }
+    if (lstrokes) {
+      applyMask(lmasked.data, lstrokes.data, lorder, LW * LH, thr);
+      localLayerCtx.putImageData(lmasked, 0, 0);
+      lctx.drawImage(localLayer, 0, 0);
+    }
+
+    // outline the region the local view zooms into (eye crop)
+    mctx.strokeStyle = 'rgba(255,255,255,0.85)';
+    mctx.lineWidth = 2;
+    mctx.strokeRect(CX * MW, CY * MH, CW * MW, CH * MH);
+
+    drawCenterlines();
   }
 
-  function loop() {
+  function loop(now) {
     requestAnimationFrame(loop);
-    if (ready) { reveal += 0.002; if (reveal >= 1) reveal = 0; }
+    if (!ready) return;
+    if (lastT == null) lastT = now;
+    const dt = (now - lastT) / 1000;
+    lastT = now;
+    if (P < 1) {
+      P = Math.min(P + dt / DURATION, 1);
+      if (P >= 1) holdUntil = now + 1200;
+    } else if (now >= holdUntil) {
+      P = 0;
+    }
     render();
   }
-  loop();
-  return setPair;
+
+  requestAnimationFrame(loop);
+  setPair('157_6', '157_6');
+  return { setPair: setPair };
 }
 
-const setEyePair = initEyeReplay();
-initTransferPicker('replay-', function (person, makeup) {
-  if (setEyePair) setEyePair(person, makeup);
+const replayDemo = initReplayDemo();
+
+// ① Nuance-Preserving Transfer — picker + before/after compare slider.
+const picker1 = initTransferPicker('', function (person, makeup) {
+  if (replayDemo) replayDemo.setPair(person, makeup);
 });
+
+// Sync section ① & ② and auto-cycle: same person runs through all 9 looks, then next person.
+if (picker1) {
+  const NINE = picker1.SAMPLES;
+  setInterval(function () {
+    const cur = picker1.getSelection();
+    let fi = NINE.indexOf(cur[0]), mi = NINE.indexOf(cur[1]);
+    mi += 1;
+    if (mi >= NINE.length) { mi = 0; fi = (fi + 1) % NINE.length; }
+    picker1.setSelection(NINE[fi], NINE[mi]);
+  }, 3500);
+}
 </script>
+<script src="js/kevin.js"></script>
+
+<div class="kevin" id="kevin" aria-hidden="true">
+  <span class="kevin__shade"></span>
+  <button class="kevin__hit" type="button" tabindex="-1" aria-hidden="true">
+    <span class="kevin__guy" id="kevin-guy">
+      <span class="kevin__chute" id="kevin-chute" style="display:none">
+        <span class="kevin__chute-canopy"></span>
+        <span class="kevin__chute-line kevin__chute-line--l"></span>
+        <span class="kevin__chute-line kevin__chute-line--r"></span>
+      </span>
+      <span class="kevin__breathe">
+        <span class="kevin__torso">
+          <span class="kevin__arm kevin__arm--l"><i id="kevin-arm-l"></i></span>
+          <span class="kevin__arm kevin__arm--r"><i id="kevin-arm-r"></i></span>
+          <span class="kevin__body">
+            <span class="kevin__face" id="kevin-face">
+              <span class="kevin__eye"><i id="kevin-pupil-l"></i></span>
+              <span class="kevin__eye"><i id="kevin-pupil-r"></i></span>
+              <span class="kevin__mouth"></span>
+            </span>
+          </span>
+        </span>
+        <span class="kevin__legs">
+          <span class="kevin__leg"><i id="kevin-leg-l"></i></span>
+          <span class="kevin__leg kevin__leg--front"><i id="kevin-leg-r"></i></span>
+        </span>
+      </span>
+      <span class="kevin__z" id="kevin-z" style="display:none">z</span>
+      <span class="kevin__z kevin__z--late" id="kevin-z2" style="display:none">z</span>
+    </span>
+  </button>
+  <div class="kevin__say" id="kevin-say"></div>
+</div>
 </body>
 </html>
